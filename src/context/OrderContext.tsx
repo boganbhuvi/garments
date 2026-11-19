@@ -156,7 +156,7 @@ interface OrderContextType {
   ) => Promise<void>;
 }
 
-const STORAGE_KEY = 'giriraj_garments_orders_v3';
+const STORAGE_KEY = 'giriraj_garments_orders_v4';
 const CURRENT_ORDER_KEY = 'giriraj_garments_current_order_v2';
 const TAILORS_STORAGE_KEY = 'giriraj_garments_tailors_v1';
 const WAGES_STORAGE_KEY = 'giriraj_garments_wages_v1';
@@ -242,13 +242,14 @@ export const OrderProvider: React.FC<{ children: React.ReactNode }> = ({ childre
       const stored = localStorage.getItem(STORAGE_KEY);
       if (stored) {
         const parsed: Order[] = JSON.parse(stored);
-        // If stored contains the old fake data (e.g. CUST-101 or Lakshmi Ramakrishnan), purge and replace
-        const hasOldFakeData = parsed.some(
+        // If stored contains the old fake data or lacks additionalPhones schema, upgrade to latest database
+        const hasOldData = parsed.some(
           o => o.customer.customerId === 'CUST-101' || 
                o.customer.customerName === 'Lakshmi Ramakrishnan' ||
-               o.customer.customerName === 'Dr. Ananya Subramanian'
+               o.customer.customerName === 'Dr. Ananya Subramanian' ||
+               (o.customer.customerId === 'A005' && (!o.customer.additionalPhones || o.customer.additionalPhones.length === 0))
         );
-        if (!hasOldFakeData && parsed.length > 0) {
+        if (!hasOldData && parsed.length > 0) {
           return parsed;
         }
       }

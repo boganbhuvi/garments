@@ -2,6 +2,7 @@ import { Order } from '../types/order';
 
 // Auto-generated from customer-register.xlsx
 // Total 191 customer records assigned IDs A001 through A191
+// Updated with full multi-phone support (primary, secondary, and additionalPhones)
 export const SAMPLE_ORDERS: Order[] = [
   {
     "id": "A001",
@@ -20,6 +21,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9585033030",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -60,24 +62,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -120,6 +151,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "8072311570",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -160,24 +192,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -220,6 +281,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9043969399",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -260,24 +322,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -320,6 +411,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9345306669",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -360,24 +452,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -419,7 +540,11 @@ export const SAMPLE_ORDERS: Order[] = [
       "fatherName": "",
       "husbandName": "",
       "primaryPhone": "9442918495",
-      "secondaryPhone": "9087081693, 9790115144, 6369227469",
+      "secondaryPhone": "9087081693",
+      "additionalPhones": [
+        "9790115144",
+        "6369227469"
+      ],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -460,24 +585,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -520,6 +674,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "7845932910",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -560,24 +715,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -620,6 +804,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9047088082",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -660,24 +845,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -720,6 +934,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "8270502526",
       "secondaryPhone": "6369552404",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -760,24 +975,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -820,6 +1064,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9087995435",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -860,24 +1105,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -920,6 +1194,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9361682980",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -960,24 +1235,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -1020,8 +1324,9 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "8300036030",
       "secondaryPhone": "9677829123",
-      "fullAddress": "Old 5129",
-      "areaLocation": "Old 5129"
+      "additionalPhones": [],
+      "fullAddress": "",
+      "areaLocation": ""
     },
     "garmentQuantities": [],
     "measurements": {
@@ -1060,24 +1365,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": "Old 5129"
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -1120,8 +1454,9 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9942993635",
       "secondaryPhone": "8248707817",
-      "fullAddress": "Old 1464",
-      "areaLocation": "Old 1464"
+      "additionalPhones": [],
+      "fullAddress": "",
+      "areaLocation": ""
     },
     "garmentQuantities": [],
     "measurements": {
@@ -1160,24 +1495,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": "Old 1464"
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -1220,8 +1584,9 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9442952749",
       "secondaryPhone": "",
-      "fullAddress": "Phone 2: Hospital · Old 816",
-      "areaLocation": "Phone 2: Hospital · Old 816"
+      "additionalPhones": [],
+      "fullAddress": "",
+      "areaLocation": ""
     },
     "garmentQuantities": [],
     "measurements": {
@@ -1260,24 +1625,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
-      "notes": "Phone 2: Hospital · Old 816"
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
+      "notes": "Phone 2: Hospital \u00b7 Old 816"
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -1320,6 +1714,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9486328631",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -1360,24 +1755,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -1420,8 +1844,9 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9994638447",
       "secondaryPhone": "",
-      "fullAddress": "Old 5425",
-      "areaLocation": "Old 5425"
+      "additionalPhones": [],
+      "fullAddress": "",
+      "areaLocation": ""
     },
     "garmentQuantities": [],
     "measurements": {
@@ -1460,24 +1885,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": "Old 5425"
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -1519,9 +1973,12 @@ export const SAMPLE_ORDERS: Order[] = [
       "fatherName": "",
       "husbandName": "",
       "primaryPhone": "9442664578",
-      "secondaryPhone": "9487158820, 9487158820",
-      "fullAddress": "Old 3031",
-      "areaLocation": "Old 3031"
+      "secondaryPhone": "9487158820",
+      "additionalPhones": [
+        "9487158820"
+      ],
+      "fullAddress": "",
+      "areaLocation": ""
     },
     "garmentQuantities": [],
     "measurements": {
@@ -1560,24 +2017,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": "Old 3031"
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -1619,9 +2105,12 @@ export const SAMPLE_ORDERS: Order[] = [
       "fatherName": "",
       "husbandName": "",
       "primaryPhone": "7339455359",
-      "secondaryPhone": "9944879801, 9842913256",
-      "fullAddress": "Also 9629913622 · Old 1243",
-      "areaLocation": "Also 9629913622 · Old 1243"
+      "secondaryPhone": "9944879801",
+      "additionalPhones": [
+        "9842913256"
+      ],
+      "fullAddress": "",
+      "areaLocation": ""
     },
     "garmentQuantities": [],
     "measurements": {
@@ -1660,24 +2149,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
-      "notes": "Also 9629913622 · Old 1243"
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
+      "notes": "Also 9629913622 \u00b7 Old 1243"
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -1720,8 +2238,9 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9486474209",
       "secondaryPhone": "",
-      "fullAddress": "Old 3120",
-      "areaLocation": "Old 3120"
+      "additionalPhones": [],
+      "fullAddress": "",
+      "areaLocation": ""
     },
     "garmentQuantities": [],
     "measurements": {
@@ -1760,24 +2279,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": "Old 3120"
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -1819,9 +2367,12 @@ export const SAMPLE_ORDERS: Order[] = [
       "fatherName": "",
       "husbandName": "",
       "primaryPhone": "8903312349",
-      "secondaryPhone": "9443390198, 9489839494",
-      "fullAddress": "Old 2266",
-      "areaLocation": "Old 2266"
+      "secondaryPhone": "9443390198",
+      "additionalPhones": [
+        "9489839494"
+      ],
+      "fullAddress": "",
+      "areaLocation": ""
     },
     "garmentQuantities": [],
     "measurements": {
@@ -1860,24 +2411,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": "Old 2266"
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -1919,9 +2499,12 @@ export const SAMPLE_ORDERS: Order[] = [
       "fatherName": "",
       "husbandName": "",
       "primaryPhone": "9629937004",
-      "secondaryPhone": "6382202063, 8220654841",
-      "fullAddress": "Old 962",
-      "areaLocation": "Old 962"
+      "secondaryPhone": "6382202063",
+      "additionalPhones": [
+        "8220654841"
+      ],
+      "fullAddress": "",
+      "areaLocation": ""
     },
     "garmentQuantities": [],
     "measurements": {
@@ -1960,24 +2543,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": "Old 962"
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -2020,8 +2632,9 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9488400004",
       "secondaryPhone": "9080304126",
-      "fullAddress": "Old 5580",
-      "areaLocation": "Old 5580"
+      "additionalPhones": [],
+      "fullAddress": "",
+      "areaLocation": ""
     },
     "garmentQuantities": [],
     "measurements": {
@@ -2060,24 +2673,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": "Old 5580"
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -2120,6 +2762,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "6374244192",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -2160,24 +2803,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -2220,6 +2892,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "8270035940",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -2260,24 +2933,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -2320,8 +3022,9 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "8144793118",
       "secondaryPhone": "",
-      "fullAddress": "Old 2926",
-      "areaLocation": "Old 2926"
+      "additionalPhones": [],
+      "fullAddress": "",
+      "areaLocation": ""
     },
     "garmentQuantities": [],
     "measurements": {
@@ -2360,24 +3063,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": "Old 2926"
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -2420,6 +3152,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9444593353",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -2460,24 +3193,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -2520,6 +3282,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9486059972",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -2560,24 +3323,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -2620,8 +3412,9 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9042587770",
       "secondaryPhone": "",
-      "fullAddress": "Old 1093",
-      "areaLocation": "Old 1093"
+      "additionalPhones": [],
+      "fullAddress": "",
+      "areaLocation": ""
     },
     "garmentQuantities": [],
     "measurements": {
@@ -2660,24 +3453,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": "Old 1093"
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -2720,6 +3542,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "8870821431",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -2760,24 +3583,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -2820,8 +3672,9 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9629213786",
       "secondaryPhone": "",
-      "fullAddress": "Old 2772",
-      "areaLocation": "Old 2772"
+      "additionalPhones": [],
+      "fullAddress": "",
+      "areaLocation": ""
     },
     "garmentQuantities": [],
     "measurements": {
@@ -2860,24 +3713,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": "Old 2772"
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -2920,6 +3802,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9600780160",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -2960,24 +3843,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -3020,8 +3932,9 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "",
       "secondaryPhone": "",
-      "fullAddress": "Phone not clear",
-      "areaLocation": "Phone not clear"
+      "additionalPhones": [],
+      "fullAddress": "",
+      "areaLocation": ""
     },
     "garmentQuantities": [],
     "measurements": {
@@ -3060,24 +3973,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": "Phone not clear"
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -3120,8 +4062,9 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9486660633",
       "secondaryPhone": "",
-      "fullAddress": "Old 3244",
-      "areaLocation": "Old 3244"
+      "additionalPhones": [],
+      "fullAddress": "",
+      "areaLocation": ""
     },
     "garmentQuantities": [],
     "measurements": {
@@ -3160,24 +4103,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": "Old 3244"
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -3220,6 +4192,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9629934146",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -3260,24 +4233,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -3320,6 +4322,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9365807801",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -3360,24 +4363,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -3420,8 +4452,9 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "7868063361",
       "secondaryPhone": "",
-      "fullAddress": "Subbulakshmi sister",
-      "areaLocation": "Subbulakshmi sister"
+      "additionalPhones": [],
+      "fullAddress": "",
+      "areaLocation": ""
     },
     "garmentQuantities": [],
     "measurements": {
@@ -3460,24 +4493,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": "Subbulakshmi sister"
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -3520,8 +4582,9 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9617956748",
       "secondaryPhone": "",
-      "fullAddress": "Mom",
-      "areaLocation": "Mom"
+      "additionalPhones": [],
+      "fullAddress": "",
+      "areaLocation": ""
     },
     "garmentQuantities": [],
     "measurements": {
@@ -3560,24 +4623,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": "Mom"
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -3619,9 +4711,12 @@ export const SAMPLE_ORDERS: Order[] = [
       "fatherName": "",
       "husbandName": "",
       "primaryPhone": "9003864825",
-      "secondaryPhone": "8056370377, 8884300384",
-      "fullAddress": "Also 9362477243 · Old 3286",
-      "areaLocation": "Also 9362477243 · Old 3286"
+      "secondaryPhone": "8056370377",
+      "additionalPhones": [
+        "8884300384"
+      ],
+      "fullAddress": "",
+      "areaLocation": ""
     },
     "garmentQuantities": [],
     "measurements": {
@@ -3660,24 +4755,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
-      "notes": "Also 9362477243 · Old 3286"
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
+      "notes": "Also 9362477243 \u00b7 Old 3286"
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -3720,6 +4844,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "8300857714",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -3760,24 +4885,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -3820,8 +4974,9 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9952476701",
       "secondaryPhone": "8056531145",
-      "fullAddress": "Carnival dress in loan",
-      "areaLocation": "Carnival dress in loan"
+      "additionalPhones": [],
+      "fullAddress": "",
+      "areaLocation": ""
     },
     "garmentQuantities": [],
     "measurements": {
@@ -3860,24 +5015,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": "Carnival dress in loan"
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -3920,8 +5104,9 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9487906172",
       "secondaryPhone": "7825977770",
-      "fullAddress": "Old 3834",
-      "areaLocation": "Old 3834"
+      "additionalPhones": [],
+      "fullAddress": "",
+      "areaLocation": ""
     },
     "garmentQuantities": [],
     "measurements": {
@@ -3960,24 +5145,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": "Old 3834"
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -4020,6 +5234,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9003418423",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -4060,24 +5275,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -4120,6 +5364,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9566720774",
       "secondaryPhone": "Felicita Pol",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -4160,24 +5405,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -4220,8 +5494,9 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9791460625",
       "secondaryPhone": "",
-      "fullAddress": "Old 4098",
-      "areaLocation": "Old 4098"
+      "additionalPhones": [],
+      "fullAddress": "",
+      "areaLocation": ""
     },
     "garmentQuantities": [],
     "measurements": {
@@ -4260,24 +5535,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": "Old 4098"
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -4320,8 +5624,9 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9842913256",
       "secondaryPhone": "",
-      "fullAddress": "Old 1257",
-      "areaLocation": "Old 1257"
+      "additionalPhones": [],
+      "fullAddress": "",
+      "areaLocation": ""
     },
     "garmentQuantities": [],
     "measurements": {
@@ -4360,24 +5665,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": "Old 1257"
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -4420,6 +5754,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9842883634",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -4460,24 +5795,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -4520,6 +5884,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "8148117444",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -4560,24 +5925,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -4620,6 +6014,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9994698626",
       "secondaryPhone": "8220465569",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -4660,24 +6055,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -4720,6 +6144,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9894128559",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -4760,24 +6185,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -4820,6 +6274,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "6380357187",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -4860,24 +6315,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -4920,6 +6404,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9629378904",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -4960,24 +6445,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -5020,6 +6534,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9344090941",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -5060,24 +6575,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -5104,15 +6648,15 @@ export const SAMPLE_ORDERS: Order[] = [
     }
   },
   {
-    "id": "D052",
+    "id": "A052",
     "serialNumber": "SR-052",
     "status": "DELIVERED",
     "currentStep": 1,
     "createdAt": "2026-11-19T00:00:00.000Z",
     "updatedAt": "2026-11-19T00:00:00.000Z",
     "customer": {
-      "customerId": "D052",
-      "billNumber": "D052",
+      "customerId": "A052",
+      "billNumber": "A052",
       "date": "2026-11-19",
       "customerName": "Dariyukadi",
       "relationshipType": "D/O",
@@ -5120,12 +6664,13 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9751108152",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
     "garmentQuantities": [],
     "measurements": {
-      "id": "meas-D052",
+      "id": "meas-A052",
       "name": "",
       "unit": "in",
       "date": "2026-11-19",
@@ -5160,24 +6705,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -5220,8 +6794,9 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9878705509",
       "secondaryPhone": "",
-      "fullAddress": "Old 5138",
-      "areaLocation": "Old 5138"
+      "additionalPhones": [],
+      "fullAddress": "",
+      "areaLocation": ""
     },
     "garmentQuantities": [],
     "measurements": {
@@ -5260,24 +6835,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": "Old 5138"
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -5320,8 +6924,9 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9894452152",
       "secondaryPhone": "0416 2221418",
-      "fullAddress": "Old 2441",
-      "areaLocation": "Old 2441"
+      "additionalPhones": [],
+      "fullAddress": "",
+      "areaLocation": ""
     },
     "garmentQuantities": [],
     "measurements": {
@@ -5360,24 +6965,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": "Old 2441"
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -5420,8 +7054,9 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9600100361",
       "secondaryPhone": "",
-      "fullAddress": "Old 4201",
-      "areaLocation": "Old 4201"
+      "additionalPhones": [],
+      "fullAddress": "",
+      "areaLocation": ""
     },
     "garmentQuantities": [],
     "measurements": {
@@ -5460,24 +7095,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": "Old 4201"
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -5519,7 +7183,10 @@ export const SAMPLE_ORDERS: Order[] = [
       "fatherName": "",
       "husbandName": "",
       "primaryPhone": "8940953616",
-      "secondaryPhone": "6098123412, 9750871314",
+      "secondaryPhone": "6098123412",
+      "additionalPhones": [
+        "9750871314"
+      ],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -5560,24 +7227,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -5620,6 +7316,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "6381501998",
       "secondaryPhone": "9486936795",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -5660,24 +7357,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -5720,6 +7446,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9486861278",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -5760,24 +7487,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -5820,6 +7576,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9791496064",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -5860,24 +7617,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -5920,6 +7706,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "6383676756",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -5960,24 +7747,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -6019,7 +7835,10 @@ export const SAMPLE_ORDERS: Order[] = [
       "fatherName": "",
       "husbandName": "",
       "primaryPhone": "7010478585",
-      "secondaryPhone": "9791833737, 9500498581",
+      "secondaryPhone": "9791833737",
+      "additionalPhones": [
+        "9500498581"
+      ],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -6060,24 +7879,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -6120,6 +7968,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9566931146",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -6160,24 +8009,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -6220,6 +8098,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9788668640",
       "secondaryPhone": "8610053239",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -6260,24 +8139,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -6320,6 +8228,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "8220190057",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -6360,24 +8269,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -6420,6 +8358,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9159145184",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -6460,24 +8399,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -6520,6 +8488,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "8946998688",
       "secondaryPhone": "8940098868",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -6560,24 +8529,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -6620,8 +8618,9 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9952371416",
       "secondaryPhone": "9943192372",
-      "fullAddress": "Old 5383",
-      "areaLocation": "Old 5383"
+      "additionalPhones": [],
+      "fullAddress": "",
+      "areaLocation": ""
     },
     "garmentQuantities": [],
     "measurements": {
@@ -6660,24 +8659,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": "Old 5383"
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -6720,8 +8748,9 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9443810297",
       "secondaryPhone": "",
-      "fullAddress": "Old 1930",
-      "areaLocation": "Old 1930"
+      "additionalPhones": [],
+      "fullAddress": "",
+      "areaLocation": ""
     },
     "garmentQuantities": [],
     "measurements": {
@@ -6760,24 +8789,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": "Old 1930"
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -6820,6 +8878,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9790185865",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -6860,24 +8919,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -6920,6 +9008,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9789599142",
       "secondaryPhone": "8889282141",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -6960,24 +9049,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -7020,6 +9138,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "8637453775",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -7060,24 +9179,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -7120,6 +9268,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "8667872166",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -7160,24 +9309,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -7220,6 +9398,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9003810681",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -7260,24 +9439,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -7320,6 +9528,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9842388755",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -7360,24 +9569,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -7420,6 +9658,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "7619168847",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -7460,24 +9699,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -7520,6 +9788,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9952233895",
       "secondaryPhone": "8072779896",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -7560,24 +9829,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -7620,6 +9918,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "7867049442",
       "secondaryPhone": "8870125088",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -7660,24 +9959,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -7720,6 +10048,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9486411425",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -7760,24 +10089,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -7820,6 +10178,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "8940105261",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -7860,24 +10219,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -7920,6 +10308,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9894238939",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -7960,24 +10349,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -8019,9 +10437,12 @@ export const SAMPLE_ORDERS: Order[] = [
       "fatherName": "",
       "husbandName": "",
       "primaryPhone": "8098118282",
-      "secondaryPhone": "0416 2210152, 0416 2210182",
-      "fullAddress": "Old 1096",
-      "areaLocation": "Old 1096"
+      "secondaryPhone": "0416 2210152",
+      "additionalPhones": [
+        "0416 2210182"
+      ],
+      "fullAddress": "",
+      "areaLocation": ""
     },
     "garmentQuantities": [],
     "measurements": {
@@ -8060,24 +10481,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": "Old 1096"
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -8120,6 +10570,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9488862481",
       "secondaryPhone": "Felicita Pol",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -8160,24 +10611,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -8220,8 +10700,9 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9442094952",
       "secondaryPhone": "0416 2214155",
-      "fullAddress": "Old 208",
-      "areaLocation": "Old 208"
+      "additionalPhones": [],
+      "fullAddress": "",
+      "areaLocation": ""
     },
     "garmentQuantities": [],
     "measurements": {
@@ -8260,24 +10741,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": "Old 208"
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -8320,6 +10830,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "7358559978",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -8360,24 +10871,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -8420,6 +10960,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9361558383",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -8460,24 +11001,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -8520,8 +11090,9 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9600069515",
       "secondaryPhone": "8870772631",
-      "fullAddress": "Old 438",
-      "areaLocation": "Old 438"
+      "additionalPhones": [],
+      "fullAddress": "",
+      "areaLocation": ""
     },
     "garmentQuantities": [],
     "measurements": {
@@ -8560,24 +11131,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": "Old 438"
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -8620,6 +11220,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "8754736007",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -8660,24 +11261,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -8720,6 +11350,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9597772304",
       "secondaryPhone": "9944648222",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -8760,24 +11391,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -8820,8 +11480,9 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9597222599",
       "secondaryPhone": "",
-      "fullAddress": "Old 2215",
-      "areaLocation": "Old 2215"
+      "additionalPhones": [],
+      "fullAddress": "",
+      "areaLocation": ""
     },
     "garmentQuantities": [],
     "measurements": {
@@ -8860,24 +11521,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": "Old 2215"
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -8920,8 +11610,9 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "7200655336",
       "secondaryPhone": "",
-      "fullAddress": "Old 3418",
-      "areaLocation": "Old 3418"
+      "additionalPhones": [],
+      "fullAddress": "",
+      "areaLocation": ""
     },
     "garmentQuantities": [],
     "measurements": {
@@ -8960,24 +11651,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": "Old 3418"
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -9020,6 +11740,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "8124585344",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -9060,24 +11781,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -9120,8 +11870,9 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9940961424",
       "secondaryPhone": "",
-      "fullAddress": "Old 5197",
-      "areaLocation": "Old 5197"
+      "additionalPhones": [],
+      "fullAddress": "",
+      "areaLocation": ""
     },
     "garmentQuantities": [],
     "measurements": {
@@ -9160,24 +11911,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": "Old 5197"
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -9220,6 +12000,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9677591373",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -9260,24 +12041,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -9320,6 +12130,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9655909592",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -9360,24 +12171,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -9420,8 +12260,9 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9444654105",
       "secondaryPhone": "9486464101",
-      "fullAddress": "Old 5399",
-      "areaLocation": "Old 5399"
+      "additionalPhones": [],
+      "fullAddress": "",
+      "areaLocation": ""
     },
     "garmentQuantities": [],
     "measurements": {
@@ -9460,24 +12301,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": "Old 5399"
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -9520,8 +12390,9 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9952313927",
       "secondaryPhone": "",
-      "fullAddress": "Old 2544",
-      "areaLocation": "Old 2544"
+      "additionalPhones": [],
+      "fullAddress": "",
+      "areaLocation": ""
     },
     "garmentQuantities": [],
     "measurements": {
@@ -9560,24 +12431,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": "Old 2544"
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -9620,6 +12520,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9944776342",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -9660,24 +12561,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -9720,6 +12650,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9629563344",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -9760,24 +12691,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -9820,6 +12780,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "8838860291",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -9860,24 +12821,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -9920,6 +12910,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "6382529361",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -9960,24 +12951,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -10020,6 +13040,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9442978010",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -10060,24 +13081,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -10120,6 +13170,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "8072016312",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -10160,24 +13211,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -10220,6 +13300,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9150553460",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -10260,24 +13341,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -10320,6 +13430,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9842554396",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -10360,24 +13471,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -10420,6 +13560,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "8754309904",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -10460,24 +13601,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -10520,6 +13690,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9597361900",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -10560,24 +13731,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -10620,6 +13820,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9003873056",
       "secondaryPhone": "7639041356",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -10660,24 +13861,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -10720,6 +13950,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9344894634",
       "secondaryPhone": "9894828620",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -10760,24 +13991,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -10820,6 +14080,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9486861278",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -10860,24 +14121,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -10920,8 +14210,9 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "",
       "secondaryPhone": "",
-      "fullAddress": "Phone not clear · Old: Thirumalpadi",
-      "areaLocation": "Phone not clear · Old: Thirumalpadi"
+      "additionalPhones": [],
+      "fullAddress": "",
+      "areaLocation": ""
     },
     "garmentQuantities": [],
     "measurements": {
@@ -10960,24 +14251,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
-      "notes": "Phone not clear · Old: Thirumalpadi"
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
+      "notes": "Phone not clear \u00b7 Old: Thirumalpadi"
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -11020,8 +14340,9 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9789599142",
       "secondaryPhone": "",
-      "fullAddress": "Police · Athralarasi sis",
-      "areaLocation": "Police · Athralarasi sis"
+      "additionalPhones": [],
+      "fullAddress": "",
+      "areaLocation": ""
     },
     "garmentQuantities": [],
     "measurements": {
@@ -11060,24 +14381,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
-      "notes": "Police · Athralarasi sis"
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
+      "notes": "Police \u00b7 Athralarasi sis"
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -11120,8 +14470,9 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9498109946",
       "secondaryPhone": "",
-      "fullAddress": "Police",
-      "areaLocation": "Police"
+      "additionalPhones": [],
+      "fullAddress": "",
+      "areaLocation": ""
     },
     "garmentQuantities": [],
     "measurements": {
@@ -11160,24 +14511,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": "Police"
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -11220,8 +14600,9 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "8870629224",
       "secondaryPhone": "",
-      "fullAddress": "Thenmozhi sis",
-      "areaLocation": "Thenmozhi sis"
+      "additionalPhones": [],
+      "fullAddress": "",
+      "areaLocation": ""
     },
     "garmentQuantities": [],
     "measurements": {
@@ -11260,24 +14641,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": "Thenmozhi sis"
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -11320,6 +14730,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9500794993",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -11360,24 +14771,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -11420,6 +14860,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9791483728",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -11460,24 +14901,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -11520,6 +14990,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "8787103398",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -11560,24 +15031,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -11620,6 +15120,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9941402450",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -11660,24 +15161,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -11720,6 +15250,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9442036555",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -11760,24 +15291,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -11820,6 +15380,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "7708487627",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -11860,24 +15421,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -11920,6 +15510,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9994892942",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -11960,24 +15551,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -12020,6 +15640,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9442413808",
       "secondaryPhone": "8124939465",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -12060,24 +15681,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -12120,6 +15770,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9791540803",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -12160,24 +15811,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -12220,6 +15900,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9790495866",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -12260,24 +15941,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -12320,6 +16030,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9487521030",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -12360,24 +16071,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -12420,6 +16160,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9487414155",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -12460,24 +16201,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -12520,6 +16290,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9629028141",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -12560,24 +16331,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -12620,6 +16420,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9629842364",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -12660,24 +16461,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -12720,8 +16550,9 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "8508444740",
       "secondaryPhone": "",
-      "fullAddress": "Kannamangalam",
-      "areaLocation": "Kannamangalam"
+      "additionalPhones": [],
+      "fullAddress": "",
+      "areaLocation": ""
     },
     "garmentQuantities": [],
     "measurements": {
@@ -12760,24 +16591,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": "Kannamangalam"
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -12820,6 +16680,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9498109366",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -12860,24 +16721,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -12920,6 +16810,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9443266853",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -12960,24 +16851,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -13020,6 +16940,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9344304883",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -13060,24 +16981,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -13120,8 +17070,9 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9597923140",
       "secondaryPhone": "",
-      "fullAddress": "Old 3675",
-      "areaLocation": "Old 3675"
+      "additionalPhones": [],
+      "fullAddress": "",
+      "areaLocation": ""
     },
     "garmentQuantities": [],
     "measurements": {
@@ -13160,24 +17111,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": "Old 3675"
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -13220,6 +17200,7 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9566665761",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -13260,24 +17241,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -13320,8 +17330,9 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "9443038570",
       "secondaryPhone": "",
-      "fullAddress": "Old 2729",
-      "areaLocation": "Old 2729"
+      "additionalPhones": [],
+      "fullAddress": "",
+      "areaLocation": ""
     },
     "garmentQuantities": [],
     "measurements": {
@@ -13360,24 +17371,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": "Old 2729"
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -13420,8 +17460,9 @@ export const SAMPLE_ORDERS: Order[] = [
       "husbandName": "",
       "primaryPhone": "8870772631",
       "secondaryPhone": "9600069515",
-      "fullAddress": "Susan",
-      "areaLocation": "Susan"
+      "additionalPhones": [],
+      "fullAddress": "",
+      "areaLocation": ""
     },
     "garmentQuantities": [],
     "measurements": {
@@ -13460,1924 +17501,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": "Susan"
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
-    "billing": {
-      "items": [],
-      "additionalCharges": {
-        "stitchingCharges": 0,
-        "materialCharges": 0,
-        "designCharges": 0,
-        "otherCharges": 0,
-        "discount": 0
-      },
-      "subtotal": 0,
-      "grandTotal": 0,
-      "advanceAmount": 0,
-      "amountPaid": 0,
-      "balanceAmount": 0,
-      "paymentMethod": "Cash",
-      "paymentStatus": "UNPAID",
-      "orderDate": "2026-11-19",
-      "dueDate": "2026-11-19",
-      "priority": "Normal",
-      "deliveryNotes": "",
-      "referralId": "",
-      "referredBy": "",
-      "referralNotes": ""
-    }
-  },
-  {
-    "id": "A136",
-    "serialNumber": "SR-136",
-    "status": "DELIVERED",
-    "currentStep": 1,
-    "createdAt": "2026-11-19T00:00:00.000Z",
-    "updatedAt": "2026-11-19T00:00:00.000Z",
-    "customer": {
-      "customerId": "A136",
-      "billNumber": "A136",
-      "date": "2026-11-19",
-      "customerName": "Aswini",
-      "relationshipType": "D/O",
-      "fatherName": "",
-      "husbandName": "",
-      "primaryPhone": "7092748789",
-      "secondaryPhone": "",
-      "fullAddress": "",
-      "areaLocation": ""
-    },
-    "garmentQuantities": [],
-    "measurements": {
-      "id": "meas-A136",
-      "name": "",
-      "unit": "in",
-      "date": "2026-11-19",
-      "shoulder": "",
-      "chest": "",
-      "bust": "",
-      "upperBust": "",
-      "underBust": "",
-      "waist": "",
-      "hip": "",
-      "armhole": "",
-      "sleeveLength": "",
-      "sleeveRound": "",
-      "bicep": "",
-      "elbow": "",
-      "wrist": "",
-      "blouseLength": "",
-      "topLength": "",
-      "frontLength": "",
-      "backLength": "",
-      "frontNeckDepth": "",
-      "backNeckDepth": "",
-      "frontNeckWidth": "",
-      "backNeckWidth": "",
-      "lowerWaist": "",
-      "lowerHip": "",
-      "thigh": "",
-      "knee": "",
-      "calf": "",
-      "ankle": "",
-      "bottomLength": "",
-      "inseam": "",
-      "outseam": "",
-      "crotch": "",
-      "customFields": [],
-      "notes": ""
-    },
-    "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
-    "billing": {
-      "items": [],
-      "additionalCharges": {
-        "stitchingCharges": 0,
-        "materialCharges": 0,
-        "designCharges": 0,
-        "otherCharges": 0,
-        "discount": 0
-      },
-      "subtotal": 0,
-      "grandTotal": 0,
-      "advanceAmount": 0,
-      "amountPaid": 0,
-      "balanceAmount": 0,
-      "paymentMethod": "Cash",
-      "paymentStatus": "UNPAID",
-      "orderDate": "2026-11-19",
-      "dueDate": "2026-11-19",
-      "priority": "Normal",
-      "deliveryNotes": "",
-      "referralId": "",
-      "referredBy": "",
-      "referralNotes": ""
-    }
-  },
-  {
-    "id": "A137",
-    "serialNumber": "SR-137",
-    "status": "DELIVERED",
-    "currentStep": 1,
-    "createdAt": "2026-11-19T00:00:00.000Z",
-    "updatedAt": "2026-11-19T00:00:00.000Z",
-    "customer": {
-      "customerId": "A137",
-      "billNumber": "A137",
-      "date": "2026-11-19",
-      "customerName": "Afriya",
-      "relationshipType": "D/O",
-      "fatherName": "",
-      "husbandName": "",
-      "primaryPhone": "7339689164",
-      "secondaryPhone": "",
-      "fullAddress": "L. Banu Pandi in law",
-      "areaLocation": "L. Banu Pandi in law"
-    },
-    "garmentQuantities": [],
-    "measurements": {
-      "id": "meas-A137",
-      "name": "",
-      "unit": "in",
-      "date": "2026-11-19",
-      "shoulder": "",
-      "chest": "",
-      "bust": "",
-      "upperBust": "",
-      "underBust": "",
-      "waist": "",
-      "hip": "",
-      "armhole": "",
-      "sleeveLength": "",
-      "sleeveRound": "",
-      "bicep": "",
-      "elbow": "",
-      "wrist": "",
-      "blouseLength": "",
-      "topLength": "",
-      "frontLength": "",
-      "backLength": "",
-      "frontNeckDepth": "",
-      "backNeckDepth": "",
-      "frontNeckWidth": "",
-      "backNeckWidth": "",
-      "lowerWaist": "",
-      "lowerHip": "",
-      "thigh": "",
-      "knee": "",
-      "calf": "",
-      "ankle": "",
-      "bottomLength": "",
-      "inseam": "",
-      "outseam": "",
-      "crotch": "",
-      "customFields": [],
-      "notes": "L. Banu Pandi in law"
-    },
-    "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
-    "billing": {
-      "items": [],
-      "additionalCharges": {
-        "stitchingCharges": 0,
-        "materialCharges": 0,
-        "designCharges": 0,
-        "otherCharges": 0,
-        "discount": 0
-      },
-      "subtotal": 0,
-      "grandTotal": 0,
-      "advanceAmount": 0,
-      "amountPaid": 0,
-      "balanceAmount": 0,
-      "paymentMethod": "Cash",
-      "paymentStatus": "UNPAID",
-      "orderDate": "2026-11-19",
-      "dueDate": "2026-11-19",
-      "priority": "Normal",
-      "deliveryNotes": "",
-      "referralId": "",
-      "referredBy": "",
-      "referralNotes": ""
-    }
-  },
-  {
-    "id": "A138",
-    "serialNumber": "SR-138",
-    "status": "DELIVERED",
-    "currentStep": 1,
-    "createdAt": "2026-11-19T00:00:00.000Z",
-    "updatedAt": "2026-11-19T00:00:00.000Z",
-    "customer": {
-      "customerId": "A138",
-      "billNumber": "A138",
-      "date": "2026-11-19",
-      "customerName": "Anitha B",
-      "relationshipType": "D/O",
-      "fatherName": "",
-      "husbandName": "",
-      "primaryPhone": "8667816743",
-      "secondaryPhone": "",
-      "fullAddress": "",
-      "areaLocation": ""
-    },
-    "garmentQuantities": [],
-    "measurements": {
-      "id": "meas-A138",
-      "name": "",
-      "unit": "in",
-      "date": "2026-11-19",
-      "shoulder": "",
-      "chest": "",
-      "bust": "",
-      "upperBust": "",
-      "underBust": "",
-      "waist": "",
-      "hip": "",
-      "armhole": "",
-      "sleeveLength": "",
-      "sleeveRound": "",
-      "bicep": "",
-      "elbow": "",
-      "wrist": "",
-      "blouseLength": "",
-      "topLength": "",
-      "frontLength": "",
-      "backLength": "",
-      "frontNeckDepth": "",
-      "backNeckDepth": "",
-      "frontNeckWidth": "",
-      "backNeckWidth": "",
-      "lowerWaist": "",
-      "lowerHip": "",
-      "thigh": "",
-      "knee": "",
-      "calf": "",
-      "ankle": "",
-      "bottomLength": "",
-      "inseam": "",
-      "outseam": "",
-      "crotch": "",
-      "customFields": [],
-      "notes": ""
-    },
-    "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
-    "billing": {
-      "items": [],
-      "additionalCharges": {
-        "stitchingCharges": 0,
-        "materialCharges": 0,
-        "designCharges": 0,
-        "otherCharges": 0,
-        "discount": 0
-      },
-      "subtotal": 0,
-      "grandTotal": 0,
-      "advanceAmount": 0,
-      "amountPaid": 0,
-      "balanceAmount": 0,
-      "paymentMethod": "Cash",
-      "paymentStatus": "UNPAID",
-      "orderDate": "2026-11-19",
-      "dueDate": "2026-11-19",
-      "priority": "Normal",
-      "deliveryNotes": "",
-      "referralId": "",
-      "referredBy": "",
-      "referralNotes": ""
-    }
-  },
-  {
-    "id": "A139",
-    "serialNumber": "SR-139",
-    "status": "DELIVERED",
-    "currentStep": 1,
-    "createdAt": "2026-11-19T00:00:00.000Z",
-    "updatedAt": "2026-11-19T00:00:00.000Z",
-    "customer": {
-      "customerId": "A139",
-      "billNumber": "A139",
-      "date": "2026-11-19",
-      "customerName": "Amudha C",
-      "relationshipType": "D/O",
-      "fatherName": "",
-      "husbandName": "",
-      "primaryPhone": "9629988041",
-      "secondaryPhone": "",
-      "fullAddress": "",
-      "areaLocation": ""
-    },
-    "garmentQuantities": [],
-    "measurements": {
-      "id": "meas-A139",
-      "name": "",
-      "unit": "in",
-      "date": "2026-11-19",
-      "shoulder": "",
-      "chest": "",
-      "bust": "",
-      "upperBust": "",
-      "underBust": "",
-      "waist": "",
-      "hip": "",
-      "armhole": "",
-      "sleeveLength": "",
-      "sleeveRound": "",
-      "bicep": "",
-      "elbow": "",
-      "wrist": "",
-      "blouseLength": "",
-      "topLength": "",
-      "frontLength": "",
-      "backLength": "",
-      "frontNeckDepth": "",
-      "backNeckDepth": "",
-      "frontNeckWidth": "",
-      "backNeckWidth": "",
-      "lowerWaist": "",
-      "lowerHip": "",
-      "thigh": "",
-      "knee": "",
-      "calf": "",
-      "ankle": "",
-      "bottomLength": "",
-      "inseam": "",
-      "outseam": "",
-      "crotch": "",
-      "customFields": [],
-      "notes": ""
-    },
-    "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
-    "billing": {
-      "items": [],
-      "additionalCharges": {
-        "stitchingCharges": 0,
-        "materialCharges": 0,
-        "designCharges": 0,
-        "otherCharges": 0,
-        "discount": 0
-      },
-      "subtotal": 0,
-      "grandTotal": 0,
-      "advanceAmount": 0,
-      "amountPaid": 0,
-      "balanceAmount": 0,
-      "paymentMethod": "Cash",
-      "paymentStatus": "UNPAID",
-      "orderDate": "2026-11-19",
-      "dueDate": "2026-11-19",
-      "priority": "Normal",
-      "deliveryNotes": "",
-      "referralId": "",
-      "referredBy": "",
-      "referralNotes": ""
-    }
-  },
-  {
-    "id": "A140",
-    "serialNumber": "SR-140",
-    "status": "DELIVERED",
-    "currentStep": 1,
-    "createdAt": "2026-11-19T00:00:00.000Z",
-    "updatedAt": "2026-11-19T00:00:00.000Z",
-    "customer": {
-      "customerId": "A140",
-      "billNumber": "A140",
-      "date": "2026-11-19",
-      "customerName": "Ananya",
-      "relationshipType": "D/O",
-      "fatherName": "",
-      "husbandName": "",
-      "primaryPhone": "9994560762",
-      "secondaryPhone": "",
-      "fullAddress": "",
-      "areaLocation": ""
-    },
-    "garmentQuantities": [],
-    "measurements": {
-      "id": "meas-A140",
-      "name": "",
-      "unit": "in",
-      "date": "2026-11-19",
-      "shoulder": "",
-      "chest": "",
-      "bust": "",
-      "upperBust": "",
-      "underBust": "",
-      "waist": "",
-      "hip": "",
-      "armhole": "",
-      "sleeveLength": "",
-      "sleeveRound": "",
-      "bicep": "",
-      "elbow": "",
-      "wrist": "",
-      "blouseLength": "",
-      "topLength": "",
-      "frontLength": "",
-      "backLength": "",
-      "frontNeckDepth": "",
-      "backNeckDepth": "",
-      "frontNeckWidth": "",
-      "backNeckWidth": "",
-      "lowerWaist": "",
-      "lowerHip": "",
-      "thigh": "",
-      "knee": "",
-      "calf": "",
-      "ankle": "",
-      "bottomLength": "",
-      "inseam": "",
-      "outseam": "",
-      "crotch": "",
-      "customFields": [],
-      "notes": ""
-    },
-    "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
-    "billing": {
-      "items": [],
-      "additionalCharges": {
-        "stitchingCharges": 0,
-        "materialCharges": 0,
-        "designCharges": 0,
-        "otherCharges": 0,
-        "discount": 0
-      },
-      "subtotal": 0,
-      "grandTotal": 0,
-      "advanceAmount": 0,
-      "amountPaid": 0,
-      "balanceAmount": 0,
-      "paymentMethod": "Cash",
-      "paymentStatus": "UNPAID",
-      "orderDate": "2026-11-19",
-      "dueDate": "2026-11-19",
-      "priority": "Normal",
-      "deliveryNotes": "",
-      "referralId": "",
-      "referredBy": "",
-      "referralNotes": ""
-    }
-  },
-  {
-    "id": "A141",
-    "serialNumber": "SR-141",
-    "status": "DELIVERED",
-    "currentStep": 1,
-    "createdAt": "2026-11-19T00:00:00.000Z",
-    "updatedAt": "2026-11-19T00:00:00.000Z",
-    "customer": {
-      "customerId": "A141",
-      "billNumber": "A141",
-      "date": "2026-11-19",
-      "customerName": "Abirami P",
-      "relationshipType": "D/O",
-      "fatherName": "",
-      "husbandName": "",
-      "primaryPhone": "6380052004",
-      "secondaryPhone": "",
-      "fullAddress": "",
-      "areaLocation": ""
-    },
-    "garmentQuantities": [],
-    "measurements": {
-      "id": "meas-A141",
-      "name": "",
-      "unit": "in",
-      "date": "2026-11-19",
-      "shoulder": "",
-      "chest": "",
-      "bust": "",
-      "upperBust": "",
-      "underBust": "",
-      "waist": "",
-      "hip": "",
-      "armhole": "",
-      "sleeveLength": "",
-      "sleeveRound": "",
-      "bicep": "",
-      "elbow": "",
-      "wrist": "",
-      "blouseLength": "",
-      "topLength": "",
-      "frontLength": "",
-      "backLength": "",
-      "frontNeckDepth": "",
-      "backNeckDepth": "",
-      "frontNeckWidth": "",
-      "backNeckWidth": "",
-      "lowerWaist": "",
-      "lowerHip": "",
-      "thigh": "",
-      "knee": "",
-      "calf": "",
-      "ankle": "",
-      "bottomLength": "",
-      "inseam": "",
-      "outseam": "",
-      "crotch": "",
-      "customFields": [],
-      "notes": ""
-    },
-    "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
-    "billing": {
-      "items": [],
-      "additionalCharges": {
-        "stitchingCharges": 0,
-        "materialCharges": 0,
-        "designCharges": 0,
-        "otherCharges": 0,
-        "discount": 0
-      },
-      "subtotal": 0,
-      "grandTotal": 0,
-      "advanceAmount": 0,
-      "amountPaid": 0,
-      "balanceAmount": 0,
-      "paymentMethod": "Cash",
-      "paymentStatus": "UNPAID",
-      "orderDate": "2026-11-19",
-      "dueDate": "2026-11-19",
-      "priority": "Normal",
-      "deliveryNotes": "",
-      "referralId": "",
-      "referredBy": "",
-      "referralNotes": ""
-    }
-  },
-  {
-    "id": "A142",
-    "serialNumber": "SR-142",
-    "status": "DELIVERED",
-    "currentStep": 1,
-    "createdAt": "2026-11-19T00:00:00.000Z",
-    "updatedAt": "2026-11-19T00:00:00.000Z",
-    "customer": {
-      "customerId": "A142",
-      "billNumber": "A142",
-      "date": "2026-11-19",
-      "customerName": "Aarthi Nirthan",
-      "relationshipType": "D/O",
-      "fatherName": "",
-      "husbandName": "",
-      "primaryPhone": "7708979941",
-      "secondaryPhone": "",
-      "fullAddress": "",
-      "areaLocation": ""
-    },
-    "garmentQuantities": [],
-    "measurements": {
-      "id": "meas-A142",
-      "name": "",
-      "unit": "in",
-      "date": "2026-11-19",
-      "shoulder": "",
-      "chest": "",
-      "bust": "",
-      "upperBust": "",
-      "underBust": "",
-      "waist": "",
-      "hip": "",
-      "armhole": "",
-      "sleeveLength": "",
-      "sleeveRound": "",
-      "bicep": "",
-      "elbow": "",
-      "wrist": "",
-      "blouseLength": "",
-      "topLength": "",
-      "frontLength": "",
-      "backLength": "",
-      "frontNeckDepth": "",
-      "backNeckDepth": "",
-      "frontNeckWidth": "",
-      "backNeckWidth": "",
-      "lowerWaist": "",
-      "lowerHip": "",
-      "thigh": "",
-      "knee": "",
-      "calf": "",
-      "ankle": "",
-      "bottomLength": "",
-      "inseam": "",
-      "outseam": "",
-      "crotch": "",
-      "customFields": [],
-      "notes": ""
-    },
-    "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
-    "billing": {
-      "items": [],
-      "additionalCharges": {
-        "stitchingCharges": 0,
-        "materialCharges": 0,
-        "designCharges": 0,
-        "otherCharges": 0,
-        "discount": 0
-      },
-      "subtotal": 0,
-      "grandTotal": 0,
-      "advanceAmount": 0,
-      "amountPaid": 0,
-      "balanceAmount": 0,
-      "paymentMethod": "Cash",
-      "paymentStatus": "UNPAID",
-      "orderDate": "2026-11-19",
-      "dueDate": "2026-11-19",
-      "priority": "Normal",
-      "deliveryNotes": "",
-      "referralId": "",
-      "referredBy": "",
-      "referralNotes": ""
-    }
-  },
-  {
-    "id": "A143",
-    "serialNumber": "SR-143",
-    "status": "DELIVERED",
-    "currentStep": 1,
-    "createdAt": "2026-11-19T00:00:00.000Z",
-    "updatedAt": "2026-11-19T00:00:00.000Z",
-    "customer": {
-      "customerId": "A143",
-      "billNumber": "A143",
-      "date": "2026-11-19",
-      "customerName": "Agasthya",
-      "relationshipType": "D/O",
-      "fatherName": "",
-      "husbandName": "",
-      "primaryPhone": "9786489910",
-      "secondaryPhone": "",
-      "fullAddress": "",
-      "areaLocation": ""
-    },
-    "garmentQuantities": [],
-    "measurements": {
-      "id": "meas-A143",
-      "name": "",
-      "unit": "in",
-      "date": "2026-11-19",
-      "shoulder": "",
-      "chest": "",
-      "bust": "",
-      "upperBust": "",
-      "underBust": "",
-      "waist": "",
-      "hip": "",
-      "armhole": "",
-      "sleeveLength": "",
-      "sleeveRound": "",
-      "bicep": "",
-      "elbow": "",
-      "wrist": "",
-      "blouseLength": "",
-      "topLength": "",
-      "frontLength": "",
-      "backLength": "",
-      "frontNeckDepth": "",
-      "backNeckDepth": "",
-      "frontNeckWidth": "",
-      "backNeckWidth": "",
-      "lowerWaist": "",
-      "lowerHip": "",
-      "thigh": "",
-      "knee": "",
-      "calf": "",
-      "ankle": "",
-      "bottomLength": "",
-      "inseam": "",
-      "outseam": "",
-      "crotch": "",
-      "customFields": [],
-      "notes": ""
-    },
-    "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
-    "billing": {
-      "items": [],
-      "additionalCharges": {
-        "stitchingCharges": 0,
-        "materialCharges": 0,
-        "designCharges": 0,
-        "otherCharges": 0,
-        "discount": 0
-      },
-      "subtotal": 0,
-      "grandTotal": 0,
-      "advanceAmount": 0,
-      "amountPaid": 0,
-      "balanceAmount": 0,
-      "paymentMethod": "Cash",
-      "paymentStatus": "UNPAID",
-      "orderDate": "2026-11-19",
-      "dueDate": "2026-11-19",
-      "priority": "Normal",
-      "deliveryNotes": "",
-      "referralId": "",
-      "referredBy": "",
-      "referralNotes": ""
-    }
-  },
-  {
-    "id": "A144",
-    "serialNumber": "SR-144",
-    "status": "DELIVERED",
-    "currentStep": 1,
-    "createdAt": "2026-11-19T00:00:00.000Z",
-    "updatedAt": "2026-11-19T00:00:00.000Z",
-    "customer": {
-      "customerId": "A144",
-      "billNumber": "A144",
-      "date": "2026-11-19",
-      "customerName": "Amutha M",
-      "relationshipType": "D/O",
-      "fatherName": "",
-      "husbandName": "",
-      "primaryPhone": "9486944451",
-      "secondaryPhone": "9442307791, 9176303366",
-      "fullAddress": "",
-      "areaLocation": ""
-    },
-    "garmentQuantities": [],
-    "measurements": {
-      "id": "meas-A144",
-      "name": "",
-      "unit": "in",
-      "date": "2026-11-19",
-      "shoulder": "",
-      "chest": "",
-      "bust": "",
-      "upperBust": "",
-      "underBust": "",
-      "waist": "",
-      "hip": "",
-      "armhole": "",
-      "sleeveLength": "",
-      "sleeveRound": "",
-      "bicep": "",
-      "elbow": "",
-      "wrist": "",
-      "blouseLength": "",
-      "topLength": "",
-      "frontLength": "",
-      "backLength": "",
-      "frontNeckDepth": "",
-      "backNeckDepth": "",
-      "frontNeckWidth": "",
-      "backNeckWidth": "",
-      "lowerWaist": "",
-      "lowerHip": "",
-      "thigh": "",
-      "knee": "",
-      "calf": "",
-      "ankle": "",
-      "bottomLength": "",
-      "inseam": "",
-      "outseam": "",
-      "crotch": "",
-      "customFields": [],
-      "notes": ""
-    },
-    "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
-    "billing": {
-      "items": [],
-      "additionalCharges": {
-        "stitchingCharges": 0,
-        "materialCharges": 0,
-        "designCharges": 0,
-        "otherCharges": 0,
-        "discount": 0
-      },
-      "subtotal": 0,
-      "grandTotal": 0,
-      "advanceAmount": 0,
-      "amountPaid": 0,
-      "balanceAmount": 0,
-      "paymentMethod": "Cash",
-      "paymentStatus": "UNPAID",
-      "orderDate": "2026-11-19",
-      "dueDate": "2026-11-19",
-      "priority": "Normal",
-      "deliveryNotes": "",
-      "referralId": "",
-      "referredBy": "",
-      "referralNotes": ""
-    }
-  },
-  {
-    "id": "A145",
-    "serialNumber": "SR-145",
-    "status": "DELIVERED",
-    "currentStep": 1,
-    "createdAt": "2026-11-19T00:00:00.000Z",
-    "updatedAt": "2026-11-19T00:00:00.000Z",
-    "customer": {
-      "customerId": "A145",
-      "billNumber": "A145",
-      "date": "2026-11-19",
-      "customerName": "Arulmozhi",
-      "relationshipType": "D/O",
-      "fatherName": "",
-      "husbandName": "",
-      "primaryPhone": "7397188600",
-      "secondaryPhone": "9597158308",
-      "fullAddress": "",
-      "areaLocation": ""
-    },
-    "garmentQuantities": [],
-    "measurements": {
-      "id": "meas-A145",
-      "name": "",
-      "unit": "in",
-      "date": "2026-11-19",
-      "shoulder": "",
-      "chest": "",
-      "bust": "",
-      "upperBust": "",
-      "underBust": "",
-      "waist": "",
-      "hip": "",
-      "armhole": "",
-      "sleeveLength": "",
-      "sleeveRound": "",
-      "bicep": "",
-      "elbow": "",
-      "wrist": "",
-      "blouseLength": "",
-      "topLength": "",
-      "frontLength": "",
-      "backLength": "",
-      "frontNeckDepth": "",
-      "backNeckDepth": "",
-      "frontNeckWidth": "",
-      "backNeckWidth": "",
-      "lowerWaist": "",
-      "lowerHip": "",
-      "thigh": "",
-      "knee": "",
-      "calf": "",
-      "ankle": "",
-      "bottomLength": "",
-      "inseam": "",
-      "outseam": "",
-      "crotch": "",
-      "customFields": [],
-      "notes": ""
-    },
-    "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
-    "billing": {
-      "items": [],
-      "additionalCharges": {
-        "stitchingCharges": 0,
-        "materialCharges": 0,
-        "designCharges": 0,
-        "otherCharges": 0,
-        "discount": 0
-      },
-      "subtotal": 0,
-      "grandTotal": 0,
-      "advanceAmount": 0,
-      "amountPaid": 0,
-      "balanceAmount": 0,
-      "paymentMethod": "Cash",
-      "paymentStatus": "UNPAID",
-      "orderDate": "2026-11-19",
-      "dueDate": "2026-11-19",
-      "priority": "Normal",
-      "deliveryNotes": "",
-      "referralId": "",
-      "referredBy": "",
-      "referralNotes": ""
-    }
-  },
-  {
-    "id": "A146",
-    "serialNumber": "SR-146",
-    "status": "DELIVERED",
-    "currentStep": 1,
-    "createdAt": "2026-11-19T00:00:00.000Z",
-    "updatedAt": "2026-11-19T00:00:00.000Z",
-    "customer": {
-      "customerId": "A146",
-      "billNumber": "A146",
-      "date": "2026-11-19",
-      "customerName": "Alamelu",
-      "relationshipType": "D/O",
-      "fatherName": "",
-      "husbandName": "",
-      "primaryPhone": "9345066488",
-      "secondaryPhone": "",
-      "fullAddress": "",
-      "areaLocation": ""
-    },
-    "garmentQuantities": [],
-    "measurements": {
-      "id": "meas-A146",
-      "name": "",
-      "unit": "in",
-      "date": "2026-11-19",
-      "shoulder": "",
-      "chest": "",
-      "bust": "",
-      "upperBust": "",
-      "underBust": "",
-      "waist": "",
-      "hip": "",
-      "armhole": "",
-      "sleeveLength": "",
-      "sleeveRound": "",
-      "bicep": "",
-      "elbow": "",
-      "wrist": "",
-      "blouseLength": "",
-      "topLength": "",
-      "frontLength": "",
-      "backLength": "",
-      "frontNeckDepth": "",
-      "backNeckDepth": "",
-      "frontNeckWidth": "",
-      "backNeckWidth": "",
-      "lowerWaist": "",
-      "lowerHip": "",
-      "thigh": "",
-      "knee": "",
-      "calf": "",
-      "ankle": "",
-      "bottomLength": "",
-      "inseam": "",
-      "outseam": "",
-      "crotch": "",
-      "customFields": [],
-      "notes": ""
-    },
-    "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
-    "billing": {
-      "items": [],
-      "additionalCharges": {
-        "stitchingCharges": 0,
-        "materialCharges": 0,
-        "designCharges": 0,
-        "otherCharges": 0,
-        "discount": 0
-      },
-      "subtotal": 0,
-      "grandTotal": 0,
-      "advanceAmount": 0,
-      "amountPaid": 0,
-      "balanceAmount": 0,
-      "paymentMethod": "Cash",
-      "paymentStatus": "UNPAID",
-      "orderDate": "2026-11-19",
-      "dueDate": "2026-11-19",
-      "priority": "Normal",
-      "deliveryNotes": "",
-      "referralId": "",
-      "referredBy": "",
-      "referralNotes": ""
-    }
-  },
-  {
-    "id": "A147",
-    "serialNumber": "SR-147",
-    "status": "DELIVERED",
-    "currentStep": 1,
-    "createdAt": "2026-11-19T00:00:00.000Z",
-    "updatedAt": "2026-11-19T00:00:00.000Z",
-    "customer": {
-      "customerId": "A147",
-      "billNumber": "A147",
-      "date": "2026-11-19",
-      "customerName": "Annie",
-      "relationshipType": "D/O",
-      "fatherName": "",
-      "husbandName": "",
-      "primaryPhone": "9894058784",
-      "secondaryPhone": "0416 2287230",
-      "fullAddress": "",
-      "areaLocation": ""
-    },
-    "garmentQuantities": [],
-    "measurements": {
-      "id": "meas-A147",
-      "name": "",
-      "unit": "in",
-      "date": "2026-11-19",
-      "shoulder": "",
-      "chest": "",
-      "bust": "",
-      "upperBust": "",
-      "underBust": "",
-      "waist": "",
-      "hip": "",
-      "armhole": "",
-      "sleeveLength": "",
-      "sleeveRound": "",
-      "bicep": "",
-      "elbow": "",
-      "wrist": "",
-      "blouseLength": "",
-      "topLength": "",
-      "frontLength": "",
-      "backLength": "",
-      "frontNeckDepth": "",
-      "backNeckDepth": "",
-      "frontNeckWidth": "",
-      "backNeckWidth": "",
-      "lowerWaist": "",
-      "lowerHip": "",
-      "thigh": "",
-      "knee": "",
-      "calf": "",
-      "ankle": "",
-      "bottomLength": "",
-      "inseam": "",
-      "outseam": "",
-      "crotch": "",
-      "customFields": [],
-      "notes": ""
-    },
-    "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
-    "billing": {
-      "items": [],
-      "additionalCharges": {
-        "stitchingCharges": 0,
-        "materialCharges": 0,
-        "designCharges": 0,
-        "otherCharges": 0,
-        "discount": 0
-      },
-      "subtotal": 0,
-      "grandTotal": 0,
-      "advanceAmount": 0,
-      "amountPaid": 0,
-      "balanceAmount": 0,
-      "paymentMethod": "Cash",
-      "paymentStatus": "UNPAID",
-      "orderDate": "2026-11-19",
-      "dueDate": "2026-11-19",
-      "priority": "Normal",
-      "deliveryNotes": "",
-      "referralId": "",
-      "referredBy": "",
-      "referralNotes": ""
-    }
-  },
-  {
-    "id": "A148",
-    "serialNumber": "SR-148",
-    "status": "DELIVERED",
-    "currentStep": 1,
-    "createdAt": "2026-11-19T00:00:00.000Z",
-    "updatedAt": "2026-11-19T00:00:00.000Z",
-    "customer": {
-      "customerId": "A148",
-      "billNumber": "A148",
-      "date": "2026-11-19",
-      "customerName": "Anbarasi",
-      "relationshipType": "D/O",
-      "fatherName": "",
-      "husbandName": "",
-      "primaryPhone": "9894058784",
-      "secondaryPhone": "0416 2287230",
-      "fullAddress": "Maharani Ice Cream",
-      "areaLocation": "Maharani Ice Cream"
-    },
-    "garmentQuantities": [],
-    "measurements": {
-      "id": "meas-A148",
-      "name": "",
-      "unit": "in",
-      "date": "2026-11-19",
-      "shoulder": "",
-      "chest": "",
-      "bust": "",
-      "upperBust": "",
-      "underBust": "",
-      "waist": "",
-      "hip": "",
-      "armhole": "",
-      "sleeveLength": "",
-      "sleeveRound": "",
-      "bicep": "",
-      "elbow": "",
-      "wrist": "",
-      "blouseLength": "",
-      "topLength": "",
-      "frontLength": "",
-      "backLength": "",
-      "frontNeckDepth": "",
-      "backNeckDepth": "",
-      "frontNeckWidth": "",
-      "backNeckWidth": "",
-      "lowerWaist": "",
-      "lowerHip": "",
-      "thigh": "",
-      "knee": "",
-      "calf": "",
-      "ankle": "",
-      "bottomLength": "",
-      "inseam": "",
-      "outseam": "",
-      "crotch": "",
-      "customFields": [],
-      "notes": "Maharani Ice Cream"
-    },
-    "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
-    "billing": {
-      "items": [],
-      "additionalCharges": {
-        "stitchingCharges": 0,
-        "materialCharges": 0,
-        "designCharges": 0,
-        "otherCharges": 0,
-        "discount": 0
-      },
-      "subtotal": 0,
-      "grandTotal": 0,
-      "advanceAmount": 0,
-      "amountPaid": 0,
-      "balanceAmount": 0,
-      "paymentMethod": "Cash",
-      "paymentStatus": "UNPAID",
-      "orderDate": "2026-11-19",
-      "dueDate": "2026-11-19",
-      "priority": "Normal",
-      "deliveryNotes": "",
-      "referralId": "",
-      "referredBy": "",
-      "referralNotes": ""
-    }
-  },
-  {
-    "id": "A149",
-    "serialNumber": "SR-149",
-    "status": "DELIVERED",
-    "currentStep": 1,
-    "createdAt": "2026-11-19T00:00:00.000Z",
-    "updatedAt": "2026-11-19T00:00:00.000Z",
-    "customer": {
-      "customerId": "A149",
-      "billNumber": "A149",
-      "date": "2026-11-19",
-      "customerName": "Anusuya",
-      "relationshipType": "D/O",
-      "fatherName": "",
-      "husbandName": "",
-      "primaryPhone": "9150142661",
-      "secondaryPhone": "",
-      "fullAddress": "MDY",
-      "areaLocation": "MDY"
-    },
-    "garmentQuantities": [],
-    "measurements": {
-      "id": "meas-A149",
-      "name": "",
-      "unit": "in",
-      "date": "2026-11-19",
-      "shoulder": "",
-      "chest": "",
-      "bust": "",
-      "upperBust": "",
-      "underBust": "",
-      "waist": "",
-      "hip": "",
-      "armhole": "",
-      "sleeveLength": "",
-      "sleeveRound": "",
-      "bicep": "",
-      "elbow": "",
-      "wrist": "",
-      "blouseLength": "",
-      "topLength": "",
-      "frontLength": "",
-      "backLength": "",
-      "frontNeckDepth": "",
-      "backNeckDepth": "",
-      "frontNeckWidth": "",
-      "backNeckWidth": "",
-      "lowerWaist": "",
-      "lowerHip": "",
-      "thigh": "",
-      "knee": "",
-      "calf": "",
-      "ankle": "",
-      "bottomLength": "",
-      "inseam": "",
-      "outseam": "",
-      "crotch": "",
-      "customFields": [],
-      "notes": "MDY"
-    },
-    "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
-    "billing": {
-      "items": [],
-      "additionalCharges": {
-        "stitchingCharges": 0,
-        "materialCharges": 0,
-        "designCharges": 0,
-        "otherCharges": 0,
-        "discount": 0
-      },
-      "subtotal": 0,
-      "grandTotal": 0,
-      "advanceAmount": 0,
-      "amountPaid": 0,
-      "balanceAmount": 0,
-      "paymentMethod": "Cash",
-      "paymentStatus": "UNPAID",
-      "orderDate": "2026-11-19",
-      "dueDate": "2026-11-19",
-      "priority": "Normal",
-      "deliveryNotes": "",
-      "referralId": "",
-      "referredBy": "",
-      "referralNotes": ""
-    }
-  },
-  {
-    "id": "A150",
-    "serialNumber": "SR-150",
-    "status": "DELIVERED",
-    "currentStep": 1,
-    "createdAt": "2026-11-19T00:00:00.000Z",
-    "updatedAt": "2026-11-19T00:00:00.000Z",
-    "customer": {
-      "customerId": "A150",
-      "billNumber": "A150",
-      "date": "2026-11-19",
-      "customerName": "Alice M.I",
-      "relationshipType": "D/O",
-      "fatherName": "",
-      "husbandName": "",
-      "primaryPhone": "9442193502",
-      "secondaryPhone": "",
-      "fullAddress": "",
-      "areaLocation": ""
-    },
-    "garmentQuantities": [],
-    "measurements": {
-      "id": "meas-A150",
-      "name": "",
-      "unit": "in",
-      "date": "2026-11-19",
-      "shoulder": "",
-      "chest": "",
-      "bust": "",
-      "upperBust": "",
-      "underBust": "",
-      "waist": "",
-      "hip": "",
-      "armhole": "",
-      "sleeveLength": "",
-      "sleeveRound": "",
-      "bicep": "",
-      "elbow": "",
-      "wrist": "",
-      "blouseLength": "",
-      "topLength": "",
-      "frontLength": "",
-      "backLength": "",
-      "frontNeckDepth": "",
-      "backNeckDepth": "",
-      "frontNeckWidth": "",
-      "backNeckWidth": "",
-      "lowerWaist": "",
-      "lowerHip": "",
-      "thigh": "",
-      "knee": "",
-      "calf": "",
-      "ankle": "",
-      "bottomLength": "",
-      "inseam": "",
-      "outseam": "",
-      "crotch": "",
-      "customFields": [],
-      "notes": ""
-    },
-    "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
-    "billing": {
-      "items": [],
-      "additionalCharges": {
-        "stitchingCharges": 0,
-        "materialCharges": 0,
-        "designCharges": 0,
-        "otherCharges": 0,
-        "discount": 0
-      },
-      "subtotal": 0,
-      "grandTotal": 0,
-      "advanceAmount": 0,
-      "amountPaid": 0,
-      "balanceAmount": 0,
-      "paymentMethod": "Cash",
-      "paymentStatus": "UNPAID",
-      "orderDate": "2026-11-19",
-      "dueDate": "2026-11-19",
-      "priority": "Normal",
-      "deliveryNotes": "",
-      "referralId": "",
-      "referredBy": "",
-      "referralNotes": ""
-    }
-  },
-  {
-    "id": "A151",
-    "serialNumber": "SR-151",
-    "status": "DELIVERED",
-    "currentStep": 1,
-    "createdAt": "2026-11-19T00:00:00.000Z",
-    "updatedAt": "2026-11-19T00:00:00.000Z",
-    "customer": {
-      "customerId": "A151",
-      "billNumber": "A151",
-      "date": "2026-11-19",
-      "customerName": "Amudha A",
-      "relationshipType": "D/O",
-      "fatherName": "",
-      "husbandName": "",
-      "primaryPhone": "9841734244",
-      "secondaryPhone": "",
-      "fullAddress": "",
-      "areaLocation": ""
-    },
-    "garmentQuantities": [],
-    "measurements": {
-      "id": "meas-A151",
-      "name": "",
-      "unit": "in",
-      "date": "2026-11-19",
-      "shoulder": "",
-      "chest": "",
-      "bust": "",
-      "upperBust": "",
-      "underBust": "",
-      "waist": "",
-      "hip": "",
-      "armhole": "",
-      "sleeveLength": "",
-      "sleeveRound": "",
-      "bicep": "",
-      "elbow": "",
-      "wrist": "",
-      "blouseLength": "",
-      "topLength": "",
-      "frontLength": "",
-      "backLength": "",
-      "frontNeckDepth": "",
-      "backNeckDepth": "",
-      "frontNeckWidth": "",
-      "backNeckWidth": "",
-      "lowerWaist": "",
-      "lowerHip": "",
-      "thigh": "",
-      "knee": "",
-      "calf": "",
-      "ankle": "",
-      "bottomLength": "",
-      "inseam": "",
-      "outseam": "",
-      "crotch": "",
-      "customFields": [],
-      "notes": ""
-    },
-    "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
-    "billing": {
-      "items": [],
-      "additionalCharges": {
-        "stitchingCharges": 0,
-        "materialCharges": 0,
-        "designCharges": 0,
-        "otherCharges": 0,
-        "discount": 0
-      },
-      "subtotal": 0,
-      "grandTotal": 0,
-      "advanceAmount": 0,
-      "amountPaid": 0,
-      "balanceAmount": 0,
-      "paymentMethod": "Cash",
-      "paymentStatus": "UNPAID",
-      "orderDate": "2026-11-19",
-      "dueDate": "2026-11-19",
-      "priority": "Normal",
-      "deliveryNotes": "",
-      "referralId": "",
-      "referredBy": "",
-      "referralNotes": ""
-    }
-  },
-  {
-    "id": "A152",
-    "serialNumber": "SR-152",
-    "status": "DELIVERED",
-    "currentStep": 1,
-    "createdAt": "2026-11-19T00:00:00.000Z",
-    "updatedAt": "2026-11-19T00:00:00.000Z",
-    "customer": {
-      "customerId": "A152",
-      "billNumber": "A152",
-      "date": "2026-11-19",
-      "customerName": "Aishwarya",
-      "relationshipType": "D/O",
-      "fatherName": "",
-      "husbandName": "",
-      "primaryPhone": "8525839950",
-      "secondaryPhone": "",
-      "fullAddress": "",
-      "areaLocation": ""
-    },
-    "garmentQuantities": [],
-    "measurements": {
-      "id": "meas-A152",
-      "name": "",
-      "unit": "in",
-      "date": "2026-11-19",
-      "shoulder": "",
-      "chest": "",
-      "bust": "",
-      "upperBust": "",
-      "underBust": "",
-      "waist": "",
-      "hip": "",
-      "armhole": "",
-      "sleeveLength": "",
-      "sleeveRound": "",
-      "bicep": "",
-      "elbow": "",
-      "wrist": "",
-      "blouseLength": "",
-      "topLength": "",
-      "frontLength": "",
-      "backLength": "",
-      "frontNeckDepth": "",
-      "backNeckDepth": "",
-      "frontNeckWidth": "",
-      "backNeckWidth": "",
-      "lowerWaist": "",
-      "lowerHip": "",
-      "thigh": "",
-      "knee": "",
-      "calf": "",
-      "ankle": "",
-      "bottomLength": "",
-      "inseam": "",
-      "outseam": "",
-      "crotch": "",
-      "customFields": [],
-      "notes": ""
-    },
-    "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
-    "billing": {
-      "items": [],
-      "additionalCharges": {
-        "stitchingCharges": 0,
-        "materialCharges": 0,
-        "designCharges": 0,
-        "otherCharges": 0,
-        "discount": 0
-      },
-      "subtotal": 0,
-      "grandTotal": 0,
-      "advanceAmount": 0,
-      "amountPaid": 0,
-      "balanceAmount": 0,
-      "paymentMethod": "Cash",
-      "paymentStatus": "UNPAID",
-      "orderDate": "2026-11-19",
-      "dueDate": "2026-11-19",
-      "priority": "Normal",
-      "deliveryNotes": "",
-      "referralId": "",
-      "referredBy": "",
-      "referralNotes": ""
-    }
-  },
-  {
-    "id": "A153",
-    "serialNumber": "SR-153",
-    "status": "DELIVERED",
-    "currentStep": 1,
-    "createdAt": "2026-11-19T00:00:00.000Z",
-    "updatedAt": "2026-11-19T00:00:00.000Z",
-    "customer": {
-      "customerId": "A153",
-      "billNumber": "A153",
-      "date": "2026-11-19",
-      "customerName": "Abirami S",
-      "relationshipType": "D/O",
-      "fatherName": "",
-      "husbandName": "",
-      "primaryPhone": "9994364298",
-      "secondaryPhone": "",
-      "fullAddress": "",
-      "areaLocation": ""
-    },
-    "garmentQuantities": [],
-    "measurements": {
-      "id": "meas-A153",
-      "name": "",
-      "unit": "in",
-      "date": "2026-11-19",
-      "shoulder": "",
-      "chest": "",
-      "bust": "",
-      "upperBust": "",
-      "underBust": "",
-      "waist": "",
-      "hip": "",
-      "armhole": "",
-      "sleeveLength": "",
-      "sleeveRound": "",
-      "bicep": "",
-      "elbow": "",
-      "wrist": "",
-      "blouseLength": "",
-      "topLength": "",
-      "frontLength": "",
-      "backLength": "",
-      "frontNeckDepth": "",
-      "backNeckDepth": "",
-      "frontNeckWidth": "",
-      "backNeckWidth": "",
-      "lowerWaist": "",
-      "lowerHip": "",
-      "thigh": "",
-      "knee": "",
-      "calf": "",
-      "ankle": "",
-      "bottomLength": "",
-      "inseam": "",
-      "outseam": "",
-      "crotch": "",
-      "customFields": [],
-      "notes": ""
-    },
-    "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
-    "billing": {
-      "items": [],
-      "additionalCharges": {
-        "stitchingCharges": 0,
-        "materialCharges": 0,
-        "designCharges": 0,
-        "otherCharges": 0,
-        "discount": 0
-      },
-      "subtotal": 0,
-      "grandTotal": 0,
-      "advanceAmount": 0,
-      "amountPaid": 0,
-      "balanceAmount": 0,
-      "paymentMethod": "Cash",
-      "paymentStatus": "UNPAID",
-      "orderDate": "2026-11-19",
-      "dueDate": "2026-11-19",
-      "priority": "Normal",
-      "deliveryNotes": "",
-      "referralId": "",
-      "referredBy": "",
-      "referralNotes": ""
-    }
-  },
-  {
-    "id": "A154",
-    "serialNumber": "SR-154",
-    "status": "DELIVERED",
-    "currentStep": 1,
-    "createdAt": "2026-11-19T00:00:00.000Z",
-    "updatedAt": "2026-11-19T00:00:00.000Z",
-    "customer": {
-      "customerId": "A154",
-      "billNumber": "A154",
-      "date": "2026-11-19",
-      "customerName": "Arthi",
-      "relationshipType": "D/O",
-      "fatherName": "",
-      "husbandName": "",
-      "primaryPhone": "8144442554",
-      "secondaryPhone": "8098222554",
-      "fullAddress": "",
-      "areaLocation": ""
-    },
-    "garmentQuantities": [],
-    "measurements": {
-      "id": "meas-A154",
-      "name": "",
-      "unit": "in",
-      "date": "2026-11-19",
-      "shoulder": "",
-      "chest": "",
-      "bust": "",
-      "upperBust": "",
-      "underBust": "",
-      "waist": "",
-      "hip": "",
-      "armhole": "",
-      "sleeveLength": "",
-      "sleeveRound": "",
-      "bicep": "",
-      "elbow": "",
-      "wrist": "",
-      "blouseLength": "",
-      "topLength": "",
-      "frontLength": "",
-      "backLength": "",
-      "frontNeckDepth": "",
-      "backNeckDepth": "",
-      "frontNeckWidth": "",
-      "backNeckWidth": "",
-      "lowerWaist": "",
-      "lowerHip": "",
-      "thigh": "",
-      "knee": "",
-      "calf": "",
-      "ankle": "",
-      "bottomLength": "",
-      "inseam": "",
-      "outseam": "",
-      "crotch": "",
-      "customFields": [],
-      "notes": ""
-    },
-    "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -15405,7 +17575,7 @@ export const SAMPLE_ORDERS: Order[] = [
   },
   {
     "id": "A155",
-    "serialNumber": "SR-155",
+    "serialNumber": "SR-136",
     "status": "DELIVERED",
     "currentStep": 1,
     "createdAt": "2026-11-19T00:00:00.000Z",
@@ -15414,12 +17584,13 @@ export const SAMPLE_ORDERS: Order[] = [
       "customerId": "A155",
       "billNumber": "A155",
       "date": "2026-11-19",
-      "customerName": "Aashna K",
+      "customerName": "Aswini",
       "relationshipType": "D/O",
       "fatherName": "",
       "husbandName": "",
-      "primaryPhone": "9443966371",
+      "primaryPhone": "7092748789",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -15460,24 +17631,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -15505,7 +17705,7 @@ export const SAMPLE_ORDERS: Order[] = [
   },
   {
     "id": "A156",
-    "serialNumber": "SR-156",
+    "serialNumber": "SR-137",
     "status": "DELIVERED",
     "currentStep": 1,
     "createdAt": "2026-11-19T00:00:00.000Z",
@@ -15514,12 +17714,13 @@ export const SAMPLE_ORDERS: Order[] = [
       "customerId": "A156",
       "billNumber": "A156",
       "date": "2026-11-19",
-      "customerName": "Amudha G",
+      "customerName": "Afriya",
       "relationshipType": "D/O",
       "fatherName": "",
       "husbandName": "",
-      "primaryPhone": "9994515956",
+      "primaryPhone": "7339689164",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -15560,24 +17761,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
-      "notes": ""
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
+      "notes": "L. Banu Pandi in law"
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -15605,7 +17835,7 @@ export const SAMPLE_ORDERS: Order[] = [
   },
   {
     "id": "A157",
-    "serialNumber": "SR-157",
+    "serialNumber": "SR-138",
     "status": "DELIVERED",
     "currentStep": 1,
     "createdAt": "2026-11-19T00:00:00.000Z",
@@ -15614,12 +17844,13 @@ export const SAMPLE_ORDERS: Order[] = [
       "customerId": "A157",
       "billNumber": "A157",
       "date": "2026-11-19",
-      "customerName": "Aparna T.P",
+      "customerName": "Anitha B",
       "relationshipType": "D/O",
       "fatherName": "",
       "husbandName": "",
-      "primaryPhone": "8220248296",
+      "primaryPhone": "8667816743",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -15660,24 +17891,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -15705,7 +17965,7 @@ export const SAMPLE_ORDERS: Order[] = [
   },
   {
     "id": "A158",
-    "serialNumber": "SR-158",
+    "serialNumber": "SR-139",
     "status": "DELIVERED",
     "currentStep": 1,
     "createdAt": "2026-11-19T00:00:00.000Z",
@@ -15714,12 +17974,13 @@ export const SAMPLE_ORDERS: Order[] = [
       "customerId": "A158",
       "billNumber": "A158",
       "date": "2026-11-19",
-      "customerName": "Aarthy P",
+      "customerName": "Amudha C",
       "relationshipType": "D/O",
       "fatherName": "",
       "husbandName": "",
-      "primaryPhone": "9003049229",
+      "primaryPhone": "9629988041",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -15760,24 +18021,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -15805,7 +18095,7 @@ export const SAMPLE_ORDERS: Order[] = [
   },
   {
     "id": "A159",
-    "serialNumber": "SR-159",
+    "serialNumber": "SR-140",
     "status": "DELIVERED",
     "currentStep": 1,
     "createdAt": "2026-11-19T00:00:00.000Z",
@@ -15814,12 +18104,13 @@ export const SAMPLE_ORDERS: Order[] = [
       "customerId": "A159",
       "billNumber": "A159",
       "date": "2026-11-19",
-      "customerName": "Abitha Sri",
+      "customerName": "Ananya",
       "relationshipType": "D/O",
       "fatherName": "",
       "husbandName": "",
-      "primaryPhone": "9486170781",
-      "secondaryPhone": "9500262620",
+      "primaryPhone": "9994560762",
+      "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -15860,24 +18151,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -15905,7 +18225,7 @@ export const SAMPLE_ORDERS: Order[] = [
   },
   {
     "id": "A160",
-    "serialNumber": "SR-160",
+    "serialNumber": "SR-141",
     "status": "DELIVERED",
     "currentStep": 1,
     "createdAt": "2026-11-19T00:00:00.000Z",
@@ -15914,14 +18234,15 @@ export const SAMPLE_ORDERS: Order[] = [
       "customerId": "A160",
       "billNumber": "A160",
       "date": "2026-11-19",
-      "customerName": "Aarthi V",
+      "customerName": "Abirami P",
       "relationshipType": "D/O",
       "fatherName": "",
       "husbandName": "",
-      "primaryPhone": "9790005843",
-      "secondaryPhone": "7708979941",
-      "fullAddress": "Arthi mother",
-      "areaLocation": "Arthi mother"
+      "primaryPhone": "6380052004",
+      "secondaryPhone": "",
+      "additionalPhones": [],
+      "fullAddress": "",
+      "areaLocation": ""
     },
     "garmentQuantities": [],
     "measurements": {
@@ -15960,24 +18281,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
-      "notes": "Arthi mother"
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
+      "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -16005,7 +18355,7 @@ export const SAMPLE_ORDERS: Order[] = [
   },
   {
     "id": "A161",
-    "serialNumber": "SR-161",
+    "serialNumber": "SR-142",
     "status": "DELIVERED",
     "currentStep": 1,
     "createdAt": "2026-11-19T00:00:00.000Z",
@@ -16014,12 +18364,13 @@ export const SAMPLE_ORDERS: Order[] = [
       "customerId": "A161",
       "billNumber": "A161",
       "date": "2026-11-19",
-      "customerName": "Aleetha",
+      "customerName": "Aarthi Nirthan",
       "relationshipType": "D/O",
       "fatherName": "",
       "husbandName": "",
-      "primaryPhone": "9994640670",
+      "primaryPhone": "7708979941",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -16060,24 +18411,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -16105,7 +18485,7 @@ export const SAMPLE_ORDERS: Order[] = [
   },
   {
     "id": "A162",
-    "serialNumber": "SR-162",
+    "serialNumber": "SR-143",
     "status": "DELIVERED",
     "currentStep": 1,
     "createdAt": "2026-11-19T00:00:00.000Z",
@@ -16114,12 +18494,13 @@ export const SAMPLE_ORDERS: Order[] = [
       "customerId": "A162",
       "billNumber": "A162",
       "date": "2026-11-19",
-      "customerName": "Abirami M",
+      "customerName": "Agasthya",
       "relationshipType": "D/O",
       "fatherName": "",
       "husbandName": "",
-      "primaryPhone": "9994052934",
+      "primaryPhone": "9786489910",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -16160,24 +18541,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -16205,7 +18615,7 @@ export const SAMPLE_ORDERS: Order[] = [
   },
   {
     "id": "A163",
-    "serialNumber": "SR-163",
+    "serialNumber": "SR-144",
     "status": "DELIVERED",
     "currentStep": 1,
     "createdAt": "2026-11-19T00:00:00.000Z",
@@ -16214,12 +18624,15 @@ export const SAMPLE_ORDERS: Order[] = [
       "customerId": "A163",
       "billNumber": "A163",
       "date": "2026-11-19",
-      "customerName": "Anitha R",
+      "customerName": "Amutha M",
       "relationshipType": "D/O",
       "fatherName": "",
       "husbandName": "",
-      "primaryPhone": "9629940010",
-      "secondaryPhone": "",
+      "primaryPhone": "9486944451",
+      "secondaryPhone": "9442307791",
+      "additionalPhones": [
+        "9176303366"
+      ],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -16260,24 +18673,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -16305,7 +18747,7 @@ export const SAMPLE_ORDERS: Order[] = [
   },
   {
     "id": "A164",
-    "serialNumber": "SR-164",
+    "serialNumber": "SR-145",
     "status": "DELIVERED",
     "currentStep": 1,
     "createdAt": "2026-11-19T00:00:00.000Z",
@@ -16314,12 +18756,13 @@ export const SAMPLE_ORDERS: Order[] = [
       "customerId": "A164",
       "billNumber": "A164",
       "date": "2026-11-19",
-      "customerName": "Ajitha S",
+      "customerName": "Arulmozhi",
       "relationshipType": "D/O",
       "fatherName": "",
       "husbandName": "",
-      "primaryPhone": "8754607065",
-      "secondaryPhone": "",
+      "primaryPhone": "7397188600",
+      "secondaryPhone": "9597158308",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -16360,24 +18803,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -16405,7 +18877,7 @@ export const SAMPLE_ORDERS: Order[] = [
   },
   {
     "id": "A165",
-    "serialNumber": "SR-165",
+    "serialNumber": "SR-146",
     "status": "DELIVERED",
     "currentStep": 1,
     "createdAt": "2026-11-19T00:00:00.000Z",
@@ -16414,12 +18886,13 @@ export const SAMPLE_ORDERS: Order[] = [
       "customerId": "A165",
       "billNumber": "A165",
       "date": "2026-11-19",
-      "customerName": "Arulchelvi",
+      "customerName": "Alamelu",
       "relationshipType": "D/O",
       "fatherName": "",
       "husbandName": "",
-      "primaryPhone": "7358041853",
+      "primaryPhone": "9345066488",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -16460,24 +18933,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -16505,7 +19007,7 @@ export const SAMPLE_ORDERS: Order[] = [
   },
   {
     "id": "A166",
-    "serialNumber": "SR-166",
+    "serialNumber": "SR-147",
     "status": "DELIVERED",
     "currentStep": 1,
     "createdAt": "2026-11-19T00:00:00.000Z",
@@ -16514,12 +19016,13 @@ export const SAMPLE_ORDERS: Order[] = [
       "customerId": "A166",
       "billNumber": "A166",
       "date": "2026-11-19",
-      "customerName": "Amirtha",
+      "customerName": "Annie",
       "relationshipType": "D/O",
       "fatherName": "",
       "husbandName": "",
-      "primaryPhone": "6381367756",
-      "secondaryPhone": "",
+      "primaryPhone": "9894058784",
+      "secondaryPhone": "0416 2287230",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -16560,24 +19063,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -16605,7 +19137,7 @@ export const SAMPLE_ORDERS: Order[] = [
   },
   {
     "id": "A167",
-    "serialNumber": "SR-167",
+    "serialNumber": "SR-148",
     "status": "DELIVERED",
     "currentStep": 1,
     "createdAt": "2026-11-19T00:00:00.000Z",
@@ -16614,12 +19146,13 @@ export const SAMPLE_ORDERS: Order[] = [
       "customerId": "A167",
       "billNumber": "A167",
       "date": "2026-11-19",
-      "customerName": "Akshaya",
+      "customerName": "Anbarasi",
       "relationshipType": "D/O",
       "fatherName": "",
       "husbandName": "",
-      "primaryPhone": "9566393550",
-      "secondaryPhone": "",
+      "primaryPhone": "9894058784",
+      "secondaryPhone": "0416 2287230",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -16660,24 +19193,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
-      "notes": ""
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
+      "notes": "Maharani Ice Cream"
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -16705,7 +19267,7 @@ export const SAMPLE_ORDERS: Order[] = [
   },
   {
     "id": "A168",
-    "serialNumber": "SR-168",
+    "serialNumber": "SR-149",
     "status": "DELIVERED",
     "currentStep": 1,
     "createdAt": "2026-11-19T00:00:00.000Z",
@@ -16714,12 +19276,13 @@ export const SAMPLE_ORDERS: Order[] = [
       "customerId": "A168",
       "billNumber": "A168",
       "date": "2026-11-19",
-      "customerName": "Arthi Mam",
+      "customerName": "Anusuya",
       "relationshipType": "D/O",
       "fatherName": "",
       "husbandName": "",
-      "primaryPhone": "9944310293",
+      "primaryPhone": "9150142661",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -16760,24 +19323,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
-      "notes": ""
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
+      "notes": "MDY"
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -16805,7 +19397,7 @@ export const SAMPLE_ORDERS: Order[] = [
   },
   {
     "id": "A169",
-    "serialNumber": "SR-169",
+    "serialNumber": "SR-150",
     "status": "DELIVERED",
     "currentStep": 1,
     "createdAt": "2026-11-19T00:00:00.000Z",
@@ -16814,14 +19406,15 @@ export const SAMPLE_ORDERS: Order[] = [
       "customerId": "A169",
       "billNumber": "A169",
       "date": "2026-11-19",
-      "customerName": "Aruna T",
+      "customerName": "Alice M.I",
       "relationshipType": "D/O",
       "fatherName": "",
       "husbandName": "",
-      "primaryPhone": "9486271235",
+      "primaryPhone": "9442193502",
       "secondaryPhone": "",
-      "fullAddress": "3 dot · MDG",
-      "areaLocation": "3 dot · MDG"
+      "additionalPhones": [],
+      "fullAddress": "",
+      "areaLocation": ""
     },
     "garmentQuantities": [],
     "measurements": {
@@ -16860,24 +19453,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
-      "notes": "3 dot · MDG"
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
+      "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -16905,7 +19527,7 @@ export const SAMPLE_ORDERS: Order[] = [
   },
   {
     "id": "A170",
-    "serialNumber": "SR-170",
+    "serialNumber": "SR-151",
     "status": "DELIVERED",
     "currentStep": 1,
     "createdAt": "2026-11-19T00:00:00.000Z",
@@ -16914,12 +19536,13 @@ export const SAMPLE_ORDERS: Order[] = [
       "customerId": "A170",
       "billNumber": "A170",
       "date": "2026-11-19",
-      "customerName": "Anitha S.K",
+      "customerName": "Amudha A",
       "relationshipType": "D/O",
       "fatherName": "",
       "husbandName": "",
-      "primaryPhone": "9448231479",
+      "primaryPhone": "9841734244",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -16960,24 +19583,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -17005,7 +19657,7 @@ export const SAMPLE_ORDERS: Order[] = [
   },
   {
     "id": "A171",
-    "serialNumber": "SR-171",
+    "serialNumber": "SR-152",
     "status": "DELIVERED",
     "currentStep": 1,
     "createdAt": "2026-11-19T00:00:00.000Z",
@@ -17014,12 +19666,13 @@ export const SAMPLE_ORDERS: Order[] = [
       "customerId": "A171",
       "billNumber": "A171",
       "date": "2026-11-19",
-      "customerName": "Abitha",
+      "customerName": "Aishwarya",
       "relationshipType": "D/O",
       "fatherName": "",
       "husbandName": "",
-      "primaryPhone": "9003538648",
+      "primaryPhone": "8525839950",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -17060,24 +19713,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -17105,7 +19787,7 @@ export const SAMPLE_ORDERS: Order[] = [
   },
   {
     "id": "A172",
-    "serialNumber": "SR-172",
+    "serialNumber": "SR-153",
     "status": "DELIVERED",
     "currentStep": 1,
     "createdAt": "2026-11-19T00:00:00.000Z",
@@ -17114,12 +19796,13 @@ export const SAMPLE_ORDERS: Order[] = [
       "customerId": "A172",
       "billNumber": "A172",
       "date": "2026-11-19",
-      "customerName": "Aswini",
+      "customerName": "Abirami S",
       "relationshipType": "D/O",
       "fatherName": "",
       "husbandName": "",
-      "primaryPhone": "7092748789",
+      "primaryPhone": "9994364298",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -17160,24 +19843,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -17205,7 +19917,7 @@ export const SAMPLE_ORDERS: Order[] = [
   },
   {
     "id": "A173",
-    "serialNumber": "SR-173",
+    "serialNumber": "SR-154",
     "status": "DELIVERED",
     "currentStep": 1,
     "createdAt": "2026-11-19T00:00:00.000Z",
@@ -17214,14 +19926,15 @@ export const SAMPLE_ORDERS: Order[] = [
       "customerId": "A173",
       "billNumber": "A173",
       "date": "2026-11-19",
-      "customerName": "Avanthika",
+      "customerName": "Arthi",
       "relationshipType": "D/O",
       "fatherName": "",
       "husbandName": "",
-      "primaryPhone": "9985577468",
-      "secondaryPhone": "",
-      "fullAddress": "Old: Y.Pali",
-      "areaLocation": "Old: Y.Pali"
+      "primaryPhone": "8144442554",
+      "secondaryPhone": "8098222554",
+      "additionalPhones": [],
+      "fullAddress": "",
+      "areaLocation": ""
     },
     "garmentQuantities": [],
     "measurements": {
@@ -17260,24 +19973,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
-      "notes": "Old: Y.Pali"
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
+      "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -17305,7 +20047,7 @@ export const SAMPLE_ORDERS: Order[] = [
   },
   {
     "id": "A174",
-    "serialNumber": "SR-174",
+    "serialNumber": "SR-155",
     "status": "DELIVERED",
     "currentStep": 1,
     "createdAt": "2026-11-19T00:00:00.000Z",
@@ -17314,12 +20056,13 @@ export const SAMPLE_ORDERS: Order[] = [
       "customerId": "A174",
       "billNumber": "A174",
       "date": "2026-11-19",
-      "customerName": "Asha",
+      "customerName": "Aashna K",
       "relationshipType": "D/O",
       "fatherName": "",
       "husbandName": "",
-      "primaryPhone": "9952332058",
+      "primaryPhone": "9443966371",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -17360,24 +20103,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -17405,7 +20177,7 @@ export const SAMPLE_ORDERS: Order[] = [
   },
   {
     "id": "A175",
-    "serialNumber": "SR-175",
+    "serialNumber": "SR-156",
     "status": "DELIVERED",
     "currentStep": 1,
     "createdAt": "2026-11-19T00:00:00.000Z",
@@ -17414,14 +20186,15 @@ export const SAMPLE_ORDERS: Order[] = [
       "customerId": "A175",
       "billNumber": "A175",
       "date": "2026-11-19",
-      "customerName": "Aruna V",
+      "customerName": "Amudha G",
       "relationshipType": "D/O",
       "fatherName": "",
       "husbandName": "",
-      "primaryPhone": "8883007710",
+      "primaryPhone": "9994515956",
       "secondaryPhone": "",
-      "fullAddress": "Old: Alipanam",
-      "areaLocation": "Old: Alipanam"
+      "additionalPhones": [],
+      "fullAddress": "",
+      "areaLocation": ""
     },
     "garmentQuantities": [],
     "measurements": {
@@ -17460,24 +20233,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
-      "notes": "Old: Alipanam"
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
+      "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -17505,7 +20307,7 @@ export const SAMPLE_ORDERS: Order[] = [
   },
   {
     "id": "A176",
-    "serialNumber": "SR-176",
+    "serialNumber": "SR-157",
     "status": "DELIVERED",
     "currentStep": 1,
     "createdAt": "2026-11-19T00:00:00.000Z",
@@ -17514,12 +20316,13 @@ export const SAMPLE_ORDERS: Order[] = [
       "customerId": "A176",
       "billNumber": "A176",
       "date": "2026-11-19",
-      "customerName": "Arulmozhi",
+      "customerName": "Aparna T.P",
       "relationshipType": "D/O",
       "fatherName": "",
       "husbandName": "",
-      "primaryPhone": "9445677579",
+      "primaryPhone": "8220248296",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -17560,24 +20363,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -17605,7 +20437,7 @@ export const SAMPLE_ORDERS: Order[] = [
   },
   {
     "id": "A177",
-    "serialNumber": "SR-177",
+    "serialNumber": "SR-158",
     "status": "DELIVERED",
     "currentStep": 1,
     "createdAt": "2026-11-19T00:00:00.000Z",
@@ -17614,14 +20446,15 @@ export const SAMPLE_ORDERS: Order[] = [
       "customerId": "A177",
       "billNumber": "A177",
       "date": "2026-11-19",
-      "customerName": "Anantha G",
+      "customerName": "Aarthy P",
       "relationshipType": "D/O",
       "fatherName": "",
       "husbandName": "",
-      "primaryPhone": "9944467685",
+      "primaryPhone": "9003049229",
       "secondaryPhone": "",
-      "fullAddress": "Old: Kalanikathi S",
-      "areaLocation": "Old: Kalanikathi S"
+      "additionalPhones": [],
+      "fullAddress": "",
+      "areaLocation": ""
     },
     "garmentQuantities": [],
     "measurements": {
@@ -17660,24 +20493,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
-      "notes": "Old: Kalanikathi S"
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
+      "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -17705,7 +20567,7 @@ export const SAMPLE_ORDERS: Order[] = [
   },
   {
     "id": "A178",
-    "serialNumber": "SR-178",
+    "serialNumber": "SR-159",
     "status": "DELIVERED",
     "currentStep": 1,
     "createdAt": "2026-11-19T00:00:00.000Z",
@@ -17714,14 +20576,15 @@ export const SAMPLE_ORDERS: Order[] = [
       "customerId": "A178",
       "billNumber": "A178",
       "date": "2026-11-19",
-      "customerName": "Aswini",
+      "customerName": "Abitha Sri",
       "relationshipType": "D/O",
       "fatherName": "",
       "husbandName": "",
-      "primaryPhone": "9080303410",
-      "secondaryPhone": "",
-      "fullAddress": "Old: Kaspa",
-      "areaLocation": "Old: Kaspa"
+      "primaryPhone": "9486170781",
+      "secondaryPhone": "9500262620",
+      "additionalPhones": [],
+      "fullAddress": "",
+      "areaLocation": ""
     },
     "garmentQuantities": [],
     "measurements": {
@@ -17760,24 +20623,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
-      "notes": "Old: Kaspa"
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
+      "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -17805,7 +20697,7 @@ export const SAMPLE_ORDERS: Order[] = [
   },
   {
     "id": "A179",
-    "serialNumber": "SR-179",
+    "serialNumber": "SR-160",
     "status": "DELIVERED",
     "currentStep": 1,
     "createdAt": "2026-11-19T00:00:00.000Z",
@@ -17814,14 +20706,15 @@ export const SAMPLE_ORDERS: Order[] = [
       "customerId": "A179",
       "billNumber": "A179",
       "date": "2026-11-19",
-      "customerName": "Arthi",
+      "customerName": "Aarthi V",
       "relationshipType": "D/O",
       "fatherName": "",
       "husbandName": "",
-      "primaryPhone": "8056370377",
-      "secondaryPhone": "",
-      "fullAddress": "Old: Arcot",
-      "areaLocation": "Old: Arcot"
+      "primaryPhone": "9790005843",
+      "secondaryPhone": "7708979941",
+      "additionalPhones": [],
+      "fullAddress": "",
+      "areaLocation": ""
     },
     "garmentQuantities": [],
     "measurements": {
@@ -17860,24 +20753,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
-      "notes": "Old: Arcot"
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
+      "notes": "Arthi mother"
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -17905,7 +20827,7 @@ export const SAMPLE_ORDERS: Order[] = [
   },
   {
     "id": "A180",
-    "serialNumber": "SR-180",
+    "serialNumber": "SR-161",
     "status": "DELIVERED",
     "currentStep": 1,
     "createdAt": "2026-11-19T00:00:00.000Z",
@@ -17914,12 +20836,13 @@ export const SAMPLE_ORDERS: Order[] = [
       "customerId": "A180",
       "billNumber": "A180",
       "date": "2026-11-19",
-      "customerName": "Amutha R",
+      "customerName": "Aleetha",
       "relationshipType": "D/O",
       "fatherName": "",
       "husbandName": "",
-      "primaryPhone": "9786488079",
+      "primaryPhone": "9994640670",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -17960,24 +20883,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -18005,7 +20957,7 @@ export const SAMPLE_ORDERS: Order[] = [
   },
   {
     "id": "A181",
-    "serialNumber": "SR-181",
+    "serialNumber": "SR-162",
     "status": "DELIVERED",
     "currentStep": 1,
     "createdAt": "2026-11-19T00:00:00.000Z",
@@ -18014,14 +20966,15 @@ export const SAMPLE_ORDERS: Order[] = [
       "customerId": "A181",
       "billNumber": "A181",
       "date": "2026-11-19",
-      "customerName": "Abirami",
+      "customerName": "Abirami M",
       "relationshipType": "D/O",
       "fatherName": "",
       "husbandName": "",
-      "primaryPhone": "9486461101",
+      "primaryPhone": "9994052934",
       "secondaryPhone": "",
-      "fullAddress": "Old: Chennai",
-      "areaLocation": "Old: Chennai"
+      "additionalPhones": [],
+      "fullAddress": "",
+      "areaLocation": ""
     },
     "garmentQuantities": [],
     "measurements": {
@@ -18060,24 +21013,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
-      "notes": "Old: Chennai"
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
+      "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -18105,7 +21087,7 @@ export const SAMPLE_ORDERS: Order[] = [
   },
   {
     "id": "A182",
-    "serialNumber": "SR-182",
+    "serialNumber": "SR-163",
     "status": "DELIVERED",
     "currentStep": 1,
     "createdAt": "2026-11-19T00:00:00.000Z",
@@ -18114,12 +21096,13 @@ export const SAMPLE_ORDERS: Order[] = [
       "customerId": "A182",
       "billNumber": "A182",
       "date": "2026-11-19",
-      "customerName": "Anushaya",
+      "customerName": "Anitha R",
       "relationshipType": "D/O",
       "fatherName": "",
       "husbandName": "",
-      "primaryPhone": "9486161101",
+      "primaryPhone": "9629940010",
       "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -18160,24 +21143,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -18205,7 +21217,7 @@ export const SAMPLE_ORDERS: Order[] = [
   },
   {
     "id": "A183",
-    "serialNumber": "SR-183",
+    "serialNumber": "SR-164",
     "status": "DELIVERED",
     "currentStep": 1,
     "createdAt": "2026-11-19T00:00:00.000Z",
@@ -18214,14 +21226,15 @@ export const SAMPLE_ORDERS: Order[] = [
       "customerId": "A183",
       "billNumber": "A183",
       "date": "2026-11-19",
-      "customerName": "Anandhi M",
+      "customerName": "Ajitha S",
       "relationshipType": "D/O",
       "fatherName": "",
       "husbandName": "",
-      "primaryPhone": "9790438159",
+      "primaryPhone": "8754607065",
       "secondaryPhone": "",
-      "fullAddress": "Old: Etteri",
-      "areaLocation": "Old: Etteri"
+      "additionalPhones": [],
+      "fullAddress": "",
+      "areaLocation": ""
     },
     "garmentQuantities": [],
     "measurements": {
@@ -18260,24 +21273,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
-      "notes": "Old: Etteri"
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
+      "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -18305,7 +21347,7 @@ export const SAMPLE_ORDERS: Order[] = [
   },
   {
     "id": "A184",
-    "serialNumber": "SR-184",
+    "serialNumber": "SR-165",
     "status": "DELIVERED",
     "currentStep": 1,
     "createdAt": "2026-11-19T00:00:00.000Z",
@@ -18314,14 +21356,15 @@ export const SAMPLE_ORDERS: Order[] = [
       "customerId": "A184",
       "billNumber": "A184",
       "date": "2026-11-19",
-      "customerName": "Akshitha S",
+      "customerName": "Arulchelvi",
       "relationshipType": "D/O",
       "fatherName": "",
       "husbandName": "",
-      "primaryPhone": "8056045519",
+      "primaryPhone": "7358041853",
       "secondaryPhone": "",
-      "fullAddress": "Old: Vidyapadi",
-      "areaLocation": "Old: Vidyapadi"
+      "additionalPhones": [],
+      "fullAddress": "",
+      "areaLocation": ""
     },
     "garmentQuantities": [],
     "measurements": {
@@ -18360,24 +21403,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
-      "notes": "Old: Vidyapadi"
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
+      "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -18405,7 +21477,7 @@ export const SAMPLE_ORDERS: Order[] = [
   },
   {
     "id": "A185",
-    "serialNumber": "SR-185",
+    "serialNumber": "SR-166",
     "status": "DELIVERED",
     "currentStep": 1,
     "createdAt": "2026-11-19T00:00:00.000Z",
@@ -18414,14 +21486,15 @@ export const SAMPLE_ORDERS: Order[] = [
       "customerId": "A185",
       "billNumber": "A185",
       "date": "2026-11-19",
-      "customerName": "Anbarasi T",
+      "customerName": "Amirtha",
       "relationshipType": "D/O",
       "fatherName": "",
       "husbandName": "",
-      "primaryPhone": "7010227337",
+      "primaryPhone": "6381367756",
       "secondaryPhone": "",
-      "fullAddress": "Old: Valantharam",
-      "areaLocation": "Old: Valantharam"
+      "additionalPhones": [],
+      "fullAddress": "",
+      "areaLocation": ""
     },
     "garmentQuantities": [],
     "measurements": {
@@ -18460,24 +21533,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
-      "notes": "Old: Valantharam"
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
+      "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -18505,7 +21607,7 @@ export const SAMPLE_ORDERS: Order[] = [
   },
   {
     "id": "A186",
-    "serialNumber": "SR-186",
+    "serialNumber": "SR-167",
     "status": "DELIVERED",
     "currentStep": 1,
     "createdAt": "2026-11-19T00:00:00.000Z",
@@ -18514,14 +21616,15 @@ export const SAMPLE_ORDERS: Order[] = [
       "customerId": "A186",
       "billNumber": "A186",
       "date": "2026-11-19",
-      "customerName": "Anitha",
+      "customerName": "Akshaya",
       "relationshipType": "D/O",
       "fatherName": "",
       "husbandName": "",
-      "primaryPhone": "9626179196",
+      "primaryPhone": "9566393550",
       "secondaryPhone": "",
-      "fullAddress": "Old: Thellur",
-      "areaLocation": "Old: Thellur"
+      "additionalPhones": [],
+      "fullAddress": "",
+      "areaLocation": ""
     },
     "garmentQuantities": [],
     "measurements": {
@@ -18560,24 +21663,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
-      "notes": "Old: Thellur"
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
+      "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -18605,7 +21737,7 @@ export const SAMPLE_ORDERS: Order[] = [
   },
   {
     "id": "A187",
-    "serialNumber": "SR-187",
+    "serialNumber": "SR-168",
     "status": "DELIVERED",
     "currentStep": 1,
     "createdAt": "2026-11-19T00:00:00.000Z",
@@ -18614,14 +21746,15 @@ export const SAMPLE_ORDERS: Order[] = [
       "customerId": "A187",
       "billNumber": "A187",
       "date": "2026-11-19",
-      "customerName": "Arthi",
+      "customerName": "Arthi Mam",
       "relationshipType": "D/O",
       "fatherName": "",
       "husbandName": "",
-      "primaryPhone": "7812811493",
+      "primaryPhone": "9944310293",
       "secondaryPhone": "",
-      "fullAddress": "Old: Chetpet",
-      "areaLocation": "Old: Chetpet"
+      "additionalPhones": [],
+      "fullAddress": "",
+      "areaLocation": ""
     },
     "garmentQuantities": [],
     "measurements": {
@@ -18660,24 +21793,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
-      "notes": "Old: Chetpet"
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
+      "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -18705,7 +21867,7 @@ export const SAMPLE_ORDERS: Order[] = [
   },
   {
     "id": "A188",
-    "serialNumber": "SR-188",
+    "serialNumber": "SR-169",
     "status": "DELIVERED",
     "currentStep": 1,
     "createdAt": "2026-11-19T00:00:00.000Z",
@@ -18714,14 +21876,15 @@ export const SAMPLE_ORDERS: Order[] = [
       "customerId": "A188",
       "billNumber": "A188",
       "date": "2026-11-19",
-      "customerName": "Anitha K",
+      "customerName": "Aruna T",
       "relationshipType": "D/O",
       "fatherName": "",
       "husbandName": "",
-      "primaryPhone": "9095441111",
+      "primaryPhone": "9486271235",
       "secondaryPhone": "",
-      "fullAddress": "Kannamangalam",
-      "areaLocation": "Kannamangalam"
+      "additionalPhones": [],
+      "fullAddress": "",
+      "areaLocation": ""
     },
     "garmentQuantities": [],
     "measurements": {
@@ -18760,24 +21923,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
-      "notes": "Kannamangalam"
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
+      "notes": "3 dot \u00b7 MDG"
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -18805,7 +21997,7 @@ export const SAMPLE_ORDERS: Order[] = [
   },
   {
     "id": "A189",
-    "serialNumber": "SR-189",
+    "serialNumber": "SR-170",
     "status": "DELIVERED",
     "currentStep": 1,
     "createdAt": "2026-11-19T00:00:00.000Z",
@@ -18814,12 +22006,13 @@ export const SAMPLE_ORDERS: Order[] = [
       "customerId": "A189",
       "billNumber": "A189",
       "date": "2026-11-19",
-      "customerName": "Amudha",
+      "customerName": "Anitha S.K",
       "relationshipType": "D/O",
       "fatherName": "",
       "husbandName": "",
-      "primaryPhone": "8248530355",
-      "secondaryPhone": "Bhavani mother",
+      "primaryPhone": "9448231479",
+      "secondaryPhone": "",
+      "additionalPhones": [],
       "fullAddress": "",
       "areaLocation": ""
     },
@@ -18860,24 +22053,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -18905,7 +22127,7 @@ export const SAMPLE_ORDERS: Order[] = [
   },
   {
     "id": "A190",
-    "serialNumber": "SR-190",
+    "serialNumber": "SR-171",
     "status": "DELIVERED",
     "currentStep": 1,
     "createdAt": "2026-11-19T00:00:00.000Z",
@@ -18914,14 +22136,15 @@ export const SAMPLE_ORDERS: Order[] = [
       "customerId": "A190",
       "billNumber": "A190",
       "date": "2026-11-19",
-      "customerName": "Ananya",
+      "customerName": "Abitha",
       "relationshipType": "D/O",
       "fatherName": "",
       "husbandName": "",
-      "primaryPhone": "6144701345",
+      "primaryPhone": "9003538648",
       "secondaryPhone": "",
-      "fullAddress": "Anustilla",
-      "areaLocation": "Anustilla"
+      "additionalPhones": [],
+      "fullAddress": "",
+      "areaLocation": ""
     },
     "garmentQuantities": [],
     "measurements": {
@@ -18960,24 +22183,53 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
-      "notes": "Anustilla"
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
+      "notes": ""
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
@@ -19005,7 +22257,7 @@ export const SAMPLE_ORDERS: Order[] = [
   },
   {
     "id": "A191",
-    "serialNumber": "SR-191",
+    "serialNumber": "SR-172",
     "status": "DELIVERED",
     "currentStep": 1,
     "createdAt": "2026-11-19T00:00:00.000Z",
@@ -19014,14 +22266,15 @@ export const SAMPLE_ORDERS: Order[] = [
       "customerId": "A191",
       "billNumber": "A191",
       "date": "2026-11-19",
-      "customerName": "Arulmozhi",
+      "customerName": "Aswini",
       "relationshipType": "D/O",
       "fatherName": "",
       "husbandName": "",
-      "primaryPhone": "8883188414",
+      "primaryPhone": "7092748789",
       "secondaryPhone": "",
-      "fullAddress": "Dr Priya",
-      "areaLocation": "Dr Priya"
+      "additionalPhones": [],
+      "fullAddress": "",
+      "areaLocation": ""
     },
     "garmentQuantities": [],
     "measurements": {
@@ -19060,24 +22313,2523 @@ export const SAMPLE_ORDERS: Order[] = [
       "inseam": "",
       "outseam": "",
       "crotch": "",
-      "customFields": [],
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
+      "notes": ""
+    },
+    "garmentSpecs": [],
+    "billing": {
+      "items": [],
+      "additionalCharges": {
+        "stitchingCharges": 0,
+        "materialCharges": 0,
+        "designCharges": 0,
+        "otherCharges": 0,
+        "discount": 0
+      },
+      "subtotal": 0,
+      "grandTotal": 0,
+      "advanceAmount": 0,
+      "amountPaid": 0,
+      "balanceAmount": 0,
+      "paymentMethod": "Cash",
+      "paymentStatus": "UNPAID",
+      "orderDate": "2026-11-19",
+      "dueDate": "2026-11-19",
+      "priority": "Normal",
+      "deliveryNotes": "",
+      "referralId": "",
+      "referredBy": "",
+      "referralNotes": ""
+    }
+  },
+  {
+    "id": "A192",
+    "serialNumber": "SR-173",
+    "status": "DELIVERED",
+    "currentStep": 1,
+    "createdAt": "2026-11-19T00:00:00.000Z",
+    "updatedAt": "2026-11-19T00:00:00.000Z",
+    "customer": {
+      "customerId": "A192",
+      "billNumber": "A192",
+      "date": "2026-11-19",
+      "customerName": "Avanthika",
+      "relationshipType": "D/O",
+      "fatherName": "",
+      "husbandName": "",
+      "primaryPhone": "9985577468",
+      "secondaryPhone": "",
+      "additionalPhones": [],
+      "fullAddress": "",
+      "areaLocation": ""
+    },
+    "garmentQuantities": [],
+    "measurements": {
+      "id": "meas-A192",
+      "name": "",
+      "unit": "in",
+      "date": "2026-11-19",
+      "shoulder": "",
+      "chest": "",
+      "bust": "",
+      "upperBust": "",
+      "underBust": "",
+      "waist": "",
+      "hip": "",
+      "armhole": "",
+      "sleeveLength": "",
+      "sleeveRound": "",
+      "bicep": "",
+      "elbow": "",
+      "wrist": "",
+      "blouseLength": "",
+      "topLength": "",
+      "frontLength": "",
+      "backLength": "",
+      "frontNeckDepth": "",
+      "backNeckDepth": "",
+      "frontNeckWidth": "",
+      "backNeckWidth": "",
+      "lowerWaist": "",
+      "lowerHip": "",
+      "thigh": "",
+      "knee": "",
+      "calf": "",
+      "ankle": "",
+      "bottomLength": "",
+      "inseam": "",
+      "outseam": "",
+      "crotch": "",
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
+      "notes": "Old: Y.Pali"
+    },
+    "garmentSpecs": [],
+    "billing": {
+      "items": [],
+      "additionalCharges": {
+        "stitchingCharges": 0,
+        "materialCharges": 0,
+        "designCharges": 0,
+        "otherCharges": 0,
+        "discount": 0
+      },
+      "subtotal": 0,
+      "grandTotal": 0,
+      "advanceAmount": 0,
+      "amountPaid": 0,
+      "balanceAmount": 0,
+      "paymentMethod": "Cash",
+      "paymentStatus": "UNPAID",
+      "orderDate": "2026-11-19",
+      "dueDate": "2026-11-19",
+      "priority": "Normal",
+      "deliveryNotes": "",
+      "referralId": "",
+      "referredBy": "",
+      "referralNotes": ""
+    }
+  },
+  {
+    "id": "A193",
+    "serialNumber": "SR-174",
+    "status": "DELIVERED",
+    "currentStep": 1,
+    "createdAt": "2026-11-19T00:00:00.000Z",
+    "updatedAt": "2026-11-19T00:00:00.000Z",
+    "customer": {
+      "customerId": "A193",
+      "billNumber": "A193",
+      "date": "2026-11-19",
+      "customerName": "Asha",
+      "relationshipType": "D/O",
+      "fatherName": "",
+      "husbandName": "",
+      "primaryPhone": "9952332058",
+      "secondaryPhone": "",
+      "additionalPhones": [],
+      "fullAddress": "",
+      "areaLocation": ""
+    },
+    "garmentQuantities": [],
+    "measurements": {
+      "id": "meas-A193",
+      "name": "",
+      "unit": "in",
+      "date": "2026-11-19",
+      "shoulder": "",
+      "chest": "",
+      "bust": "",
+      "upperBust": "",
+      "underBust": "",
+      "waist": "",
+      "hip": "",
+      "armhole": "",
+      "sleeveLength": "",
+      "sleeveRound": "",
+      "bicep": "",
+      "elbow": "",
+      "wrist": "",
+      "blouseLength": "",
+      "topLength": "",
+      "frontLength": "",
+      "backLength": "",
+      "frontNeckDepth": "",
+      "backNeckDepth": "",
+      "frontNeckWidth": "",
+      "backNeckWidth": "",
+      "lowerWaist": "",
+      "lowerHip": "",
+      "thigh": "",
+      "knee": "",
+      "calf": "",
+      "ankle": "",
+      "bottomLength": "",
+      "inseam": "",
+      "outseam": "",
+      "crotch": "",
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
+      "notes": ""
+    },
+    "garmentSpecs": [],
+    "billing": {
+      "items": [],
+      "additionalCharges": {
+        "stitchingCharges": 0,
+        "materialCharges": 0,
+        "designCharges": 0,
+        "otherCharges": 0,
+        "discount": 0
+      },
+      "subtotal": 0,
+      "grandTotal": 0,
+      "advanceAmount": 0,
+      "amountPaid": 0,
+      "balanceAmount": 0,
+      "paymentMethod": "Cash",
+      "paymentStatus": "UNPAID",
+      "orderDate": "2026-11-19",
+      "dueDate": "2026-11-19",
+      "priority": "Normal",
+      "deliveryNotes": "",
+      "referralId": "",
+      "referredBy": "",
+      "referralNotes": ""
+    }
+  },
+  {
+    "id": "A194",
+    "serialNumber": "SR-175",
+    "status": "DELIVERED",
+    "currentStep": 1,
+    "createdAt": "2026-11-19T00:00:00.000Z",
+    "updatedAt": "2026-11-19T00:00:00.000Z",
+    "customer": {
+      "customerId": "A194",
+      "billNumber": "A194",
+      "date": "2026-11-19",
+      "customerName": "Aruna V",
+      "relationshipType": "D/O",
+      "fatherName": "",
+      "husbandName": "",
+      "primaryPhone": "8883007710",
+      "secondaryPhone": "",
+      "additionalPhones": [],
+      "fullAddress": "",
+      "areaLocation": ""
+    },
+    "garmentQuantities": [],
+    "measurements": {
+      "id": "meas-A194",
+      "name": "",
+      "unit": "in",
+      "date": "2026-11-19",
+      "shoulder": "",
+      "chest": "",
+      "bust": "",
+      "upperBust": "",
+      "underBust": "",
+      "waist": "",
+      "hip": "",
+      "armhole": "",
+      "sleeveLength": "",
+      "sleeveRound": "",
+      "bicep": "",
+      "elbow": "",
+      "wrist": "",
+      "blouseLength": "",
+      "topLength": "",
+      "frontLength": "",
+      "backLength": "",
+      "frontNeckDepth": "",
+      "backNeckDepth": "",
+      "frontNeckWidth": "",
+      "backNeckWidth": "",
+      "lowerWaist": "",
+      "lowerHip": "",
+      "thigh": "",
+      "knee": "",
+      "calf": "",
+      "ankle": "",
+      "bottomLength": "",
+      "inseam": "",
+      "outseam": "",
+      "crotch": "",
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
+      "notes": "Old: Alipanam"
+    },
+    "garmentSpecs": [],
+    "billing": {
+      "items": [],
+      "additionalCharges": {
+        "stitchingCharges": 0,
+        "materialCharges": 0,
+        "designCharges": 0,
+        "otherCharges": 0,
+        "discount": 0
+      },
+      "subtotal": 0,
+      "grandTotal": 0,
+      "advanceAmount": 0,
+      "amountPaid": 0,
+      "balanceAmount": 0,
+      "paymentMethod": "Cash",
+      "paymentStatus": "UNPAID",
+      "orderDate": "2026-11-19",
+      "dueDate": "2026-11-19",
+      "priority": "Normal",
+      "deliveryNotes": "",
+      "referralId": "",
+      "referredBy": "",
+      "referralNotes": ""
+    }
+  },
+  {
+    "id": "A195",
+    "serialNumber": "SR-176",
+    "status": "DELIVERED",
+    "currentStep": 1,
+    "createdAt": "2026-11-19T00:00:00.000Z",
+    "updatedAt": "2026-11-19T00:00:00.000Z",
+    "customer": {
+      "customerId": "A195",
+      "billNumber": "A195",
+      "date": "2026-11-19",
+      "customerName": "Arulmozhi",
+      "relationshipType": "D/O",
+      "fatherName": "",
+      "husbandName": "",
+      "primaryPhone": "9445677579",
+      "secondaryPhone": "",
+      "additionalPhones": [],
+      "fullAddress": "",
+      "areaLocation": ""
+    },
+    "garmentQuantities": [],
+    "measurements": {
+      "id": "meas-A195",
+      "name": "",
+      "unit": "in",
+      "date": "2026-11-19",
+      "shoulder": "",
+      "chest": "",
+      "bust": "",
+      "upperBust": "",
+      "underBust": "",
+      "waist": "",
+      "hip": "",
+      "armhole": "",
+      "sleeveLength": "",
+      "sleeveRound": "",
+      "bicep": "",
+      "elbow": "",
+      "wrist": "",
+      "blouseLength": "",
+      "topLength": "",
+      "frontLength": "",
+      "backLength": "",
+      "frontNeckDepth": "",
+      "backNeckDepth": "",
+      "frontNeckWidth": "",
+      "backNeckWidth": "",
+      "lowerWaist": "",
+      "lowerHip": "",
+      "thigh": "",
+      "knee": "",
+      "calf": "",
+      "ankle": "",
+      "bottomLength": "",
+      "inseam": "",
+      "outseam": "",
+      "crotch": "",
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
+      "notes": ""
+    },
+    "garmentSpecs": [],
+    "billing": {
+      "items": [],
+      "additionalCharges": {
+        "stitchingCharges": 0,
+        "materialCharges": 0,
+        "designCharges": 0,
+        "otherCharges": 0,
+        "discount": 0
+      },
+      "subtotal": 0,
+      "grandTotal": 0,
+      "advanceAmount": 0,
+      "amountPaid": 0,
+      "balanceAmount": 0,
+      "paymentMethod": "Cash",
+      "paymentStatus": "UNPAID",
+      "orderDate": "2026-11-19",
+      "dueDate": "2026-11-19",
+      "priority": "Normal",
+      "deliveryNotes": "",
+      "referralId": "",
+      "referredBy": "",
+      "referralNotes": ""
+    }
+  },
+  {
+    "id": "A196",
+    "serialNumber": "SR-177",
+    "status": "DELIVERED",
+    "currentStep": 1,
+    "createdAt": "2026-11-19T00:00:00.000Z",
+    "updatedAt": "2026-11-19T00:00:00.000Z",
+    "customer": {
+      "customerId": "A196",
+      "billNumber": "A196",
+      "date": "2026-11-19",
+      "customerName": "Anantha G",
+      "relationshipType": "D/O",
+      "fatherName": "",
+      "husbandName": "",
+      "primaryPhone": "9944467685",
+      "secondaryPhone": "",
+      "additionalPhones": [],
+      "fullAddress": "",
+      "areaLocation": ""
+    },
+    "garmentQuantities": [],
+    "measurements": {
+      "id": "meas-A196",
+      "name": "",
+      "unit": "in",
+      "date": "2026-11-19",
+      "shoulder": "",
+      "chest": "",
+      "bust": "",
+      "upperBust": "",
+      "underBust": "",
+      "waist": "",
+      "hip": "",
+      "armhole": "",
+      "sleeveLength": "",
+      "sleeveRound": "",
+      "bicep": "",
+      "elbow": "",
+      "wrist": "",
+      "blouseLength": "",
+      "topLength": "",
+      "frontLength": "",
+      "backLength": "",
+      "frontNeckDepth": "",
+      "backNeckDepth": "",
+      "frontNeckWidth": "",
+      "backNeckWidth": "",
+      "lowerWaist": "",
+      "lowerHip": "",
+      "thigh": "",
+      "knee": "",
+      "calf": "",
+      "ankle": "",
+      "bottomLength": "",
+      "inseam": "",
+      "outseam": "",
+      "crotch": "",
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
+      "notes": "Old: Kalanikathi S"
+    },
+    "garmentSpecs": [],
+    "billing": {
+      "items": [],
+      "additionalCharges": {
+        "stitchingCharges": 0,
+        "materialCharges": 0,
+        "designCharges": 0,
+        "otherCharges": 0,
+        "discount": 0
+      },
+      "subtotal": 0,
+      "grandTotal": 0,
+      "advanceAmount": 0,
+      "amountPaid": 0,
+      "balanceAmount": 0,
+      "paymentMethod": "Cash",
+      "paymentStatus": "UNPAID",
+      "orderDate": "2026-11-19",
+      "dueDate": "2026-11-19",
+      "priority": "Normal",
+      "deliveryNotes": "",
+      "referralId": "",
+      "referredBy": "",
+      "referralNotes": ""
+    }
+  },
+  {
+    "id": "A197",
+    "serialNumber": "SR-178",
+    "status": "DELIVERED",
+    "currentStep": 1,
+    "createdAt": "2026-11-19T00:00:00.000Z",
+    "updatedAt": "2026-11-19T00:00:00.000Z",
+    "customer": {
+      "customerId": "A197",
+      "billNumber": "A197",
+      "date": "2026-11-19",
+      "customerName": "Aswini",
+      "relationshipType": "D/O",
+      "fatherName": "",
+      "husbandName": "",
+      "primaryPhone": "9080303410",
+      "secondaryPhone": "",
+      "additionalPhones": [],
+      "fullAddress": "",
+      "areaLocation": ""
+    },
+    "garmentQuantities": [],
+    "measurements": {
+      "id": "meas-A197",
+      "name": "",
+      "unit": "in",
+      "date": "2026-11-19",
+      "shoulder": "",
+      "chest": "",
+      "bust": "",
+      "upperBust": "",
+      "underBust": "",
+      "waist": "",
+      "hip": "",
+      "armhole": "",
+      "sleeveLength": "",
+      "sleeveRound": "",
+      "bicep": "",
+      "elbow": "",
+      "wrist": "",
+      "blouseLength": "",
+      "topLength": "",
+      "frontLength": "",
+      "backLength": "",
+      "frontNeckDepth": "",
+      "backNeckDepth": "",
+      "frontNeckWidth": "",
+      "backNeckWidth": "",
+      "lowerWaist": "",
+      "lowerHip": "",
+      "thigh": "",
+      "knee": "",
+      "calf": "",
+      "ankle": "",
+      "bottomLength": "",
+      "inseam": "",
+      "outseam": "",
+      "crotch": "",
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
+      "notes": "Old: Kaspa"
+    },
+    "garmentSpecs": [],
+    "billing": {
+      "items": [],
+      "additionalCharges": {
+        "stitchingCharges": 0,
+        "materialCharges": 0,
+        "designCharges": 0,
+        "otherCharges": 0,
+        "discount": 0
+      },
+      "subtotal": 0,
+      "grandTotal": 0,
+      "advanceAmount": 0,
+      "amountPaid": 0,
+      "balanceAmount": 0,
+      "paymentMethod": "Cash",
+      "paymentStatus": "UNPAID",
+      "orderDate": "2026-11-19",
+      "dueDate": "2026-11-19",
+      "priority": "Normal",
+      "deliveryNotes": "",
+      "referralId": "",
+      "referredBy": "",
+      "referralNotes": ""
+    }
+  },
+  {
+    "id": "A198",
+    "serialNumber": "SR-179",
+    "status": "DELIVERED",
+    "currentStep": 1,
+    "createdAt": "2026-11-19T00:00:00.000Z",
+    "updatedAt": "2026-11-19T00:00:00.000Z",
+    "customer": {
+      "customerId": "A198",
+      "billNumber": "A198",
+      "date": "2026-11-19",
+      "customerName": "Arthi",
+      "relationshipType": "D/O",
+      "fatherName": "",
+      "husbandName": "",
+      "primaryPhone": "8056370377",
+      "secondaryPhone": "",
+      "additionalPhones": [],
+      "fullAddress": "",
+      "areaLocation": ""
+    },
+    "garmentQuantities": [],
+    "measurements": {
+      "id": "meas-A198",
+      "name": "",
+      "unit": "in",
+      "date": "2026-11-19",
+      "shoulder": "",
+      "chest": "",
+      "bust": "",
+      "upperBust": "",
+      "underBust": "",
+      "waist": "",
+      "hip": "",
+      "armhole": "",
+      "sleeveLength": "",
+      "sleeveRound": "",
+      "bicep": "",
+      "elbow": "",
+      "wrist": "",
+      "blouseLength": "",
+      "topLength": "",
+      "frontLength": "",
+      "backLength": "",
+      "frontNeckDepth": "",
+      "backNeckDepth": "",
+      "frontNeckWidth": "",
+      "backNeckWidth": "",
+      "lowerWaist": "",
+      "lowerHip": "",
+      "thigh": "",
+      "knee": "",
+      "calf": "",
+      "ankle": "",
+      "bottomLength": "",
+      "inseam": "",
+      "outseam": "",
+      "crotch": "",
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
+      "notes": "Old: Arcot"
+    },
+    "garmentSpecs": [],
+    "billing": {
+      "items": [],
+      "additionalCharges": {
+        "stitchingCharges": 0,
+        "materialCharges": 0,
+        "designCharges": 0,
+        "otherCharges": 0,
+        "discount": 0
+      },
+      "subtotal": 0,
+      "grandTotal": 0,
+      "advanceAmount": 0,
+      "amountPaid": 0,
+      "balanceAmount": 0,
+      "paymentMethod": "Cash",
+      "paymentStatus": "UNPAID",
+      "orderDate": "2026-11-19",
+      "dueDate": "2026-11-19",
+      "priority": "Normal",
+      "deliveryNotes": "",
+      "referralId": "",
+      "referredBy": "",
+      "referralNotes": ""
+    }
+  },
+  {
+    "id": "A199",
+    "serialNumber": "SR-180",
+    "status": "DELIVERED",
+    "currentStep": 1,
+    "createdAt": "2026-11-19T00:00:00.000Z",
+    "updatedAt": "2026-11-19T00:00:00.000Z",
+    "customer": {
+      "customerId": "A199",
+      "billNumber": "A199",
+      "date": "2026-11-19",
+      "customerName": "Amutha R",
+      "relationshipType": "D/O",
+      "fatherName": "",
+      "husbandName": "",
+      "primaryPhone": "9786488079",
+      "secondaryPhone": "",
+      "additionalPhones": [],
+      "fullAddress": "",
+      "areaLocation": ""
+    },
+    "garmentQuantities": [],
+    "measurements": {
+      "id": "meas-A199",
+      "name": "",
+      "unit": "in",
+      "date": "2026-11-19",
+      "shoulder": "",
+      "chest": "",
+      "bust": "",
+      "upperBust": "",
+      "underBust": "",
+      "waist": "",
+      "hip": "",
+      "armhole": "",
+      "sleeveLength": "",
+      "sleeveRound": "",
+      "bicep": "",
+      "elbow": "",
+      "wrist": "",
+      "blouseLength": "",
+      "topLength": "",
+      "frontLength": "",
+      "backLength": "",
+      "frontNeckDepth": "",
+      "backNeckDepth": "",
+      "frontNeckWidth": "",
+      "backNeckWidth": "",
+      "lowerWaist": "",
+      "lowerHip": "",
+      "thigh": "",
+      "knee": "",
+      "calf": "",
+      "ankle": "",
+      "bottomLength": "",
+      "inseam": "",
+      "outseam": "",
+      "crotch": "",
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
+      "notes": ""
+    },
+    "garmentSpecs": [],
+    "billing": {
+      "items": [],
+      "additionalCharges": {
+        "stitchingCharges": 0,
+        "materialCharges": 0,
+        "designCharges": 0,
+        "otherCharges": 0,
+        "discount": 0
+      },
+      "subtotal": 0,
+      "grandTotal": 0,
+      "advanceAmount": 0,
+      "amountPaid": 0,
+      "balanceAmount": 0,
+      "paymentMethod": "Cash",
+      "paymentStatus": "UNPAID",
+      "orderDate": "2026-11-19",
+      "dueDate": "2026-11-19",
+      "priority": "Normal",
+      "deliveryNotes": "",
+      "referralId": "",
+      "referredBy": "",
+      "referralNotes": ""
+    }
+  },
+  {
+    "id": "A200",
+    "serialNumber": "SR-181",
+    "status": "DELIVERED",
+    "currentStep": 1,
+    "createdAt": "2026-11-19T00:00:00.000Z",
+    "updatedAt": "2026-11-19T00:00:00.000Z",
+    "customer": {
+      "customerId": "A200",
+      "billNumber": "A200",
+      "date": "2026-11-19",
+      "customerName": "Abirami",
+      "relationshipType": "D/O",
+      "fatherName": "",
+      "husbandName": "",
+      "primaryPhone": "9486461101",
+      "secondaryPhone": "",
+      "additionalPhones": [],
+      "fullAddress": "",
+      "areaLocation": ""
+    },
+    "garmentQuantities": [],
+    "measurements": {
+      "id": "meas-A200",
+      "name": "",
+      "unit": "in",
+      "date": "2026-11-19",
+      "shoulder": "",
+      "chest": "",
+      "bust": "",
+      "upperBust": "",
+      "underBust": "",
+      "waist": "",
+      "hip": "",
+      "armhole": "",
+      "sleeveLength": "",
+      "sleeveRound": "",
+      "bicep": "",
+      "elbow": "",
+      "wrist": "",
+      "blouseLength": "",
+      "topLength": "",
+      "frontLength": "",
+      "backLength": "",
+      "frontNeckDepth": "",
+      "backNeckDepth": "",
+      "frontNeckWidth": "",
+      "backNeckWidth": "",
+      "lowerWaist": "",
+      "lowerHip": "",
+      "thigh": "",
+      "knee": "",
+      "calf": "",
+      "ankle": "",
+      "bottomLength": "",
+      "inseam": "",
+      "outseam": "",
+      "crotch": "",
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
+      "notes": "Old: Chennai"
+    },
+    "garmentSpecs": [],
+    "billing": {
+      "items": [],
+      "additionalCharges": {
+        "stitchingCharges": 0,
+        "materialCharges": 0,
+        "designCharges": 0,
+        "otherCharges": 0,
+        "discount": 0
+      },
+      "subtotal": 0,
+      "grandTotal": 0,
+      "advanceAmount": 0,
+      "amountPaid": 0,
+      "balanceAmount": 0,
+      "paymentMethod": "Cash",
+      "paymentStatus": "UNPAID",
+      "orderDate": "2026-11-19",
+      "dueDate": "2026-11-19",
+      "priority": "Normal",
+      "deliveryNotes": "",
+      "referralId": "",
+      "referredBy": "",
+      "referralNotes": ""
+    }
+  },
+  {
+    "id": "A201",
+    "serialNumber": "SR-182",
+    "status": "DELIVERED",
+    "currentStep": 1,
+    "createdAt": "2026-11-19T00:00:00.000Z",
+    "updatedAt": "2026-11-19T00:00:00.000Z",
+    "customer": {
+      "customerId": "A201",
+      "billNumber": "A201",
+      "date": "2026-11-19",
+      "customerName": "Anushaya",
+      "relationshipType": "D/O",
+      "fatherName": "",
+      "husbandName": "",
+      "primaryPhone": "9486161101",
+      "secondaryPhone": "",
+      "additionalPhones": [],
+      "fullAddress": "",
+      "areaLocation": ""
+    },
+    "garmentQuantities": [],
+    "measurements": {
+      "id": "meas-A201",
+      "name": "",
+      "unit": "in",
+      "date": "2026-11-19",
+      "shoulder": "",
+      "chest": "",
+      "bust": "",
+      "upperBust": "",
+      "underBust": "",
+      "waist": "",
+      "hip": "",
+      "armhole": "",
+      "sleeveLength": "",
+      "sleeveRound": "",
+      "bicep": "",
+      "elbow": "",
+      "wrist": "",
+      "blouseLength": "",
+      "topLength": "",
+      "frontLength": "",
+      "backLength": "",
+      "frontNeckDepth": "",
+      "backNeckDepth": "",
+      "frontNeckWidth": "",
+      "backNeckWidth": "",
+      "lowerWaist": "",
+      "lowerHip": "",
+      "thigh": "",
+      "knee": "",
+      "calf": "",
+      "ankle": "",
+      "bottomLength": "",
+      "inseam": "",
+      "outseam": "",
+      "crotch": "",
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
+      "notes": ""
+    },
+    "garmentSpecs": [],
+    "billing": {
+      "items": [],
+      "additionalCharges": {
+        "stitchingCharges": 0,
+        "materialCharges": 0,
+        "designCharges": 0,
+        "otherCharges": 0,
+        "discount": 0
+      },
+      "subtotal": 0,
+      "grandTotal": 0,
+      "advanceAmount": 0,
+      "amountPaid": 0,
+      "balanceAmount": 0,
+      "paymentMethod": "Cash",
+      "paymentStatus": "UNPAID",
+      "orderDate": "2026-11-19",
+      "dueDate": "2026-11-19",
+      "priority": "Normal",
+      "deliveryNotes": "",
+      "referralId": "",
+      "referredBy": "",
+      "referralNotes": ""
+    }
+  },
+  {
+    "id": "A202",
+    "serialNumber": "SR-183",
+    "status": "DELIVERED",
+    "currentStep": 1,
+    "createdAt": "2026-11-19T00:00:00.000Z",
+    "updatedAt": "2026-11-19T00:00:00.000Z",
+    "customer": {
+      "customerId": "A202",
+      "billNumber": "A202",
+      "date": "2026-11-19",
+      "customerName": "Anandhi M",
+      "relationshipType": "D/O",
+      "fatherName": "",
+      "husbandName": "",
+      "primaryPhone": "9790438159",
+      "secondaryPhone": "",
+      "additionalPhones": [],
+      "fullAddress": "",
+      "areaLocation": ""
+    },
+    "garmentQuantities": [],
+    "measurements": {
+      "id": "meas-A202",
+      "name": "",
+      "unit": "in",
+      "date": "2026-11-19",
+      "shoulder": "",
+      "chest": "",
+      "bust": "",
+      "upperBust": "",
+      "underBust": "",
+      "waist": "",
+      "hip": "",
+      "armhole": "",
+      "sleeveLength": "",
+      "sleeveRound": "",
+      "bicep": "",
+      "elbow": "",
+      "wrist": "",
+      "blouseLength": "",
+      "topLength": "",
+      "frontLength": "",
+      "backLength": "",
+      "frontNeckDepth": "",
+      "backNeckDepth": "",
+      "frontNeckWidth": "",
+      "backNeckWidth": "",
+      "lowerWaist": "",
+      "lowerHip": "",
+      "thigh": "",
+      "knee": "",
+      "calf": "",
+      "ankle": "",
+      "bottomLength": "",
+      "inseam": "",
+      "outseam": "",
+      "crotch": "",
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
+      "notes": "Old: Etteri"
+    },
+    "garmentSpecs": [],
+    "billing": {
+      "items": [],
+      "additionalCharges": {
+        "stitchingCharges": 0,
+        "materialCharges": 0,
+        "designCharges": 0,
+        "otherCharges": 0,
+        "discount": 0
+      },
+      "subtotal": 0,
+      "grandTotal": 0,
+      "advanceAmount": 0,
+      "amountPaid": 0,
+      "balanceAmount": 0,
+      "paymentMethod": "Cash",
+      "paymentStatus": "UNPAID",
+      "orderDate": "2026-11-19",
+      "dueDate": "2026-11-19",
+      "priority": "Normal",
+      "deliveryNotes": "",
+      "referralId": "",
+      "referredBy": "",
+      "referralNotes": ""
+    }
+  },
+  {
+    "id": "A203",
+    "serialNumber": "SR-184",
+    "status": "DELIVERED",
+    "currentStep": 1,
+    "createdAt": "2026-11-19T00:00:00.000Z",
+    "updatedAt": "2026-11-19T00:00:00.000Z",
+    "customer": {
+      "customerId": "A203",
+      "billNumber": "A203",
+      "date": "2026-11-19",
+      "customerName": "Akshitha S",
+      "relationshipType": "D/O",
+      "fatherName": "",
+      "husbandName": "",
+      "primaryPhone": "8056045519",
+      "secondaryPhone": "",
+      "additionalPhones": [],
+      "fullAddress": "",
+      "areaLocation": ""
+    },
+    "garmentQuantities": [],
+    "measurements": {
+      "id": "meas-A203",
+      "name": "",
+      "unit": "in",
+      "date": "2026-11-19",
+      "shoulder": "",
+      "chest": "",
+      "bust": "",
+      "upperBust": "",
+      "underBust": "",
+      "waist": "",
+      "hip": "",
+      "armhole": "",
+      "sleeveLength": "",
+      "sleeveRound": "",
+      "bicep": "",
+      "elbow": "",
+      "wrist": "",
+      "blouseLength": "",
+      "topLength": "",
+      "frontLength": "",
+      "backLength": "",
+      "frontNeckDepth": "",
+      "backNeckDepth": "",
+      "frontNeckWidth": "",
+      "backNeckWidth": "",
+      "lowerWaist": "",
+      "lowerHip": "",
+      "thigh": "",
+      "knee": "",
+      "calf": "",
+      "ankle": "",
+      "bottomLength": "",
+      "inseam": "",
+      "outseam": "",
+      "crotch": "",
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
+      "notes": "Old: Vidyapadi"
+    },
+    "garmentSpecs": [],
+    "billing": {
+      "items": [],
+      "additionalCharges": {
+        "stitchingCharges": 0,
+        "materialCharges": 0,
+        "designCharges": 0,
+        "otherCharges": 0,
+        "discount": 0
+      },
+      "subtotal": 0,
+      "grandTotal": 0,
+      "advanceAmount": 0,
+      "amountPaid": 0,
+      "balanceAmount": 0,
+      "paymentMethod": "Cash",
+      "paymentStatus": "UNPAID",
+      "orderDate": "2026-11-19",
+      "dueDate": "2026-11-19",
+      "priority": "Normal",
+      "deliveryNotes": "",
+      "referralId": "",
+      "referredBy": "",
+      "referralNotes": ""
+    }
+  },
+  {
+    "id": "A204",
+    "serialNumber": "SR-185",
+    "status": "DELIVERED",
+    "currentStep": 1,
+    "createdAt": "2026-11-19T00:00:00.000Z",
+    "updatedAt": "2026-11-19T00:00:00.000Z",
+    "customer": {
+      "customerId": "A204",
+      "billNumber": "A204",
+      "date": "2026-11-19",
+      "customerName": "Anbarasi T",
+      "relationshipType": "D/O",
+      "fatherName": "",
+      "husbandName": "",
+      "primaryPhone": "7010227337",
+      "secondaryPhone": "",
+      "additionalPhones": [],
+      "fullAddress": "",
+      "areaLocation": ""
+    },
+    "garmentQuantities": [],
+    "measurements": {
+      "id": "meas-A204",
+      "name": "",
+      "unit": "in",
+      "date": "2026-11-19",
+      "shoulder": "",
+      "chest": "",
+      "bust": "",
+      "upperBust": "",
+      "underBust": "",
+      "waist": "",
+      "hip": "",
+      "armhole": "",
+      "sleeveLength": "",
+      "sleeveRound": "",
+      "bicep": "",
+      "elbow": "",
+      "wrist": "",
+      "blouseLength": "",
+      "topLength": "",
+      "frontLength": "",
+      "backLength": "",
+      "frontNeckDepth": "",
+      "backNeckDepth": "",
+      "frontNeckWidth": "",
+      "backNeckWidth": "",
+      "lowerWaist": "",
+      "lowerHip": "",
+      "thigh": "",
+      "knee": "",
+      "calf": "",
+      "ankle": "",
+      "bottomLength": "",
+      "inseam": "",
+      "outseam": "",
+      "crotch": "",
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
+      "notes": "Old: Valantharam"
+    },
+    "garmentSpecs": [],
+    "billing": {
+      "items": [],
+      "additionalCharges": {
+        "stitchingCharges": 0,
+        "materialCharges": 0,
+        "designCharges": 0,
+        "otherCharges": 0,
+        "discount": 0
+      },
+      "subtotal": 0,
+      "grandTotal": 0,
+      "advanceAmount": 0,
+      "amountPaid": 0,
+      "balanceAmount": 0,
+      "paymentMethod": "Cash",
+      "paymentStatus": "UNPAID",
+      "orderDate": "2026-11-19",
+      "dueDate": "2026-11-19",
+      "priority": "Normal",
+      "deliveryNotes": "",
+      "referralId": "",
+      "referredBy": "",
+      "referralNotes": ""
+    }
+  },
+  {
+    "id": "A205",
+    "serialNumber": "SR-186",
+    "status": "DELIVERED",
+    "currentStep": 1,
+    "createdAt": "2026-11-19T00:00:00.000Z",
+    "updatedAt": "2026-11-19T00:00:00.000Z",
+    "customer": {
+      "customerId": "A205",
+      "billNumber": "A205",
+      "date": "2026-11-19",
+      "customerName": "Anitha",
+      "relationshipType": "D/O",
+      "fatherName": "",
+      "husbandName": "",
+      "primaryPhone": "9626179196",
+      "secondaryPhone": "",
+      "additionalPhones": [],
+      "fullAddress": "",
+      "areaLocation": ""
+    },
+    "garmentQuantities": [],
+    "measurements": {
+      "id": "meas-A205",
+      "name": "",
+      "unit": "in",
+      "date": "2026-11-19",
+      "shoulder": "",
+      "chest": "",
+      "bust": "",
+      "upperBust": "",
+      "underBust": "",
+      "waist": "",
+      "hip": "",
+      "armhole": "",
+      "sleeveLength": "",
+      "sleeveRound": "",
+      "bicep": "",
+      "elbow": "",
+      "wrist": "",
+      "blouseLength": "",
+      "topLength": "",
+      "frontLength": "",
+      "backLength": "",
+      "frontNeckDepth": "",
+      "backNeckDepth": "",
+      "frontNeckWidth": "",
+      "backNeckWidth": "",
+      "lowerWaist": "",
+      "lowerHip": "",
+      "thigh": "",
+      "knee": "",
+      "calf": "",
+      "ankle": "",
+      "bottomLength": "",
+      "inseam": "",
+      "outseam": "",
+      "crotch": "",
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
+      "notes": "Old: Thellur"
+    },
+    "garmentSpecs": [],
+    "billing": {
+      "items": [],
+      "additionalCharges": {
+        "stitchingCharges": 0,
+        "materialCharges": 0,
+        "designCharges": 0,
+        "otherCharges": 0,
+        "discount": 0
+      },
+      "subtotal": 0,
+      "grandTotal": 0,
+      "advanceAmount": 0,
+      "amountPaid": 0,
+      "balanceAmount": 0,
+      "paymentMethod": "Cash",
+      "paymentStatus": "UNPAID",
+      "orderDate": "2026-11-19",
+      "dueDate": "2026-11-19",
+      "priority": "Normal",
+      "deliveryNotes": "",
+      "referralId": "",
+      "referredBy": "",
+      "referralNotes": ""
+    }
+  },
+  {
+    "id": "A206",
+    "serialNumber": "SR-187",
+    "status": "DELIVERED",
+    "currentStep": 1,
+    "createdAt": "2026-11-19T00:00:00.000Z",
+    "updatedAt": "2026-11-19T00:00:00.000Z",
+    "customer": {
+      "customerId": "A206",
+      "billNumber": "A206",
+      "date": "2026-11-19",
+      "customerName": "Arthi",
+      "relationshipType": "D/O",
+      "fatherName": "",
+      "husbandName": "",
+      "primaryPhone": "7812811493",
+      "secondaryPhone": "",
+      "additionalPhones": [],
+      "fullAddress": "",
+      "areaLocation": ""
+    },
+    "garmentQuantities": [],
+    "measurements": {
+      "id": "meas-A206",
+      "name": "",
+      "unit": "in",
+      "date": "2026-11-19",
+      "shoulder": "",
+      "chest": "",
+      "bust": "",
+      "upperBust": "",
+      "underBust": "",
+      "waist": "",
+      "hip": "",
+      "armhole": "",
+      "sleeveLength": "",
+      "sleeveRound": "",
+      "bicep": "",
+      "elbow": "",
+      "wrist": "",
+      "blouseLength": "",
+      "topLength": "",
+      "frontLength": "",
+      "backLength": "",
+      "frontNeckDepth": "",
+      "backNeckDepth": "",
+      "frontNeckWidth": "",
+      "backNeckWidth": "",
+      "lowerWaist": "",
+      "lowerHip": "",
+      "thigh": "",
+      "knee": "",
+      "calf": "",
+      "ankle": "",
+      "bottomLength": "",
+      "inseam": "",
+      "outseam": "",
+      "crotch": "",
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
+      "notes": "Old: Chetpet"
+    },
+    "garmentSpecs": [],
+    "billing": {
+      "items": [],
+      "additionalCharges": {
+        "stitchingCharges": 0,
+        "materialCharges": 0,
+        "designCharges": 0,
+        "otherCharges": 0,
+        "discount": 0
+      },
+      "subtotal": 0,
+      "grandTotal": 0,
+      "advanceAmount": 0,
+      "amountPaid": 0,
+      "balanceAmount": 0,
+      "paymentMethod": "Cash",
+      "paymentStatus": "UNPAID",
+      "orderDate": "2026-11-19",
+      "dueDate": "2026-11-19",
+      "priority": "Normal",
+      "deliveryNotes": "",
+      "referralId": "",
+      "referredBy": "",
+      "referralNotes": ""
+    }
+  },
+  {
+    "id": "A207",
+    "serialNumber": "SR-188",
+    "status": "DELIVERED",
+    "currentStep": 1,
+    "createdAt": "2026-11-19T00:00:00.000Z",
+    "updatedAt": "2026-11-19T00:00:00.000Z",
+    "customer": {
+      "customerId": "A207",
+      "billNumber": "A207",
+      "date": "2026-11-19",
+      "customerName": "Anitha K",
+      "relationshipType": "D/O",
+      "fatherName": "",
+      "husbandName": "",
+      "primaryPhone": "9095441111",
+      "secondaryPhone": "",
+      "additionalPhones": [],
+      "fullAddress": "",
+      "areaLocation": ""
+    },
+    "garmentQuantities": [],
+    "measurements": {
+      "id": "meas-A207",
+      "name": "",
+      "unit": "in",
+      "date": "2026-11-19",
+      "shoulder": "",
+      "chest": "",
+      "bust": "",
+      "upperBust": "",
+      "underBust": "",
+      "waist": "",
+      "hip": "",
+      "armhole": "",
+      "sleeveLength": "",
+      "sleeveRound": "",
+      "bicep": "",
+      "elbow": "",
+      "wrist": "",
+      "blouseLength": "",
+      "topLength": "",
+      "frontLength": "",
+      "backLength": "",
+      "frontNeckDepth": "",
+      "backNeckDepth": "",
+      "frontNeckWidth": "",
+      "backNeckWidth": "",
+      "lowerWaist": "",
+      "lowerHip": "",
+      "thigh": "",
+      "knee": "",
+      "calf": "",
+      "ankle": "",
+      "bottomLength": "",
+      "inseam": "",
+      "outseam": "",
+      "crotch": "",
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
+      "notes": "Kannamangalam"
+    },
+    "garmentSpecs": [],
+    "billing": {
+      "items": [],
+      "additionalCharges": {
+        "stitchingCharges": 0,
+        "materialCharges": 0,
+        "designCharges": 0,
+        "otherCharges": 0,
+        "discount": 0
+      },
+      "subtotal": 0,
+      "grandTotal": 0,
+      "advanceAmount": 0,
+      "amountPaid": 0,
+      "balanceAmount": 0,
+      "paymentMethod": "Cash",
+      "paymentStatus": "UNPAID",
+      "orderDate": "2026-11-19",
+      "dueDate": "2026-11-19",
+      "priority": "Normal",
+      "deliveryNotes": "",
+      "referralId": "",
+      "referredBy": "",
+      "referralNotes": ""
+    }
+  },
+  {
+    "id": "A208",
+    "serialNumber": "SR-189",
+    "status": "DELIVERED",
+    "currentStep": 1,
+    "createdAt": "2026-11-19T00:00:00.000Z",
+    "updatedAt": "2026-11-19T00:00:00.000Z",
+    "customer": {
+      "customerId": "A208",
+      "billNumber": "A208",
+      "date": "2026-11-19",
+      "customerName": "Amudha",
+      "relationshipType": "D/O",
+      "fatherName": "",
+      "husbandName": "",
+      "primaryPhone": "8248530355",
+      "secondaryPhone": "Bhavani mother",
+      "additionalPhones": [],
+      "fullAddress": "",
+      "areaLocation": ""
+    },
+    "garmentQuantities": [],
+    "measurements": {
+      "id": "meas-A208",
+      "name": "",
+      "unit": "in",
+      "date": "2026-11-19",
+      "shoulder": "",
+      "chest": "",
+      "bust": "",
+      "upperBust": "",
+      "underBust": "",
+      "waist": "",
+      "hip": "",
+      "armhole": "",
+      "sleeveLength": "",
+      "sleeveRound": "",
+      "bicep": "",
+      "elbow": "",
+      "wrist": "",
+      "blouseLength": "",
+      "topLength": "",
+      "frontLength": "",
+      "backLength": "",
+      "frontNeckDepth": "",
+      "backNeckDepth": "",
+      "frontNeckWidth": "",
+      "backNeckWidth": "",
+      "lowerWaist": "",
+      "lowerHip": "",
+      "thigh": "",
+      "knee": "",
+      "calf": "",
+      "ankle": "",
+      "bottomLength": "",
+      "inseam": "",
+      "outseam": "",
+      "crotch": "",
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
+      "notes": ""
+    },
+    "garmentSpecs": [],
+    "billing": {
+      "items": [],
+      "additionalCharges": {
+        "stitchingCharges": 0,
+        "materialCharges": 0,
+        "designCharges": 0,
+        "otherCharges": 0,
+        "discount": 0
+      },
+      "subtotal": 0,
+      "grandTotal": 0,
+      "advanceAmount": 0,
+      "amountPaid": 0,
+      "balanceAmount": 0,
+      "paymentMethod": "Cash",
+      "paymentStatus": "UNPAID",
+      "orderDate": "2026-11-19",
+      "dueDate": "2026-11-19",
+      "priority": "Normal",
+      "deliveryNotes": "",
+      "referralId": "",
+      "referredBy": "",
+      "referralNotes": ""
+    }
+  },
+  {
+    "id": "A209",
+    "serialNumber": "SR-190",
+    "status": "DELIVERED",
+    "currentStep": 1,
+    "createdAt": "2026-11-19T00:00:00.000Z",
+    "updatedAt": "2026-11-19T00:00:00.000Z",
+    "customer": {
+      "customerId": "A209",
+      "billNumber": "A209",
+      "date": "2026-11-19",
+      "customerName": "Ananya",
+      "relationshipType": "D/O",
+      "fatherName": "",
+      "husbandName": "",
+      "primaryPhone": "6144701345",
+      "secondaryPhone": "",
+      "additionalPhones": [],
+      "fullAddress": "",
+      "areaLocation": ""
+    },
+    "garmentQuantities": [],
+    "measurements": {
+      "id": "meas-A209",
+      "name": "",
+      "unit": "in",
+      "date": "2026-11-19",
+      "shoulder": "",
+      "chest": "",
+      "bust": "",
+      "upperBust": "",
+      "underBust": "",
+      "waist": "",
+      "hip": "",
+      "armhole": "",
+      "sleeveLength": "",
+      "sleeveRound": "",
+      "bicep": "",
+      "elbow": "",
+      "wrist": "",
+      "blouseLength": "",
+      "topLength": "",
+      "frontLength": "",
+      "backLength": "",
+      "frontNeckDepth": "",
+      "backNeckDepth": "",
+      "frontNeckWidth": "",
+      "backNeckWidth": "",
+      "lowerWaist": "",
+      "lowerHip": "",
+      "thigh": "",
+      "knee": "",
+      "calf": "",
+      "ankle": "",
+      "bottomLength": "",
+      "inseam": "",
+      "outseam": "",
+      "crotch": "",
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
+      "notes": "Anustilla"
+    },
+    "garmentSpecs": [],
+    "billing": {
+      "items": [],
+      "additionalCharges": {
+        "stitchingCharges": 0,
+        "materialCharges": 0,
+        "designCharges": 0,
+        "otherCharges": 0,
+        "discount": 0
+      },
+      "subtotal": 0,
+      "grandTotal": 0,
+      "advanceAmount": 0,
+      "amountPaid": 0,
+      "balanceAmount": 0,
+      "paymentMethod": "Cash",
+      "paymentStatus": "UNPAID",
+      "orderDate": "2026-11-19",
+      "dueDate": "2026-11-19",
+      "priority": "Normal",
+      "deliveryNotes": "",
+      "referralId": "",
+      "referredBy": "",
+      "referralNotes": ""
+    }
+  },
+  {
+    "id": "A210",
+    "serialNumber": "SR-191",
+    "status": "DELIVERED",
+    "currentStep": 1,
+    "createdAt": "2026-11-19T00:00:00.000Z",
+    "updatedAt": "2026-11-19T00:00:00.000Z",
+    "customer": {
+      "customerId": "A210",
+      "billNumber": "A210",
+      "date": "2026-11-19",
+      "customerName": "Arulmozhi",
+      "relationshipType": "D/O",
+      "fatherName": "",
+      "husbandName": "",
+      "primaryPhone": "8883188414",
+      "secondaryPhone": "",
+      "additionalPhones": [],
+      "fullAddress": "",
+      "areaLocation": ""
+    },
+    "garmentQuantities": [],
+    "measurements": {
+      "id": "meas-A210",
+      "name": "",
+      "unit": "in",
+      "date": "2026-11-19",
+      "shoulder": "",
+      "chest": "",
+      "bust": "",
+      "upperBust": "",
+      "underBust": "",
+      "waist": "",
+      "hip": "",
+      "armhole": "",
+      "sleeveLength": "",
+      "sleeveRound": "",
+      "bicep": "",
+      "elbow": "",
+      "wrist": "",
+      "blouseLength": "",
+      "topLength": "",
+      "frontLength": "",
+      "backLength": "",
+      "frontNeckDepth": "",
+      "backNeckDepth": "",
+      "frontNeckWidth": "",
+      "backNeckWidth": "",
+      "lowerWaist": "",
+      "lowerHip": "",
+      "thigh": "",
+      "knee": "",
+      "calf": "",
+      "ankle": "",
+      "bottomLength": "",
+      "inseam": "",
+      "outseam": "",
+      "crotch": "",
+      "customFields": [
+        {
+          "id": "cf-1",
+          "code": "AH",
+          "label": "Armhole Depth (AH)",
+          "value": "",
+          "note": "Standard tailoring armhole drop"
+        },
+        {
+          "id": "cf-2",
+          "code": "BH",
+          "label": "Blouse Height (BH)",
+          "value": "",
+          "note": "Shoulder to waistband"
+        },
+        {
+          "id": "cf-3",
+          "code": "SL",
+          "label": "Sleeve Length (SL)",
+          "value": "",
+          "note": "Shoulder point to sleeve hem"
+        },
+        {
+          "id": "cf-4",
+          "code": "FNN",
+          "label": "Front Neck Normal (FNN)",
+          "value": "",
+          "note": "Neck point to front cleavage curve"
+        },
+        {
+          "id": "cf-5",
+          "code": "BN",
+          "label": "Back Neck (BN)",
+          "value": "",
+          "note": "Center back drop"
+        },
+        {
+          "id": "cf-6",
+          "code": "SH",
+          "label": "Shoulder Seam (SH)",
+          "value": "",
+          "note": "Shoulder bone to shoulder bone"
+        }
+      ],
       "notes": "Dr Priya"
     },
     "garmentSpecs": [],
-    "cuttingDetails": {
-      "status": "NEW",
-      "actualQuantityCut": 0,
-      "cuttingRemarks": "",
-      "assignedMaster": "",
-      "materialsCheck": {
-        "customerMaterial": "Not Required",
-        "shopMaterial": "Not Required",
-        "liningMaterial": "Not Required",
-        "twoByTwoMaterial": "Not Required",
-        "otherMaterials": "Not Required",
-        "remarks": ""
-      }
-    },
     "billing": {
       "items": [],
       "additionalCharges": {
