@@ -4,11 +4,15 @@
  * Recreates the original Giriraj City Garments physical booking form.
  * Opens in a fresh browser window → auto-prints → user closes.
  *
- * REVISED v3: Single A4 page guaranteed.
- *   - Tightened padding/margins so all sections fit on one page.
- *   - Readable font sizes maintained (10–11pt body, 20pt heading).
- *   - Larger handwriting spaces than v1 but trimmed vs v2.
- *   - overflow:hidden + page-break-inside:avoid on the page container.
+ * UPDATED:
+ * 1. REMOVE ALL CHECKBOXES: Checkbox symbols removed across all sections
+ *    (Lining, Neck, Sleeve, BH, Slit, Zip, Fitting, Bottom). Text options
+ *    remain for handwritten marking / circling.
+ * 2. AUTOMATICALLY POPULATE FINAL DETAILS: In the bottom strip, automatically
+ *    populates NAME, R.NO, and DUE DATE from order/customer database.
+ * 3. INCREASE BOTTOM WRITING SPACE: Height of bottom section increased with
+ *    a dedicated handwritten Notes area while preserving single-page A4 fit.
+ * 4. SINGLE-PAGE A4 GUARANTEE: Optimized vertical layout with flex distribution.
  */
 
 import { Order } from '../types/order';
@@ -34,6 +38,7 @@ function buildBookingFormHTML(order: Order): string {
   ) || 0;
   const itemsStr    = totalQty > 0 ? String(totalQty) : '';
   const rNo         = c.customerId || '';
+  const dueDate     = order.billing?.dueDate || '';
 
   return `<!DOCTYPE html>
 <html lang="en">
@@ -54,7 +59,7 @@ html, body {
 /* ── PAGE SETUP ──────────────────────────────────────────── */
 @page {
   size: A4 portrait;
-  margin: 7mm;
+  margin: 6mm;
 }
 @media print {
   .no-print { display: none !important; }
@@ -64,12 +69,12 @@ html, body {
 
 /* ── PAGE CONTAINER ──────────────────────────────────────── */
 /* 
-  A4 printable area = 297mm − 2×7mm = 283mm tall, 196mm wide.
-  We use a fixed 283mm height so nothing escapes to page 2.
+  A4 printable area = 297mm − 2×6mm = 285mm tall, 198mm wide.
+  Exact height prevents any accidental second page.
 */
 .page {
-  width: 196mm;
-  height: 283mm;          /* exact printable height — nothing bleeds beyond */
+  width: 198mm;
+  height: 285mm;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -116,6 +121,8 @@ html, body {
   border-bottom: 1.5px solid #444;
   margin-left: 1mm;
   vertical-align: bottom;
+  padding-left: 2mm;
+  font-weight: 700;
 }
 
 /* ── CUSTOMER INFO TABLES ────────────────────────────────── */
@@ -128,10 +135,10 @@ table { width: 100%; border-collapse: collapse; flex-shrink: 0; }
   vertical-align: middle;
 }
 .lbl { font-weight: 800; font-size: 10pt; white-space: nowrap; }
-.val-block { font-size: 10.5pt; font-weight: 500; }
+.val-block { font-size: 10.5pt; font-weight: 600; }
 .addr-val {
   font-size: 10.5pt;
-  font-weight: 500;
+  font-weight: 600;
   display: block;
   min-height: 7mm;
   word-break: break-word;
@@ -185,30 +192,29 @@ table { width: 100%; border-collapse: collapse; flex-shrink: 0; }
   font-size: 10pt;
   font-weight: 600;
   border-bottom: 1px solid #bbb;
-  padding: 1mm 0;
+  padding: 0.8mm 0;
 }
 .qty-box {
   width: 12mm;
-  height: 6mm;
+  height: 5.5mm;
   border: 2px solid #000;
   display: inline-block;
   flex-shrink: 0;
 }
 
 /* ── TWO-COLUMN DESIGN SECTIONS ──────────────────────────── */
-/* flex:1 so this area stretches to fill whatever space remains */
 .two-col {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2mm;
   margin-top: 1.5mm;
-  flex: 1;         /* grow to fill remaining page height */
-  min-height: 0;   /* allow shrink below content size in flex context */
+  flex: 1;         /* grow to fill middle section */
+  min-height: 0;
 }
 .col-stack {
   display: flex;
   flex-direction: column;
-  gap: 1.5mm;
+  gap: 1.2mm;
 }
 .section-box {
   border: 1.5px solid #000;
@@ -220,26 +226,19 @@ table { width: 100%; border-collapse: collapse; flex-shrink: 0; }
   margin-bottom: 1mm;
 }
 
-/* ── CHECKBOXES ──────────────────────────────────────────── */
+/* ── CLEAN OPTION LISTS (NO CHECKBOXES) ─────────────────── */
 .option-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5mm 5mm;
+  gap: 2mm 6mm;
 }
 .option-item {
-  display: flex;
-  align-items: center;
-  gap: 1.5mm;
-  font-size: 10pt;
-  font-weight: 600;
-  white-space: nowrap;
-}
-.chk-box {
-  width: 4.5mm;
-  height: 4.5mm;
-  border: 2px solid #000;
   display: inline-block;
-  flex-shrink: 0;
+  font-size: 10pt;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+  padding: 0.5mm 1.5mm;
 }
 
 /* ── WRITE LINES & AREAS ─────────────────────────────────── */
@@ -247,17 +246,16 @@ table { width: 100%; border-collapse: collapse; flex-shrink: 0; }
   display: block;
   width: 100%;
   border-bottom: 1.5px solid #666;
-  min-height: 7mm;
-  margin-top: 1.5mm;
+  min-height: 6mm;
+  margin-top: 1mm;
 }
 .write-area {
   display: block;
   width: 100%;
   border: 1.5px solid #666;
-  /* flex: 1 makes the NECK box grow to fill right column */
   flex: 1;
-  margin-top: 1.5mm;
-  min-height: 10mm;
+  margin-top: 1mm;
+  min-height: 12mm;
 }
 
 /* ── NECK section — right col grows to fill the col ─────── */
@@ -267,18 +265,62 @@ table { width: 100%; border-collapse: collapse; flex-shrink: 0; }
   flex: 1;
 }
 
-/* ── BOTTOM REFERENCE STRIP ──────────────────────────────── */
-.bottom-strip {
-  border-top: 2px solid #000;
+/* ── EXPANDED BOTTOM REFERENCE & NOTES SECTION ──────────── */
+.bottom-section {
+  border: 2px solid #000;
   margin-top: 2mm;
-  padding-top: 2mm;
-  display: flex;
-  gap: 5mm;
+  padding: 2mm 3mm;
   flex-shrink: 0;
+  background: #fff;
 }
-.bottom-field { flex: 1; }
-.bottom-field .lbl { font-size: 10pt; font-weight: 800; }
-.bottom-field .write-line { min-height: 16mm; }
+.bottom-strip {
+  display: flex;
+  gap: 6mm;
+  padding-bottom: 2mm;
+  border-bottom: 1.5px dashed #444;
+}
+.bottom-field {
+  flex: 1;
+  display: flex;
+  align-items: baseline;
+  gap: 2mm;
+}
+.bottom-field .lbl {
+  font-size: 10.5pt;
+  font-weight: 900;
+}
+.bottom-field .populated-val {
+  font-size: 11pt;
+  font-weight: 700;
+  color: #000;
+  border-bottom: 1.5px solid #222;
+  padding: 0.5mm 2mm;
+  flex: 1;
+  display: inline-block;
+}
+.bottom-notes-area {
+  margin-top: 2mm;
+  display: flex;
+  flex-direction: column;
+  gap: 1mm;
+}
+.bottom-notes-title {
+  font-size: 10pt;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.bottom-notes-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5mm;
+  padding-top: 1mm;
+}
+.notes-line {
+  border-bottom: 1.2px solid #888;
+  height: 5.5mm;
+  width: 100%;
+}
 
 /* ── PRINT BUTTON (screen only) ──────────────────────────── */
 .no-print {
@@ -322,7 +364,7 @@ table { width: 100%; border-collapse: collapse; flex-shrink: 0; }
 
   <!-- DUE DATE / FORM 1 -->
   <div class="header-row">
-    <span>DUE DATE :&nbsp;<span class="due-line">&nbsp;</span></span>
+    <span>DUE DATE :&nbsp;<span class="due-line">${dueDate ? dueDate : '&nbsp;'}</span></span>
     <span style="font-size:10.5pt; font-weight:900; letter-spacing:0.5px;">FORM 1</span>
   </div>
 
@@ -407,7 +449,7 @@ table { width: 100%; border-collapse: collapse; flex-shrink: 0; }
     <div class="qty-item"><span>DHUPATTA</span><span class="qty-box"></span></div>
   </div>
 
-  <!-- TWO-COLUMN DESIGN SECTIONS (flex:1 — fills remaining height) -->
+  <!-- TWO-COLUMN DESIGN SECTIONS (WITHOUT CHECKBOXES) -->
   <div class="two-col">
 
     <!-- LEFT COLUMN -->
@@ -417,8 +459,8 @@ table { width: 100%; border-collapse: collapse; flex-shrink: 0; }
       <div class="section-box">
         <div class="section-box-title">LINING :</div>
         <div class="option-grid">
-          <div class="option-item"><span class="chk-box"></span> YES</div>
-          <div class="option-item"><span class="chk-box"></span> NO</div>
+          <span class="option-item">YES</span>
+          <span class="option-item">NO</span>
         </div>
       </div>
 
@@ -426,10 +468,10 @@ table { width: 100%; border-collapse: collapse; flex-shrink: 0; }
       <div class="section-box">
         <div class="section-box-title">SLEEVE (SL) :</div>
         <div class="option-grid">
-          <div class="option-item"><span class="chk-box"></span> MEGA</div>
-          <div class="option-item"><span class="chk-box"></span> 3/4</div>
-          <div class="option-item"><span class="chk-box"></span> 1/4</div>
-          <div class="option-item"><span class="chk-box"></span> FULL</div>
+          <span class="option-item">MEGA</span>
+          <span class="option-item">3/4</span>
+          <span class="option-item">1/4</span>
+          <span class="option-item">FULL</span>
         </div>
         <span class="write-line"></span>
       </div>
@@ -438,11 +480,11 @@ table { width: 100%; border-collapse: collapse; flex-shrink: 0; }
       <div class="section-box">
         <div class="section-box-title">BH :</div>
         <div class="option-grid">
-          <div class="option-item"><span class="chk-box"></span> SHTOP</div>
-          <div class="option-item"><span class="chk-box"></span> JTOP</div>
-          <div class="option-item"><span class="chk-box"></span> LNGTOP</div>
-          <div class="option-item"><span class="chk-box"></span> FH</div>
-          <div class="option-item"><span class="chk-box"></span> SKTTOP</div>
+          <span class="option-item">SHTOP</span>
+          <span class="option-item">JTOP</span>
+          <span class="option-item">LNGTOP</span>
+          <span class="option-item">FH</span>
+          <span class="option-item">SKTTOP</span>
         </div>
         <span class="write-line"></span>
       </div>
@@ -451,8 +493,8 @@ table { width: 100%; border-collapse: collapse; flex-shrink: 0; }
       <div class="section-box">
         <div class="section-box-title">SLIT :</div>
         <div class="option-grid">
-          <div class="option-item"><span class="chk-box"></span> SLIT</div>
-          <div class="option-item"><span class="chk-box"></span> NO SLIT</div>
+          <span class="option-item">SLIT</span>
+          <span class="option-item">NO SLIT</span>
         </div>
       </div>
 
@@ -460,8 +502,8 @@ table { width: 100%; border-collapse: collapse; flex-shrink: 0; }
       <div class="section-box">
         <div class="section-box-title">ZIP :</div>
         <div class="option-grid">
-          <div class="option-item"><span class="chk-box"></span> YES</div>
-          <div class="option-item"><span class="chk-box"></span> NO</div>
+          <span class="option-item">YES</span>
+          <span class="option-item">NO</span>
         </div>
       </div>
 
@@ -470,12 +512,12 @@ table { width: 100%; border-collapse: collapse; flex-shrink: 0; }
     <!-- RIGHT COLUMN -->
     <div class="col-stack">
 
-      <!-- NECK — flex:1 so it grows to fill right column -->
+      <!-- NECK -->
       <div class="section-box neck-box" style="flex:1;">
         <div class="section-box-title">NECK :</div>
         <div class="option-grid">
-          <div class="option-item"><span class="chk-box"></span> NEW NECK</div>
-          <div class="option-item"><span class="chk-box"></span> DESIGN</div>
+          <span class="option-item">NEW NECK</span>
+          <span class="option-item">DESIGN</span>
         </div>
         <span class="write-area"></span>
       </div>
@@ -484,10 +526,10 @@ table { width: 100%; border-collapse: collapse; flex-shrink: 0; }
       <div class="section-box">
         <div class="section-box-title">FITTING :</div>
         <div class="option-grid">
-          <div class="option-item"><span class="chk-box"></span> TIGHT</div>
-          <div class="option-item"><span class="chk-box"></span> M+</div>
-          <div class="option-item"><span class="chk-box"></span> MEDIUM</div>
-          <div class="option-item"><span class="chk-box"></span> LOOSEFIT</div>
+          <span class="option-item">TIGHT</span>
+          <span class="option-item">M+</span>
+          <span class="option-item">MEDIUM</span>
+          <span class="option-item">LOOSEFIT</span>
         </div>
       </div>
 
@@ -495,12 +537,12 @@ table { width: 100%; border-collapse: collapse; flex-shrink: 0; }
       <div class="section-box">
         <div class="section-box-title">BOTTOM :</div>
         <div class="option-grid">
-          <div class="option-item"><span class="chk-box"></span> SALWAR</div>
-          <div class="option-item"><span class="chk-box"></span> GATHERING</div>
-          <div class="option-item"><span class="chk-box"></span> PUNJABI</div>
-          <div class="option-item"><span class="chk-box"></span> PATYALA</div>
+          <span class="option-item">SALWAR</span>
+          <span class="option-item">GATHERING</span>
+          <span class="option-item">PUNJABI</span>
+          <span class="option-item">PATYALA</span>
         </div>
-        <div style="margin-top:1.5mm; font-size:10.5pt; font-weight:800;">OTHERS :</div>
+        <div style="margin-top:1.5mm; font-size:10pt; font-weight:800;">OTHERS :</div>
         <span class="write-line"></span>
       </div>
 
@@ -508,19 +550,30 @@ table { width: 100%; border-collapse: collapse; flex-shrink: 0; }
 
   </div><!-- end two-col -->
 
-  <!-- BOTTOM REFERENCE STRIP -->
-  <div class="bottom-strip">
-    <div class="bottom-field">
-      <div class="lbl">NAME :</div>
-      <span class="write-line"></span>
+  <!-- EXPANDED BOTTOM SECTION: AUTO-POPULATED NAME / R.NO / DUE DATE + EXTRA WRITING SPACE -->
+  <div class="bottom-section">
+    <div class="bottom-strip">
+      <div class="bottom-field">
+        <span class="lbl">NAME :</span>
+        <span class="populated-val">${name}</span>
+      </div>
+      <div class="bottom-field" style="max-width:45mm;">
+        <span class="lbl">R.NO :</span>
+        <span class="populated-val">${rNo}</span>
+      </div>
+      <div class="bottom-field" style="max-width:55mm;">
+        <span class="lbl">DUE DATE :</span>
+        <span class="populated-val">${dueDate}</span>
+      </div>
     </div>
-    <div class="bottom-field">
-      <div class="lbl">R.NO :</div>
-      <span class="write-line"></span>
-    </div>
-    <div class="bottom-field">
-      <div class="lbl">DUE DATE :</div>
-      <span class="write-line"></span>
+    
+    <!-- Expanded notes / instructions handwritten lines -->
+    <div class="bottom-notes-area">
+      <div class="bottom-notes-title">SPECIAL WORKSHOP REMARKS / NOTES :</div>
+      <div class="bottom-notes-lines">
+        <div class="notes-line"></div>
+        <div class="notes-line"></div>
+      </div>
     </div>
   </div>
 
