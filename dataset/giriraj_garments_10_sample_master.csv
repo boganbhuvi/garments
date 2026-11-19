@@ -1,0 +1,11 @@
+Order ID,Serial Number,Status,Customer ID,Customer Name,Phone,Area Location,Order Date,Due Date,Priority,Shoulder,Chest,Bust,Waist,Hip,Armhole,Sleeve Length,Blouse Length,Top Length,Front Neck,Back Neck,Total Items,Grand Total,Advance Paid,Balance Due,Payment Status
+"GG-2026-0101","SR-001","IN_CUTTING","CUST-101","Lakshmi Ramakrishnan","9876543210","Mylapore, Chennai - 600004","2026-11-10","2026-11-17","Urgent",14.5,36,37.5,30,39,16.5,10.5,14.5,42,7,9.5,5,4200,2500,1700,"PARTIAL"
+"GG-2026-0102","SR-002","IN_STITCHING","CUST-102","Meenakshi Sundaram","9841023456","T. Nagar, Chennai - 600017","2026-11-11","2026-11-18","Normal",15,38,40,33,42,17.5,11,15,44,6.5,8,5,3850,2000,1850,"PARTIAL"
+"GG-2026-0103","SR-003","READY_FOR_TRIAL","CUST-103","Dr. Ananya Subramanian","9790812345","Adyar, Chennai - 600020","2026-11-12","2026-11-19","Normal",14,34,35.5,28.5,37.5,15.5,16,14,43,6,6.5,6,4600,4600,0,"PAID"
+"GG-2026-0104","SR-004","NEW","CUST-104","Priya Venkataraman","9884077889","Anna Nagar, Chennai - 600040","2026-11-13","2026-11-24","Urgent",14,35,36.5,29,38,16,7.5,14,14,7.5,10.5,3,7800,5000,2800,"PARTIAL"
+"GG-2026-0105","SR-005","NEW","CUST-105","Kavitha Rajagopal","9840334455","Alwarpet, Chennai - 600018","2026-11-13","2026-11-20","Normal",15.5,40,42,35,44,18,8.5,15.5,42,6.5,7.5,4,2450,1500,950,"PARTIAL"
+"GG-2026-0106","SR-006","IN_CUTTING","CUST-106","Deepa Natarajan","9789065432","Velachery, Chennai - 600042","2026-11-12","2026-11-21","Normal",14.5,37,38.5,31,40,16.5,18,14.5,52,6.5,8.5,3,5200,3000,2200,"PARTIAL"
+"GG-2026-0107","SR-007","IN_STITCHING","CUST-107","Sangeetha Balaji","9840112244","Kilpauk, Chennai - 600010","2026-11-14","2026-11-22","Normal",14,36,37,30,39,16,10,14.5,41,7,9,3,3400,2000,1400,"PARTIAL"
+"GG-2026-0108","SR-008","NEW","CUST-108","Revathi Sridhar","9884123490","Besant Nagar, Chennai - 600090","2026-11-14","2026-11-25","Normal",15,39,41,34,43,17.5,15.5,15,43.5,6.5,7,4,3900,2000,1900,"PARTIAL"
+"GG-2026-0109","SR-009","COMPLETED","CUST-109","Shanthi Narayanan","9444198765","Tambaram, Chennai - 600045","2026-11-08","2026-11-14","Normal",15,38,39.5,32.5,41,17,9,15,40,6.5,7.5,5,2750,2750,0,"PAID"
+"GG-2026-0110","SR-010","NEW","CUST-110","Divya Chandrasekaran","9840889900","Nungambakkam, Chennai - 600034","2026-11-15","2026-11-26","Urgent",14,34.5,36,28,37,15.5,22,13.5,13.5,7,8,3,6500,3500,3000,"PARTIAL"

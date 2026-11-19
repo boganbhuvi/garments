@@ -1,0 +1,118 @@
+import { Order } from '../types/order';
+
+const API_BASE = '/api';
+
+export interface DatabaseStatus {
+  connected: boolean;
+  host: string;
+  name: string;
+  uriMasked?: string;
+}
+
+export interface HealthResponse {
+  status: string;
+  timestamp: string;
+  database: DatabaseStatus;
+}
+
+export const api = {
+  // Check backend server and MongoDB connection
+  async checkHealth(): Promise<HealthResponse | null> {
+    try {
+      const res = await fetch(`${API_BASE}/health`, {
+        signal: AbortSignal.timeout(3000),
+      });
+      if (!res.ok) return null;
+      return await res.json();
+    } catch {
+      return null;
+    }
+  },
+
+  // Fetch all orders
+  async getOrders(query?: string, status?: string): Promise<Order[] | null> {
+    try {
+      const params = new URLSearchParams();
+      if (query) params.append('q', query);
+      if (status && status !== 'ALL') params.append('status', status);
+
+      const url = `${API_BASE}/orders${params.toString() ? `?${params.toString()}` : ''}`;
+      const res = await fetch(url, { signal: AbortSignal.timeout(4000) });
+      if (!res.ok) return null;
+      return await res.json();
+    } catch {
+      return null;
+    }
+  },
+
+  // Fetch single order
+  async getOrder(id: string): Promise<Order | null> {
+    try {
+      const res = await fetch(`${API_BASE}/orders/${encodeURIComponent(id)}`, {
+        signal: AbortSignal.timeout(4000),
+      });
+      if (!res.ok) return null;
+      return await res.json();
+    } catch {
+      return null;
+    }
+  },
+
+  // Save / Upsert order to MongoDB
+  async saveOrder(order: Order): Promise<Order | null> {
+    try {
+      const res = await fetch(`${API_BASE}/orders`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(order),
+        signal: AbortSignal.timeout(6000),
+      });
+      if (!res.ok) return null;
+      return await res.json();
+    } catch {
+      return null;
+    }
+  },
+
+  // Delete order
+  async deleteOrder(id: string): Promise<boolean> {
+    try {
+      const res = await fetch(`${API_BASE}/orders/${encodeURIComponent(id)}`, {
+        method: 'DELETE',
+        signal: AbortSignal.timeout(4000),
+      });
+      return res.ok;
+    } catch {
+      return false;
+    }
+  },
+
+  // Search customers in MongoDB
+  async searchCustomers(query: string): Promise<Order[] | null> {
+    try {
+      const res = await fetch(`${API_BASE}/customers/search?q=${encodeURIComponent(query)}`, {
+        signal: AbortSignal.timeout(4000),
+      });
+      if (!res.ok) return null;
+      return await res.json();
+    } catch {
+      return null;
+    }
+  },
+
+  // Batch sync all local orders to MongoDB
+  async syncOrders(orders: Order[]): Promise<{ count: number } | null> {
+    try {
+      const res = await fetch(`${API_BASE}/sync`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ orders }),
+        signal: AbortSignal.timeout(10000),
+      });
+      if (!res.ok) return null;
+      return await res.json();
+    } catch {
+      return null;
+    }
+  },
+};

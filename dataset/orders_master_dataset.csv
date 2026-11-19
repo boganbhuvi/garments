@@ -1,0 +1,11 @@
+Order ID,Serial Number,Customer Name,Primary Phone,Order Date,Due Date,Priority,Workflow Status,Cutting Status,Total Garments,Subtotal (INR),Advance Paid (INR),Balance Due (INR),Payment Method,Assigned Cutting Master,Delivery Notes
+"GG-2026-0101","SR-001","Lakshmi Ramakrishnan","9876543210","2026-11-10","2026-11-17","Urgent","IN_CUTTING","IN_CUTTING",5,4200,2500,1700,"UPI","Master Subramaniam (Table 1)","Wedding order. Must deliver on or before Nov 17 evening without fail."
+"GG-2026-0102","SR-002","Meenakshi Sundaram","9841023456","2026-11-11","2026-11-18","Normal","IN_STITCHING","CUTTING_COMPLETED",5,3850,2000,1850,"UPI","Master Subramaniam (Table 1)","Deliver in Giriraj branded garment bag."
+"GG-2026-0103","SR-003","Dr. Ananya Subramanian","9790812345","2026-11-12","2026-11-19","Normal","READY_FOR_TRIAL","CUTTING_COMPLETED",6,4600,4600,0,"Card","Master Subramaniam (Table 1)","Customer requested WhatsApp message when ready for trial."
+"GG-2026-0104","SR-004","Priya Venkataraman","9884077889","2026-11-13","2026-11-24","Urgent","NEW","NEW",3,7800,5000,2800,"UPI","Master Subramaniam (Table 1)","VIP Bridal Client. Deliver in velvet bridal trunk bag."
+"GG-2026-0105","SR-005","Kavitha Rajagopal","9840334455","2026-11-13","2026-11-20","Normal","NEW","NEW",4,2450,1500,950,"Cash","Master Subramaniam (Table 1)",""
+"GG-2026-0106","SR-006","Deepa Natarajan","9789065432","2026-11-12","2026-11-21","Normal","IN_CUTTING","IN_CUTTING",3,5200,3000,2200,"UPI","Master Subramaniam (Table 1)",""
+"GG-2026-0107","SR-007","Sangeetha Balaji","9840112244","2026-11-14","2026-11-22","Normal","IN_STITCHING","CUTTING_COMPLETED",3,3400,2000,1400,"UPI","Master Subramaniam (Table 1)",""
+"GG-2026-0108","SR-008","Revathi Sridhar","9884123490","2026-11-14","2026-11-25","Normal","NEW","NEW",4,3900,2000,1900,"UPI","Master Subramaniam (Table 1)",""
+"GG-2026-0109","SR-009","Shanthi Narayanan","9444198765","2026-11-08","2026-11-14","Normal","COMPLETED","CUTTING_COMPLETED",5,2750,2750,0,"Cash","Master Subramaniam (Table 1)","Order completed and ready for pickup."
+"GG-2026-0110","SR-010","Divya Chandrasekaran","9840889900","2026-11-15","2026-11-26","Urgent","NEW","ON_HOLD",3,6500,3500,3000,"UPI","Master Subramaniam (Table 1)","Reception order. Highly time sensitive."
