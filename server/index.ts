@@ -332,12 +332,12 @@ app.delete('/api/tailors/:id', async (req: Request, res: Response) => {
 const distPath = path.resolve(__dirname, '../dist');
 app.use(express.static(distPath));
 
-// Fallback to index.html for SPA client-side routing
-app.get('*', (req: Request, res: Response) => {
-  if (req.path.startsWith('/api')) {
-    return res.status(404).json({ error: 'Endpoint not found' });
+// Fallback to index.html for SPA client-side routing (Express 5 compatible)
+app.use((req: Request, res: Response, next) => {
+  if (req.method === 'GET' && !req.path.startsWith('/api')) {
+    return res.sendFile(path.join(distPath, 'index.html'));
   }
-  res.sendFile(path.join(distPath, 'index.html'));
+  next();
 });
 
 // Start Server
