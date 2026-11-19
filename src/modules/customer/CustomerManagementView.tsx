@@ -43,10 +43,22 @@ export const CustomerManagementView: React.FC = () => {
   const filteredCustomers = uniqueCustomers.filter(({ customer, orders }) => {
     const q = searchQuery.toLowerCase().trim();
     if (!q) return true;
+    const digitsOnly = searchQuery.replace(/\D/g, '');
+
+    const allPhones: string[] = [
+      customer.primaryPhone || '',
+      customer.secondaryPhone || '',
+      ...(customer.additionalPhones || [])
+    ].filter(Boolean);
+
+    const phoneMatch = allPhones.some(p => {
+      const clean = p.replace(/\D/g, '');
+      return p.includes(q) || (digitsOnly && clean.includes(digitsOnly));
+    });
+
     return (
+      phoneMatch ||
       customer.customerName.toLowerCase().includes(q) ||
-      customer.primaryPhone.includes(q) ||
-      customer.secondaryPhone?.includes(q) ||
       customer.customerId.toLowerCase().includes(q) ||
       customer.areaLocation.toLowerCase().includes(q) ||
       customer.fullAddress.toLowerCase().includes(q)

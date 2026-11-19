@@ -198,6 +198,7 @@ function createBlankOrder(orderCount: number, defaultUnit: 'in' | 'cm' = 'in'): 
       husbandName: '',
       primaryPhone: '',
       secondaryPhone: '',
+      additionalPhones: [],
       fullAddress: '',
       areaLocation: ''
     },
@@ -683,12 +684,32 @@ export const OrderProvider: React.FC<{ children: React.ReactNode }> = ({ childre
   const searchCustomers = (query: string): Order[] => {
     if (!query.trim()) return savedOrders;
     const q = query.toLowerCase().trim();
-    return savedOrders.filter(o => 
-      o.customer.customerName.toLowerCase().includes(q) ||
-      o.customer.primaryPhone.includes(q) ||
-      o.customer.customerId.toLowerCase().includes(q) ||
-      o.id.toLowerCase().includes(q)
-    );
+    // Normalize numeric digits for phone search
+    const digitsOnly = query.replace(/\D/g, '');
+
+    return savedOrders.filter(o => {
+      const c = o.customer;
+      // Name, ID, or Order ID match
+      if (
+        c.customerName.toLowerCase().includes(q) ||
+        c.customerId.toLowerCase().includes(q) ||
+        o.id.toLowerCase().includes(q)
+      ) {
+        return true;
+      }
+
+      // Any phone number match (primary, secondary, or additionalPhones)
+      const allPhones: string[] = [
+        c.primaryPhone || '',
+        c.secondaryPhone || '',
+        ...(c.additionalPhones || [])
+      ].filter(Boolean);
+
+      return allPhones.some(phone => {
+        const cleanPhone = phone.replace(/\D/g, '');
+        return phone.includes(q) || (digitsOnly && cleanPhone.includes(digitsOnly));
+      });
+    });
   };
 
   const selectCustomerFromHistory = (sourceOrder: Order) => {
@@ -703,6 +724,7 @@ export const OrderProvider: React.FC<{ children: React.ReactNode }> = ({ childre
         husbandName: sourceOrder.customer.husbandName,
         primaryPhone: sourceOrder.customer.primaryPhone,
         secondaryPhone: sourceOrder.customer.secondaryPhone,
+        additionalPhones: sourceOrder.customer.additionalPhones ? [...sourceOrder.customer.additionalPhones] : [],
         fullAddress: sourceOrder.customer.fullAddress,
         areaLocation: sourceOrder.customer.areaLocation
       },

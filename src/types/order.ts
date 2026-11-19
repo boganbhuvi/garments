@@ -18,6 +18,7 @@ export interface CustomerDetails {
   husbandName: string;
   primaryPhone: string;
   secondaryPhone: string;
+  additionalPhones?: string[]; // Up to 3 additional contact numbers (5 total)
   fullAddress: string;
   areaLocation: string;
   doorNo?: string;

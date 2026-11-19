@@ -218,6 +218,8 @@ app.get('/api/customers/search', async (req: Request, res: Response) => {
       $or: [
         { 'customer.customerName': regex },
         { 'customer.primaryPhone': regex },
+        { 'customer.secondaryPhone': regex },
+        { 'customer.additionalPhones': regex },
         { 'customer.customerId': regex },
         { id: regex },
       ],

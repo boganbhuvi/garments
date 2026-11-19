@@ -99,6 +99,14 @@ export const CustomerSearchModal: React.FC<CustomerSearchModalProps> = ({ isOpen
                         </span>
                       </>
                     )}
+                    {record.customer.additionalPhones && record.customer.additionalPhones.length > 0 && (
+                      <>
+                        <span>•</span>
+                        <span className="text-[#64748B]">
+                          More: {record.customer.additionalPhones.join(', ')}
+                        </span>
+                      </>
+                    )}
                     {(record.customer.areaLocation || record.customer.fullAddress) && (
                       <>
                         <span>•</span>

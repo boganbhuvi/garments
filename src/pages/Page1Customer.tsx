@@ -16,7 +16,8 @@ import {
   Sparkles,
   Building,
   Check,
-  Printer
+  Printer,
+  Trash2
 } from 'lucide-react';
 import { searchIndianAddress, AddressSuggestion } from '../services/addressService';
 import { printCustomerBookingForm } from '../components/CustomerBookingFormPrint';
@@ -347,11 +348,16 @@ export const Page1Customer: React.FC<Page1CustomerProps> = ({ onOpenSearch }) =>
               </div>
             </div>
 
-            {/* Field 5: Secondary Phone Number */}
+            {/* Field 5: Secondary Phone Number (Default 2nd Number) */}
             <div className="flex flex-col gap-1.5 w-full">
-              <label className="text-[17px] font-black text-[#233B5D]">
-                Secondary Phone Number (WhatsApp / Landline):
-              </label>
+              <div className="flex items-center justify-between">
+                <label className="text-[17px] font-black text-[#233B5D]">
+                  Secondary Phone Number (WhatsApp / Alternative):
+                </label>
+                <span className="text-xs text-slate-500 font-semibold">
+                  Default 2 Numbers • Up to 5 Max
+                </span>
+              </div>
               <div className="relative w-full">
                 <span className="absolute left-4 top-1/2 -translate-y-1/2 text-[17px] font-bold text-slate-500">
                   +91
@@ -366,6 +372,65 @@ export const Page1Customer: React.FC<Page1CustomerProps> = ({ onOpenSearch }) =>
                 />
               </div>
             </div>
+
+            {/* Additional Phone Numbers (Up to 3 more, making 5 total) */}
+            {(order.customer.additionalPhones || []).map((phone, idx) => (
+              <div key={idx} className="flex flex-col gap-1.5 w-full animate-in fade-in duration-150">
+                <label className="text-[16px] font-black text-[#233B5D] flex items-center justify-between">
+                  <span>Additional Mobile Number {idx + 3} :</span>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      const updated = [...(order.customer.additionalPhones || [])];
+                      updated.splice(idx, 1);
+                      updateCustomer({ additionalPhones: updated });
+                    }}
+                    className="text-xs text-red-600 hover:text-red-700 font-bold flex items-center gap-1 hover:underline cursor-pointer"
+                  >
+                    <Trash2 className="w-3.5 h-3.5" />
+                    <span>Remove Number</span>
+                  </button>
+                </label>
+                <div className="relative w-full flex items-center gap-2">
+                  <div className="relative flex-1">
+                    <span className="absolute left-4 top-1/2 -translate-y-1/2 text-[17px] font-bold text-slate-500">
+                      +91
+                    </span>
+                    <input
+                      type="tel"
+                      maxLength={10}
+                      value={phone}
+                      onChange={(e) => {
+                        const updated = [...(order.customer.additionalPhones || [])];
+                        updated[idx] = e.target.value.replace(/\D/g, '');
+                        updateCustomer({ additionalPhones: updated });
+                      }}
+                      placeholder={`Mobile Number ${idx + 3} (10 Digits)`}
+                      className="w-full min-h-[52px] pl-14 pr-4 bg-white border-2 border-slate-300 focus:border-[#147D75] rounded-xl text-[18px] text-[#191C1E] font-bold focus:outline-none transition-colors"
+                    />
+                  </div>
+                </div>
+              </div>
+            ))}
+
+            {/* Add Another Number Button (Enabled if total numbers < 5) */}
+            {((order.customer.additionalPhones?.length || 0) < 3) && (
+              <div className="flex justify-start pt-1">
+                <button
+                  type="button"
+                  onClick={() => {
+                    const current = order.customer.additionalPhones || [];
+                    if (current.length < 3) {
+                      updateCustomer({ additionalPhones: [...current, ''] });
+                    }
+                  }}
+                  className="min-h-[44px] px-4 rounded-xl border-2 border-dashed border-[#147D75] bg-[#E6F4F2] hover:bg-[#D0ECE8] text-[#147D75] text-[15px] font-black flex items-center gap-2 transition-all cursor-pointer shadow-sm"
+                >
+                  <PlusCircle className="w-4 h-4 text-[#147D75]" />
+                  <span>+ Add Another Mobile Number ({2 + (order.customer.additionalPhones?.length || 0)} / 5)</span>
+                </button>
+              </div>
+            )}
 
             {/* Section Divider: Indian Address & Location */}
             <div className="pt-3 border-t border-slate-200">

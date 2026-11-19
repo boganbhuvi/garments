@@ -15,6 +15,7 @@ export interface IOrderDoc extends Document {
     husbandName: string;
     primaryPhone: string;
     secondaryPhone: string;
+    additionalPhones?: string[];
     fullAddress: string;
     areaLocation: string;
   };
@@ -153,6 +154,7 @@ const OrderSchema = new Schema<IOrderDoc>(
       husbandName: { type: String, default: '' },
       primaryPhone: { type: String, required: true, index: true },
       secondaryPhone: { type: String, default: '' },
+      additionalPhones: { type: [String], default: [] },
       fullAddress: { type: String, required: true },
       areaLocation: { type: String, default: '' },
     },
