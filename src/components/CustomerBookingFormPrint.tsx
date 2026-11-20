@@ -2,16 +2,22 @@
  * CustomerBookingFormPrint
  *
  * Recreates the Giriraj City Garments physical booking worksheet for A4 portrait printing.
- * Redesigned for physical THREE-FOLD paper format:
- *   - FOLD 1 (Top ~92mm): Giriraj City Garments header, Due Date, Form 1,
- *     Bill No, S.No, Date, Name, R.No, P.No, Items (enlarged & prominent),
- *     Father Name, Husband Name, Address, compact SELF / SHOP with up to 3 recent
- *     customer phone numbers, and Garment Quantities with RED highlighted category names.
- *   - FOLD 2 (Middle ~95mm): Symmetrical tailoring details section containing
- *     Lining, Neck (large writing area), Sleeve (SL), BH, Slit, Zip, Fitting, Bottom,
- *     and other instructions — with clean blank handwriting areas & no checkboxes.
- *   - FOLD 3 (Bottom): PRESERVED EXACTLY AS EXISTING:
- *     Auto-populated NAME, R.NO, DUE DATE, and 3-line SPECIAL WORKSHOP REMARKS / NOTES.
+ * Three-Fold paper format:
+ *   - FOLD 1 (Top Section):
+ *       * GIRIRAJ CITY GARMENTS heading in bold RED.
+ *       * DUE DATE in bold black text.
+ *       * ROW 1: BILL NO, S.NO, DATE (all black text).
+ *       * ROW 2: NAME, R.NO, ITEMS (P.NO removed from next to R.NO; ITEMS left blank for handwriting, no filled numbers).
+ *       * ROW 3: FATHER NAME, HUSBAND NAME.
+ *       * ROW 4: ADDRESS.
+ *       * ROW 5: Reduced SELF / SHOP, and Customer Registered Phone Numbers box.
+ *       * ROW 6: NO. OF boxes with all category names in clean BLACK (not red).
+ *   - FOLD 2 (Middle Section - Symmetrical Tailoring Details):
+ *       * Tailoring specifications: Lining, Neck (large sketch area), Sleeve (SL), BH, Slit, Zip, Fitting, Bottom, Other Instructions.
+ *       * Clean blank handwriting lines, all black text.
+ *   - FOLD 3 (Bottom Section):
+ *       * Auto-populated NAME, R.NO, DUE DATE, and 3-line SPECIAL WORKSHOP REMARKS / NOTES.
+ *       * Clean black text styling.
  */
 
 import { Order } from '../types/order';
@@ -23,7 +29,6 @@ function buildBookingFormHTML(order: Order): string {
   const sNo         = order.serialNumber || '';
   const date        = c.date        || '';
   const name        = c.customerName || '';
-  const pNo         = c.primaryPhone ? `+91 ${c.primaryPhone}` : '';
   const address     = c.fullAddress || [
     c.doorNo, c.street, c.areaLocation, c.city,
     c.state, c.pinCode ? `PIN ${c.pinCode}` : ''
@@ -32,10 +37,6 @@ function buildBookingFormHTML(order: Order): string {
   const fatherName  = c.relationshipType === 'D/O' ? (c.fatherName  || '') : '';
   const husbandName = c.relationshipType === 'W/O' ? (c.husbandName || '') : '';
 
-  const totalQty    = order.garmentQuantities?.reduce(
-    (s, g) => s + (Number(g.quantity) || 0), 0
-  ) || 0;
-  const itemsStr    = totalQty > 0 ? String(totalQty) : '';
   const rNo         = c.customerId || '';
   const dueDate     = order.billing?.dueDate || '';
 
@@ -45,7 +46,6 @@ function buildBookingFormHTML(order: Order): string {
     allPhones.push(c.primaryPhone.trim());
   }
   if (c.secondaryPhone && c.secondaryPhone.trim()) {
-    // In case secondaryPhone has comma-separated values from legacy registers
     const secParts = c.secondaryPhone.split(',').map(p => p.trim()).filter(Boolean);
     for (const p of secParts) {
       if (!allPhones.includes(p)) allPhones.push(p);
@@ -58,23 +58,6 @@ function buildBookingFormHTML(order: Order): string {
     }
   }
   const recent3Phones = allPhones.slice(0, 3);
-
-  // Map category quantities for the quantity grid
-  const getQty = (catName: string) => {
-    const item = order.garmentQuantities?.find(
-      g => g.category.toLowerCase() === catName.toLowerCase() || g.label.toLowerCase() === catName.toLowerCase()
-    );
-    return item && Number(item.quantity) > 0 ? String(item.quantity) : '';
-  };
-
-  const topsQty     = getQty('Tops') || getQty('Kurtis');
-  const bottomQty   = getQty('Bottom') || getQty('Bottoms');
-  const blowsQty    = getQty('Blows') || getQty('Blouses');
-  const sareeQty    = getQty('Saree') || getQty('Sarees');
-  const fallsQty    = getQty('Falls');
-  const nightyQty   = getQty('Nighties') || getQty('Nighty');
-  const othersQty   = getQty('Others') || getQty('Other Items');
-  const dhupattaQty = getQty('Dupatta') || getQty('Dhupatta');
 
   return `<!DOCTYPE html>
 <html lang="en">
@@ -160,13 +143,14 @@ html, body {
   margin-bottom: 1mm;
   flex-shrink: 0;
 }
+/* User Request: Company name in RED */
 .shop-name {
-  font-size: 16pt;
+  font-size: 16.5pt;
   font-weight: 900;
-  letter-spacing: 1.2px;
+  letter-spacing: 1.3px;
   text-transform: uppercase;
   line-height: 1.1;
-  color: #000;
+  color: #dc2626 !important; /* Bold vivid red */
 }
 .shop-tagline {
   font-size: 8.5pt;
@@ -187,15 +171,16 @@ html, body {
   background: #f8fafc;
   flex-shrink: 0;
 }
+/* User Request: Date in BLACK */
 .due-line {
   display: inline-block;
   min-width: 45mm;
-  border-bottom: 1.5px solid #222;
+  border-bottom: 1.5px solid #000;
   margin-left: 1mm;
   vertical-align: bottom;
   padding: 0 2mm;
   font-weight: 800;
-  color: #b91c1c; /* Prominent Due Date in red */
+  color: #000 !important; /* Black */
 }
 
 /* ── CUSTOMER INFO TABLES ────────────────────────────────── */
@@ -207,55 +192,19 @@ table { width: 100%; border-collapse: collapse; flex-shrink: 0; }
   padding: 1mm 2mm;
   vertical-align: middle;
 }
-.lbl { font-weight: 800; font-size: 9pt; white-space: nowrap; color: #111; }
+.lbl { font-weight: 800; font-size: 9pt; white-space: nowrap; color: #000; }
 .val-block { font-size: 9.5pt; font-weight: 700; color: #000; }
 
-/* ── PROFESSIONAL ACCENT COLOR CODING ────────────────────── */
-.accent-name {
-  color: #1e3a8a; /* Deep Navy */
-  background: #eff6ff;
-  padding: 0.5mm 1.5mm;
-  border-radius: 2px;
-  font-weight: 800;
-  display: inline-block;
-}
-.accent-sno {
-  color: #065f46; /* Deep Emerald */
-  background: #ecfdf5;
-  padding: 0.5mm 1.5mm;
-  border-radius: 2px;
-  font-weight: 800;
-  display: inline-block;
-}
-.accent-rno {
-  color: #7c2d12; /* Deep Amber / Rust */
-  background: #fffbeb;
-  padding: 0.5mm 1.5mm;
-  border-radius: 2px;
-  font-weight: 800;
-  display: inline-block;
-}
-.accent-phone {
-  color: #1e293b; /* Slate Dark */
-  background: #f1f5f9;
-  padding: 0.5mm 1.5mm;
-  border-radius: 2px;
-  font-weight: 800;
-  letter-spacing: 0.3px;
-  display: inline-block;
-}
-
-/* ── PROMINENT ITEMS BOX ─────────────────────────────────── */
+/* ── PROMINENT ITEMS BOX (BLANK FOR HANDWRITING) ─────────── */
 .items-cell {
-  background: #fef2f2;
+  background: #fff;
   text-align: center;
   padding: 0 1mm !important;
 }
-.items-badge {
-  font-size: 11pt;
-  font-weight: 900;
-  color: #b91c1c;
+.items-blank-line {
   display: inline-block;
+  width: 90%;
+  height: 5mm;
 }
 
 .addr-val {
@@ -266,6 +215,7 @@ table { width: 100%; border-collapse: collapse; flex-shrink: 0; }
   word-break: break-word;
   white-space: normal;
   line-height: 1.15;
+  color: #000;
 }
 
 /* ── COMPACT SELF / SHOP & RECENT PHONES SECTION ─────────── */
@@ -293,6 +243,7 @@ table { width: 100%; border-collapse: collapse; flex-shrink: 0; }
   text-align: center;
   width: 14mm;
   background: #f8fafc;
+  color: #000;
 }
 .line-blank {
   display: inline-block;
@@ -301,7 +252,7 @@ table { width: 100%; border-collapse: collapse; flex-shrink: 0; }
   height: 3.5mm;
 }
 
-/* Recent Phones Area inside Fold 1 */
+/* Customer Registered Phone Numbers Area (Placed in dedicated space) */
 .phones-box {
   flex: 1;
   border: 1.8px solid #000;
@@ -315,7 +266,7 @@ table { width: 100%; border-collapse: collapse; flex-shrink: 0; }
   font-size: 8pt;
   font-weight: 800;
   text-transform: uppercase;
-  color: #475569;
+  color: #000;
   letter-spacing: 0.4px;
   margin-bottom: 0.5mm;
   border-bottom: 1px solid #ddd;
@@ -330,14 +281,14 @@ table { width: 100%; border-collapse: collapse; flex-shrink: 0; }
 .phone-chip {
   font-size: 8.5pt;
   font-weight: 700;
-  color: #0f172a;
-  background: #e2e8f0;
+  color: #000;
+  background: #f1f5f9;
   padding: 0.5mm 1.8mm;
   border-radius: 3px;
   border: 1px solid #cbd5e1;
 }
 
-/* ── NO. OF QUANTITIES (WITH RED HIGHLIGHTED GARMENT NAMES) ─ */
+/* ── NO. OF QUANTITIES (ALL FONT COLOR IN CLEAN BLACK) ───── */
 .qty-section {
   margin-top: 1mm;
   border-top: 1.8px solid #000;
@@ -350,6 +301,7 @@ table { width: 100%; border-collapse: collapse; flex-shrink: 0; }
   text-transform: uppercase;
   letter-spacing: 0.4px;
   margin-bottom: 0.6mm;
+  color: #000;
 }
 .qty-grid {
   display: grid;
@@ -361,13 +313,13 @@ table { width: 100%; border-collapse: collapse; flex-shrink: 0; }
   align-items: center;
   justify-content: space-between;
   font-size: 8.5pt;
-  border: 1px solid #bbb;
+  border: 1px solid #000;
   padding: 0.6mm 1.5mm;
   background: #fff;
 }
-/* Requirement 5: Garment names MUST be highlighted in RED */
-.garment-name-red {
-  color: #dc2626 !important; /* Bold vivid red */
+/* User Request: Change all font colour to black not red */
+.garment-name-black {
+  color: #000 !important;
   font-weight: 800;
   letter-spacing: 0.3px;
   text-transform: uppercase;
@@ -404,6 +356,7 @@ table { width: 100%; border-collapse: collapse; flex-shrink: 0; }
   margin-bottom: 1.2mm;
   background: #f8fafc;
   padding: 1mm 2mm;
+  color: #000;
 }
 .two-col {
   display: grid;
@@ -437,27 +390,26 @@ table { width: 100%; border-collapse: collapse; flex-shrink: 0; }
 /* ── HANDWRITING WRITING LINES & AREAS ───────────────────── */
 .write-box-sm {
   width: 100%;
-  border-bottom: 1.2px solid #666;
+  border-bottom: 1.2px solid #000;
   min-height: 5mm;
   flex: 1;
 }
 .write-box-md {
   width: 100%;
-  border-bottom: 1.2px solid #666;
+  border-bottom: 1.2px solid #000;
   min-height: 7mm;
   flex: 1;
 }
 .write-area-fill {
   width: 100%;
-  border: 1.2px solid #888;
+  border: 1.2px solid #000;
   flex: 1;
   min-height: 28mm;
   margin-top: 0.8mm;
-  background: #fafafa;
+  background: #fff;
 }
 
-/* ── FOLD 3: PRESERVED EXACTLY AS EXISTING ───────────────── */
-/* STRICT REQUIREMENT: DO NOT MODIFY THE THIRD FOLD */
+/* ── FOLD 3: PRESERVED EXACTLY WITH CLEAN BLACK TEXT ─────── */
 .bottom-section {
   border: 2px solid #000;
   margin-top: 1mm;
@@ -480,12 +432,14 @@ table { width: 100%; border-collapse: collapse; flex-shrink: 0; }
 .bottom-field .lbl {
   font-size: 10.5pt;
   font-weight: 900;
+  color: #000;
 }
+/* User Request: Change colour in 3rd fold also to clean black */
 .bottom-field .populated-val {
   font-size: 11pt;
   font-weight: 700;
-  color: #000;
-  border-bottom: 1.5px solid #222;
+  color: #000 !important;
+  border-bottom: 1.5px solid #000;
   padding: 0.5mm 2mm;
   flex: 1;
   display: inline-block;
@@ -501,6 +455,7 @@ table { width: 100%; border-collapse: collapse; flex-shrink: 0; }
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  color: #000;
 }
 .bottom-notes-lines {
   display: flex;
@@ -509,7 +464,7 @@ table { width: 100%; border-collapse: collapse; flex-shrink: 0; }
   padding-top: 1mm;
 }
 .notes-line {
-  border-bottom: 1.2px solid #888;
+  border-bottom: 1.2px solid #000;
   height: 6mm;
   width: 100%;
 }
@@ -553,41 +508,39 @@ table { width: 100%; border-collapse: collapse; flex-shrink: 0; }
        ======================================================== -->
   <div class="fold-section fold-1">
 
-    <!-- HEADER -->
+    <!-- HEADER: COMPANY NAME IN RED -->
     <div class="shop-header">
       <div class="shop-name">GIRIRAJ CITY GARMENTS</div>
       <div class="shop-tagline">Ladies Tailoring &amp; Garments</div>
     </div>
 
-    <!-- DUE DATE / FORM 1 -->
+    <!-- DUE DATE / FORM 1 (DUE DATE IN BLACK) -->
     <div class="header-row">
       <span>DUE DATE :&nbsp;<span class="due-line">${dueDate ? dueDate : '&nbsp;'}</span></span>
       <span style="font-size:10pt; font-weight:900; letter-spacing:0.5px;">FORM 1 (THREE-FOLD WORKSHEET)</span>
     </div>
 
-    <!-- ROW 1: BILL NO / S.NO / DATE -->
+    <!-- ROW 1: BILL NO / S.NO / DATE (ALL BLACK) -->
     <table class="info-table">
       <tr>
         <td class="lbl" style="width:20mm;">BILL NO&nbsp;:</td>
         <td style="width:46mm;"><span class="val-block">${billNo}</span></td>
         <td class="lbl" style="width:13mm;">S.NO&nbsp;:</td>
-        <td style="width:34mm;"><span class="val-block accent-sno">${sNo}</span></td>
+        <td style="width:34mm;"><span class="val-block">${sNo}</span></td>
         <td class="lbl" style="width:13mm;">DATE&nbsp;:</td>
         <td><span class="val-block">${date}</span></td>
       </tr>
     </table>
 
-    <!-- ROW 2: NAME / R.NO / P.NO / ITEMS (WITH PROMINENT ITEMS BOX & ACCENT COLORS) -->
+    <!-- ROW 2: NAME / R.NO / ITEMS (PHONE NUMBER REMOVED NEXT TO R.NO; ITEMS COLUMN LEFT BLANK FOR HANDWRITING) -->
     <table class="info-table">
       <tr>
-        <td class="lbl" style="width:15mm;">NAME&nbsp;:</td>
-        <td style="width:50mm;"><span class="val-block accent-name">${name}</span></td>
-        <td class="lbl" style="width:13mm;">R.NO&nbsp;:</td>
-        <td style="width:26mm;"><span class="val-block accent-rno">${rNo}</span></td>
-        <td class="lbl" style="width:13mm;">P.NO&nbsp;:</td>
-        <td style="width:36mm;"><span class="val-block accent-phone">${pNo}</span></td>
-        <td class="lbl" style="width:15mm; text-align:center;">ITEMS&nbsp;:</td>
-        <td class="items-cell" style="width:20mm;"><span class="items-badge">${itemsStr || '0'}</span></td>
+        <td class="lbl" style="width:16mm;">NAME&nbsp;:</td>
+        <td style="width:80mm;"><span class="val-block">${name}</span></td>
+        <td class="lbl" style="width:16mm;">R.NO&nbsp;:</td>
+        <td style="width:40mm;"><span class="val-block">${rNo}</span></td>
+        <td class="lbl" style="width:18mm; text-align:center;">ITEMS&nbsp;:</td>
+        <td class="items-cell"><span class="items-blank-line"></span></td>
       </tr>
     </table>
 
@@ -609,7 +562,7 @@ table { width: 100%; border-collapse: collapse; flex-shrink: 0; }
       </tr>
     </table>
 
-    <!-- ROW 5: REDUCED SELF / SHOP SECTION & RECENT 3 CUSTOMER PHONES -->
+    <!-- ROW 5: REDUCED SELF / SHOP & REGISTERED PHONES -->
     <div class="middle-fold1-row">
       <!-- Reduced Self / Shop Table -->
       <table class="compact-self-shop">
@@ -635,31 +588,31 @@ table { width: 100%; border-collapse: collapse; flex-shrink: 0; }
         </tr>
       </table>
 
-      <!-- Customer Recent 3 Contact Numbers -->
+      <!-- Customer Registered Phone Numbers (Dedicated space populated from records) -->
       <div class="phones-box">
         <div class="phones-hdr">Customer Registered Phone Numbers (${recent3Phones.length} Available)</div>
         <div class="phones-list">
           ${
             recent3Phones.length > 0
               ? recent3Phones.map((ph, idx) => `<span class="phone-chip">#${idx + 1}: ${ph}</span>`).join('')
-              : '<span style="font-size:8.5pt; color:#888; font-style:italic;">No phone numbers on file</span>'
+              : '<span style="font-size:8.5pt; color:#666; font-style:italic;">No phone numbers on file</span>'
           }
         </div>
       </div>
     </div>
 
-    <!-- ROW 6: NO. OF QUANTITIES (GARMENT NAMES IN BOLD RED) -->
+    <!-- ROW 6: NO. OF QUANTITIES (ALL FONT COLOR IN BLACK NOT RED) -->
     <div class="qty-section">
       <div class="qty-hdr">NO. OF :</div>
       <div class="qty-grid">
-        <div class="qty-item"><span class="garment-name-red">TOPS</span><span class="qty-box">${topsQty}</span></div>
-        <div class="qty-item"><span class="garment-name-red">BOTTOM</span><span class="qty-box">${bottomQty}</span></div>
-        <div class="qty-item"><span class="garment-name-red">BLOWS</span><span class="qty-box">${blowsQty}</span></div>
-        <div class="qty-item"><span class="garment-name-red">SAREE</span><span class="qty-box">${sareeQty}</span></div>
-        <div class="qty-item"><span class="garment-name-red">FALLS</span><span class="qty-box">${fallsQty}</span></div>
-        <div class="qty-item"><span class="garment-name-red">NIGHTY</span><span class="qty-box">${nightyQty}</span></div>
-        <div class="qty-item"><span class="garment-name-red">OTHERS</span><span class="qty-box">${othersQty}</span></div>
-        <div class="qty-item"><span class="garment-name-red">DHUPATTA</span><span class="qty-box">${dhupattaQty}</span></div>
+        <div class="qty-item"><span class="garment-name-black">TOPS</span><span class="qty-box"></span></div>
+        <div class="qty-item"><span class="garment-name-black">BOTTOM</span><span class="qty-box"></span></div>
+        <div class="qty-item"><span class="garment-name-black">BLOWS</span><span class="qty-box"></span></div>
+        <div class="qty-item"><span class="garment-name-black">SAREE</span><span class="qty-box"></span></div>
+        <div class="qty-item"><span class="garment-name-black">FALLS</span><span class="qty-box"></span></div>
+        <div class="qty-item"><span class="garment-name-black">NIGHTY</span><span class="qty-box"></span></div>
+        <div class="qty-item"><span class="garment-name-black">OTHERS</span><span class="qty-box"></span></div>
+        <div class="qty-item"><span class="garment-name-black">DHUPATTA</span><span class="qty-box"></span></div>
       </div>
     </div>
 
@@ -672,7 +625,7 @@ table { width: 100%; border-collapse: collapse; flex-shrink: 0; }
     <div class="fold-2-inner">
       <div class="fold-2-hdr">
         <span>TAILORING SPECIFICATIONS &amp; CUTTING INSTRUCTIONS</span>
-        <span style="font-size:8.5pt; font-weight:700; color:#555;">FOLD 2 – WORKSHOP MASTER INSTRUCTIONS</span>
+        <span style="font-size:8.5pt; font-weight:700; color:#444;">FOLD 2 – WORKSHOP MASTER INSTRUCTIONS</span>
       </div>
 
       <div class="two-col">
@@ -684,7 +637,7 @@ table { width: 100%; border-collapse: collapse; flex-shrink: 0; }
           <div class="section-box" style="flex:1;">
             <div class="section-box-title">
               <span>LINING :</span>
-              <span style="font-size:8pt; font-weight:normal; color:#666;">Full / Half / None</span>
+              <span style="font-size:8pt; font-weight:normal; color:#444;">Full / Half / None</span>
             </div>
             <span class="write-box-sm"></span>
           </div>
@@ -693,7 +646,7 @@ table { width: 100%; border-collapse: collapse; flex-shrink: 0; }
           <div class="section-box" style="flex:1.2;">
             <div class="section-box-title">
               <span>SLEEVE (SL) :</span>
-              <span style="font-size:8pt; font-weight:normal; color:#666;">Length &amp; Round</span>
+              <span style="font-size:8pt; font-weight:normal; color:#444;">Length &amp; Round</span>
             </div>
             <span class="write-box-md"></span>
           </div>
@@ -702,7 +655,7 @@ table { width: 100%; border-collapse: collapse; flex-shrink: 0; }
           <div class="section-box" style="flex:1.2;">
             <div class="section-box-title">
               <span>BH :</span>
-              <span style="font-size:8pt; font-weight:normal; color:#666;">Blouse Height</span>
+              <span style="font-size:8pt; font-weight:normal; color:#444;">Blouse Height</span>
             </div>
             <span class="write-box-md"></span>
           </div>
@@ -711,7 +664,7 @@ table { width: 100%; border-collapse: collapse; flex-shrink: 0; }
           <div class="section-box" style="flex:1;">
             <div class="section-box-title">
               <span>SLIT :</span>
-              <span style="font-size:8pt; font-weight:normal; color:#666;">Side / Front</span>
+              <span style="font-size:8pt; font-weight:normal; color:#444;">Side / Front</span>
             </div>
             <span class="write-box-sm"></span>
           </div>
@@ -720,7 +673,7 @@ table { width: 100%; border-collapse: collapse; flex-shrink: 0; }
           <div class="section-box" style="flex:1;">
             <div class="section-box-title">
               <span>ZIP :</span>
-              <span style="font-size:8pt; font-weight:normal; color:#666;">Side / Back / Concealed</span>
+              <span style="font-size:8pt; font-weight:normal; color:#444;">Side / Back / Concealed</span>
             </div>
             <span class="write-box-sm"></span>
           </div>
@@ -734,7 +687,7 @@ table { width: 100%; border-collapse: collapse; flex-shrink: 0; }
           <div class="section-box" style="flex:2.8;">
             <div class="section-box-title">
               <span>NECK (FRONT &amp; BACK PATTERN) :</span>
-              <span style="font-size:8pt; font-weight:normal; color:#666;">Pattern / Depth / Piping</span>
+              <span style="font-size:8pt; font-weight:normal; color:#444;">Pattern / Depth / Piping</span>
             </div>
             <span class="write-area-fill"></span>
           </div>
@@ -743,7 +696,7 @@ table { width: 100%; border-collapse: collapse; flex-shrink: 0; }
           <div class="section-box" style="flex:1.1;">
             <div class="section-box-title">
               <span>FITTING :</span>
-              <span style="font-size:8pt; font-weight:normal; color:#666;">Tight / Regular / Loose</span>
+              <span style="font-size:8pt; font-weight:normal; color:#444;">Tight / Regular / Loose</span>
             </div>
             <span class="write-box-sm"></span>
           </div>
@@ -752,7 +705,7 @@ table { width: 100%; border-collapse: collapse; flex-shrink: 0; }
           <div class="section-box" style="flex:1.2;">
             <div class="section-box-title">
               <span>BOTTOM :</span>
-              <span style="font-size:8pt; font-weight:normal; color:#666;">Style &amp; Length</span>
+              <span style="font-size:8pt; font-weight:normal; color:#444;">Style &amp; Length</span>
             </div>
             <span class="write-box-md"></span>
           </div>
@@ -772,8 +725,7 @@ table { width: 100%; border-collapse: collapse; flex-shrink: 0; }
   </div><!-- end fold-2 -->
 
   <!-- ========================================================
-       FOLD 3: BOTTOM SECTION (PRESERVED EXACTLY AS EXISTING)
-       STRICT REQUIREMENT: DO NOT MODIFY THE THIRD FOLD.
+       FOLD 3: BOTTOM SECTION (PRESERVED WITH CLEAN BLACK TEXT)
        ======================================================== -->
   <div class="fold-section fold-3">
     <div class="bottom-section">
