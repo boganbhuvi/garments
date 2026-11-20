@@ -32,11 +32,15 @@ export const Page1Customer: React.FC<Page1CustomerProps> = ({ onOpenSearch }) =>
     updateCustomer, 
     updateGarmentQuantity, 
     addCustomGarmentCategory, 
-    clearOrder 
+    clearOrder,
+    customers,
+    selectRegisteredCustomerForOrder,
+    setActiveModule
   } = useOrder();
 
   const [newCategoryName, setNewCategoryName] = useState('');
   const [showAddCategory, setShowAddCategory] = useState(false);
+  const [customerSelectQuery, setCustomerSelectQuery] = useState('');
 
   // Address autocomplete state
   const [addressSearchQuery, setAddressSearchQuery] = useState('');

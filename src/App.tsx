@@ -25,6 +25,11 @@ import { DemoModeModal } from './components/DemoModeModal';
 import { WhatsAppNotificationModal } from './components/whatsapp/WhatsAppNotificationModal';
 import { CheckCircle, Info, AlertTriangle } from 'lucide-react';
 import { Order, WhatsAppNotificationRecord } from './types/order';
+import { PublicWebsite } from './public-site/PublicWebsite';
+import { InventoryView } from './modules/inventory/InventoryView';
+import { AccountsView } from './modules/accounts/AccountsView';
+import { BranchManagementView } from './modules/branches/BranchManagementView';
+import { ActivityLogsView } from './modules/system/ActivityLogsView';
 
 const MainLayout: React.FC = () => {
   const { 
@@ -144,6 +149,22 @@ const MainLayout: React.FC = () => {
                 onDeleteTailor={() => {}}
               />
             </main>
+          ) : activeModule === 'INVENTORY' ? (
+            <main className="flex-1 w-full min-w-0">
+              <InventoryView />
+            </main>
+          ) : activeModule === 'ACCOUNTS' ? (
+            <main className="flex-1 w-full min-w-0">
+              <AccountsView />
+            </main>
+          ) : activeModule === 'BRANCHES' ? (
+            <main className="flex-1 w-full min-w-0">
+              <BranchManagementView />
+            </main>
+          ) : activeModule === 'ACTIVITY_LOGS' ? (
+            <main className="flex-1 w-full min-w-0">
+              <ActivityLogsView />
+            </main>
           ) : activeModule === 'REPORTS' ? (
             <main className="flex-1 w-full min-w-0">
               <ReportsView />
@@ -221,9 +242,27 @@ const MainLayout: React.FC = () => {
 };
 
 export function App() {
+  const [isAdminMode, setIsAdminMode] = useState(() => {
+    const params = new URLSearchParams(window.location.search);
+    return params.get('portal') === 'admin' || window.location.pathname.startsWith('/admin');
+  });
+
   return (
     <OrderProvider>
-      <MainLayout />
+      {isAdminMode ? (
+        <div className="relative">
+          <MainLayout />
+          <button
+            type="button"
+            onClick={() => setIsAdminMode(false)}
+            className="fixed bottom-4 right-4 z-50 px-4 py-2 rounded-full bg-[#1C1917] text-white text-xs font-bold shadow-lg hover:bg-[#7F1D1D] transition-colors cursor-pointer"
+          >
+            View Public Website
+          </button>
+        </div>
+      ) : (
+        <PublicWebsite onOpenAdmin={() => setIsAdminMode(true)} />
+      )}
     </OrderProvider>
   );
 }

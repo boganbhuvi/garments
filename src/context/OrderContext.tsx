@@ -2,6 +2,7 @@ import React, { createContext, useContext, useState, useEffect } from 'react';
 import {
   Order,
   CustomerDetails,
+  CustomerRecord,
   GarmentQuantityItem,
   MeasurementRecord,
   GarmentSpecification,
@@ -38,6 +39,10 @@ export type AppModule =
   | 'ORDERS'
   | 'CUSTOMERS'
   | 'TAILORS'
+  | 'INVENTORY'
+  | 'ACCOUNTS'
+  | 'BRANCHES'
+  | 'ACTIVITY_LOGS'
   | 'REPORTS'
   | 'SETTINGS';
 
@@ -155,6 +160,12 @@ interface OrderContextType {
     overrideRecord: CapacityOverrideRecord
   ) => Promise<void>;
   restoreCustomerDatabase: () => void;
+  customers: CustomerRecord[];
+  refreshCustomers: () => Promise<void>;
+  registerCustomer: (data: Partial<CustomerRecord> & { forceCreate?: boolean }) => Promise<{ ok: boolean; customer?: CustomerRecord; error?: string; existingCustomer?: CustomerRecord }>;
+  updateCustomerRecord: (customerId: string, data: Partial<CustomerRecord>) => Promise<{ ok: boolean; customer?: CustomerRecord; error?: string }>;
+  archiveOrDeleteCustomer: (customerId: string) => Promise<{ ok: boolean; archived?: boolean; message?: string; error?: string }>;
+  selectRegisteredCustomerForOrder: (cust: CustomerRecord) => void;
 }
 
 const STORAGE_KEY = 'giriraj_garments_orders_v5';
@@ -2001,6 +2012,136 @@ export const OrderProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     showToast('✓ Rich demonstration orders and master tailors restored', 'success');
   };
 
+  // ── DEDICATED CUSTOMER MASTER STATE & ACTIONS ───────────────────
+  const [customers, setCustomers] = useState<CustomerRecord[]>(() => {
+    try {
+      const saved = localStorage.getItem('giriraj_garments_customers_v1');
+      if (saved) return JSON.parse(saved);
+    } catch {}
+    return [];
+  });
+
+  const refreshCustomers = async () => {
+    const remote = await api.getCustomers();
+    if (remote && Array.isArray(remote)) {
+      setCustomers(remote);
+      try {
+        localStorage.setItem('giriraj_garments_customers_v1', JSON.stringify(remote));
+      } catch {}
+    } else if (customers.length === 0 && savedOrders.length > 0) {
+      // Offline fallback: derive unique customers from savedOrders without creating duplicates
+      const map = new Map<string, CustomerRecord>();
+      savedOrders.forEach(ord => {
+        const c = ord.customer;
+        const key = c.customerId || c.primaryPhone;
+        if (key && !map.has(key)) {
+          map.set(key, {
+            customerId: c.customerId || `C-${c.primaryPhone}`,
+            customerName: c.customerName || 'Unknown',
+            relationshipType: (c.relationshipType as any) || 'None',
+            husbandName: c.husbandName || '',
+            fatherName: c.fatherName || '',
+            primaryPhone: c.primaryPhone || '',
+            secondaryPhone: c.secondaryPhone || '',
+            additionalPhones: c.additionalPhones || [],
+            doorNo: c.doorNo || '',
+            street: c.street || '',
+            areaLocation: c.areaLocation || '',
+            city: c.city || '',
+            state: c.state || '',
+            pinCode: c.pinCode || '',
+            fullAddress: c.fullAddress || '',
+          });
+        }
+      });
+      setCustomers(Array.from(map.values()));
+    }
+  };
+
+  useEffect(() => {
+    refreshCustomers();
+  }, []);
+
+  const registerCustomer = async (data: Partial<CustomerRecord> & { forceCreate?: boolean }) => {
+    const res = await api.createCustomer(data);
+    if (res.ok && res.customer) {
+      setCustomers(prev => [res.customer!, ...prev.filter(c => c.customerId !== res.customer!.customerId)]);
+      showToast(`✓ Customer ${res.customer.customerName} (${res.customer.customerId}) registered`, 'success');
+    }
+    return res;
+  };
+
+  const updateCustomerRecord = async (customerId: string, data: Partial<CustomerRecord>) => {
+    const res = await api.updateCustomer(customerId, data);
+    if (res.ok && res.customer) {
+      const updated = res.customer;
+      setCustomers(prev => prev.map(c => (c.customerId === customerId ? updated : c)));
+      // Keep linked orders' cached customer snapshot in sync without altering customerId
+      setSavedOrders(prev =>
+        prev.map(ord =>
+          ord.customer.customerId === customerId
+            ? {
+                ...ord,
+                customer: {
+                  ...ord.customer,
+                  customerName: updated.customerName,
+                  relationshipType: (updated.relationshipType as any) || ord.customer.relationshipType,
+                  husbandName: updated.husbandName,
+                  fatherName: updated.fatherName,
+                  primaryPhone: updated.primaryPhone,
+                  secondaryPhone: updated.secondaryPhone,
+                  additionalPhones: updated.additionalPhones,
+                  doorNo: updated.doorNo,
+                  street: updated.street,
+                  areaLocation: updated.areaLocation,
+                  city: updated.city,
+                  state: updated.state,
+                  pinCode: updated.pinCode,
+                  fullAddress: updated.fullAddress,
+                },
+              }
+            : ord
+        )
+      );
+      showToast(`✓ Updated customer ${updated.customerName} (${customerId})`, 'success');
+    }
+    return res;
+  };
+
+  const archiveOrDeleteCustomer = async (customerId: string) => {
+    const res = await api.deleteOrArchiveCustomer(customerId);
+    if (res.ok) {
+      setCustomers(prev => prev.filter(c => c.customerId !== customerId));
+      showToast(res.message || 'Customer removed', 'info');
+    }
+    return res;
+  };
+
+  const selectRegisteredCustomerForOrder = (cust: CustomerRecord) => {
+    setOrder(prev => ({
+      ...prev,
+      customer: {
+        ...prev.customer,
+        customerId: cust.customerId,
+        customerName: cust.customerName,
+        relationshipType: (cust.relationshipType === 'D/O' || cust.relationshipType === 'W/O') ? cust.relationshipType : 'D/O',
+        husbandName: cust.husbandName || '',
+        fatherName: cust.fatherName || '',
+        primaryPhone: cust.primaryPhone || '',
+        secondaryPhone: cust.secondaryPhone || '',
+        additionalPhones: cust.additionalPhones || [],
+        doorNo: cust.doorNo || '',
+        street: cust.street || '',
+        areaLocation: cust.areaLocation || '',
+        city: cust.city || '',
+        state: cust.state || '',
+        pinCode: cust.pinCode || '',
+        fullAddress: cust.fullAddress || '',
+      },
+    }));
+    showToast(`✓ Linked registered customer: ${cust.customerName} (${cust.customerId})`, 'success');
+  };
+
   return (
     <OrderContext.Provider
       value={{
@@ -2081,7 +2222,13 @@ export const OrderProvider: React.FC<{ children: React.ReactNode }> = ({ childre
         updateQCStatus,
         recordDispatch,
         recordCapacityOverride,
-        restoreCustomerDatabase
+        restoreCustomerDatabase,
+        customers,
+        refreshCustomers,
+        registerCustomer,
+        updateCustomerRecord,
+        archiveOrDeleteCustomer,
+        selectRegisteredCustomerForOrder
       }}
     >
       {children}

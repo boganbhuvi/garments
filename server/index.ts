@@ -5,6 +5,7 @@ import mongoose from 'mongoose';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { OrderModel } from './models/Order';
+import { CustomerModel } from './models/Customer';
 import { SAMPLE_ORDERS } from '../src/data/sampleData';
 
 dotenv.config();
@@ -58,6 +59,43 @@ async function initMongo() {
       console.log('MongoDB collection empty. Seeding initial demonstration orders (Lakshmi & Meenakshi)...');
       await OrderModel.insertMany(SAMPLE_ORDERS);
       console.log('✓ Initial orders successfully seeded to MongoDB Atlas!');
+    }
+
+    // Backfill CustomerModel from existing orders if not already present (preserves all existing records)
+    const custCount = await CustomerModel.countDocuments();
+    if (custCount === 0) {
+      const existingOrders = await OrderModel.find().lean();
+      const seenIds = new Set<string>();
+      const toInsert: any[] = [];
+      for (const ord of existingOrders) {
+        const c = (ord as any).customer;
+        if (!c || !c.customerId) continue;
+        if (seenIds.has(c.customerId)) continue;
+        seenIds.add(c.customerId);
+        toInsert.push({
+          customerId: c.customerId,
+          customerName: c.customerName || 'Unknown Customer',
+          relationshipType: c.relationshipType || 'None',
+          husbandName: c.husbandName || '',
+          fatherName: c.fatherName || '',
+          primaryPhone: c.primaryPhone || 'N/A',
+          secondaryPhone: c.secondaryPhone || '',
+          additionalPhones: Array.isArray(c.additionalPhones) ? c.additionalPhones : [],
+          doorNo: c.doorNo || '',
+          street: c.street || '',
+          areaLocation: c.areaLocation || '',
+          city: c.city || '',
+          state: c.state || '',
+          pinCode: c.pinCode || '',
+          fullAddress: c.fullAddress || '',
+          isArchived: false,
+          history: [{ action: 'CREATED', timestamp: new Date(), note: 'Migrated from existing order records' }],
+        });
+      }
+      if (toInsert.length > 0) {
+        await CustomerModel.insertMany(toInsert, { ordered: false }).catch(() => {});
+        console.log(`✓ Synced ${toInsert.length} unique customer profiles into Customer collection.`);
+      }
     }
   } catch (error: any) {
     isDbConnected = false;
@@ -228,6 +266,216 @@ app.get('/api/customers/search', async (req: Request, res: Response) => {
       .lean();
 
     res.json(matches);
+  } catch (error: any) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+// ==========================================
+// DEDICATED CUSTOMER MASTER CRUD ENDPOINTS
+// ==========================================
+
+// GET all registered customers (with optional search ?q= and ?includeArchived=true)
+app.get('/api/customers', async (req: Request, res: Response) => {
+  if (!isDbConnected) {
+    return res.status(503).json({ error: 'Database disconnected' });
+  }
+  try {
+    const q = (req.query.q as string || '').trim();
+    const includeArchived = req.query.includeArchived === 'true';
+    const filter: any = includeArchived ? {} : { isArchived: { $ne: true } };
+
+    if (q) {
+      const regex = new RegExp(q, 'i');
+      filter.$or = [
+        { customerName: regex },
+        { primaryPhone: regex },
+        { secondaryPhone: regex },
+        { additionalPhones: regex },
+        { customerId: regex },
+        { fullAddress: regex },
+      ];
+    }
+
+    const customers = await CustomerModel.find(filter).sort({ updatedAt: -1 }).lean();
+    res.json(customers);
+  } catch (error: any) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+// GET single customer profile + all associated orders
+app.get('/api/customers/:customerId', async (req: Request, res: Response) => {
+  if (!isDbConnected) {
+    return res.status(503).json({ error: 'Database disconnected' });
+  }
+  try {
+    const customer = await CustomerModel.findOne({ customerId: req.params.customerId }).lean();
+    if (!customer) {
+      return res.status(404).json({ error: 'Customer not found' });
+    }
+    const orders = await OrderModel.find({ 'customer.customerId': req.params.customerId })
+      .sort({ createdAt: -1 })
+      .lean();
+    res.json({ customer, orders });
+  } catch (error: any) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+// POST register a new customer (with duplicate phone/ID validation)
+app.post('/api/customers', async (req: Request, res: Response) => {
+  if (!isDbConnected) {
+    return res.status(503).json({ error: 'Database disconnected' });
+  }
+  try {
+    const data = req.body;
+    if (!data.customerName || !data.primaryPhone) {
+      return res.status(400).json({ error: 'Customer Name and Primary Mobile Number are required.' });
+    }
+
+    const cleanPhone = String(data.primaryPhone).replace(/\D/g, '');
+    if (!data.forceCreate && cleanPhone.length >= 6) {
+      const existingByPhone = await CustomerModel.findOne({
+        isArchived: { $ne: true },
+        $or: [
+          { primaryPhone: data.primaryPhone.trim() },
+          { primaryPhone: new RegExp(cleanPhone.slice(-10) + '$') },
+        ],
+      }).lean();
+      if (existingByPhone) {
+        return res.status(409).json({
+          error: `A customer with mobile number ${data.primaryPhone} already exists (${existingByPhone.customerName} - ${existingByPhone.customerId}).`,
+          existingCustomer: existingByPhone,
+        });
+      }
+    }
+
+    let customerId = (data.customerId || '').trim();
+    if (!customerId) {
+      const count = await CustomerModel.countDocuments();
+      customerId = `C${String(count + 101).padStart(4, '0')}`;
+      while (await CustomerModel.exists({ customerId })) {
+        customerId = `C${Math.floor(1000 + Math.random() * 9000)}`;
+      }
+    } else {
+      const dupId = await CustomerModel.findOne({ customerId }).lean();
+      if (dupId) {
+        return res.status(409).json({
+          error: `Customer ID ${customerId} is already assigned to ${dupId.customerName}.`,
+          existingCustomer: dupId,
+        });
+      }
+    }
+
+    const newCustomer = new CustomerModel({
+      ...data,
+      customerId,
+      isArchived: false,
+      history: [{ action: 'CREATED', timestamp: new Date(), note: 'Registered in Customer Details' }],
+    });
+    const saved = await newCustomer.save();
+    res.status(201).json(saved);
+  } catch (error: any) {
+    res.status(400).json({ error: error.message });
+  }
+});
+
+// PUT update an existing customer (strictly UPDATE, never CREATE, customerId immutable)
+app.put('/api/customers/:customerId', async (req: Request, res: Response) => {
+  if (!isDbConnected) {
+    return res.status(503).json({ error: 'Database disconnected' });
+  }
+  try {
+    const targetId = req.params.customerId;
+    const { customerId: _ignoredId, _id: _ignoredMongoId, history: _ignoredHistory, ...updateFields } = req.body;
+
+    const updated = await CustomerModel.findOneAndUpdate(
+      { customerId: targetId },
+      {
+        $set: { ...updateFields, updatedAt: new Date() },
+        $push: {
+          history: {
+            action: 'UPDATED',
+            timestamp: new Date(),
+            note: 'Customer profile updated',
+          },
+        },
+      },
+      { new: true }
+    );
+
+    if (!updated) {
+      return res.status(404).json({ error: `Customer ${targetId} not found.` });
+    }
+
+    // Sync updated customer snapshot to existing orders linked by customerId without breaking relationships
+    await OrderModel.updateMany(
+      { 'customer.customerId': targetId },
+      {
+        $set: {
+          'customer.customerName': updated.customerName,
+          'customer.relationshipType': updated.relationshipType,
+          'customer.husbandName': updated.husbandName,
+          'customer.fatherName': updated.fatherName,
+          'customer.primaryPhone': updated.primaryPhone,
+          'customer.secondaryPhone': updated.secondaryPhone,
+          'customer.additionalPhones': updated.additionalPhones,
+          'customer.doorNo': updated.doorNo,
+          'customer.street': updated.street,
+          'customer.areaLocation': updated.areaLocation,
+          'customer.city': updated.city,
+          'customer.state': updated.state,
+          'customer.pinCode': updated.pinCode,
+          'customer.fullAddress': updated.fullAddress,
+        },
+      }
+    );
+
+    res.json(updated);
+  } catch (error: any) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+// DELETE or safely archive a customer
+app.delete('/api/customers/:customerId', async (req: Request, res: Response) => {
+  if (!isDbConnected) {
+    return res.status(503).json({ error: 'Database disconnected' });
+  }
+  try {
+    const targetId = req.params.customerId;
+    const orderCount = await OrderModel.countDocuments({ 'customer.customerId': targetId });
+    if (orderCount > 0) {
+      const archived = await CustomerModel.findOneAndUpdate(
+        { customerId: targetId },
+        {
+          $set: { isArchived: true, updatedAt: new Date() },
+          $push: {
+            history: {
+              action: 'ARCHIVED',
+              timestamp: new Date(),
+              note: `Safely archived (${orderCount} linked orders preserved)`,
+            },
+          },
+        },
+        { new: true }
+      );
+      if (!archived) {
+        return res.status(404).json({ error: 'Customer not found' });
+      }
+      return res.json({
+        archived: true,
+        message: `Customer ${targetId} has ${orderCount} linked orders and was safely archived instead of deleted.`,
+        customer: archived,
+      });
+    }
+
+    const deleted = await CustomerModel.findOneAndDelete({ customerId: targetId });
+    if (!deleted) {
+      return res.status(404).json({ error: 'Customer not found' });
+    }
+    res.json({ archived: false, message: `Customer ${targetId} deleted.`, customerId: targetId });
   } catch (error: any) {
     res.status(500).json({ error: error.message });
   }

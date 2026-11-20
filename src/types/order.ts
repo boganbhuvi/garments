@@ -29,6 +29,34 @@ export interface CustomerDetails {
   pinCode?: string;
 }
 
+export interface CustomerHistoryEntry {
+  action: 'CREATED' | 'UPDATED' | 'ARCHIVED';
+  timestamp: string;
+  note?: string;
+}
+
+export interface CustomerRecord {
+  customerId: string;
+  customerName: string;
+  relationshipType: 'W/O' | 'D/O' | 'S/O' | 'None';
+  husbandName: string;
+  fatherName: string;
+  primaryPhone: string;
+  secondaryPhone: string;
+  additionalPhones: string[];
+  doorNo: string;
+  street: string;
+  areaLocation: string;
+  city: string;
+  state: string;
+  pinCode: string;
+  fullAddress: string;
+  isArchived?: boolean;
+  history?: CustomerHistoryEntry[];
+  createdAt?: string;
+  updatedAt?: string;
+}
+
 export interface WhatsAppNotificationRecord {
   id: string;
   templateType: string;

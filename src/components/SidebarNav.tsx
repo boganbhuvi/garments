@@ -18,7 +18,11 @@ import {
   Sparkles,
   PlusCircle,
   X,
-  Menu
+  Menu,
+  Boxes,
+  IndianRupee,
+  Building2,
+  Activity
 } from 'lucide-react';
 
 interface SidebarNavProps {
@@ -33,6 +37,7 @@ interface NavItem {
   label: string;
   shortLabel: string;
   icon: React.ComponentType<{ className?: string }>;
+  section?: string;
   badge?: string;
   badgeColor?: string;
 }
@@ -73,15 +78,17 @@ export const SidebarNav: React.FC<SidebarNavProps> = ({
   const NAV_ITEMS: NavItem[] = [
     {
       id: 'OVERVIEW',
-      label: 'Overview',
-      shortLabel: 'Overview',
-      icon: TrendingUp
+      label: 'Dashboard',
+      shortLabel: 'Dashboard',
+      icon: TrendingUp,
+      section: 'OVERVIEW'
     },
     {
-      id: 'FRONT_DESK',
-      label: 'Front Desk / New Order',
-      shortLabel: 'Front Desk',
-      icon: Store
+      id: 'CUSTOMERS',
+      label: 'Customer Details',
+      shortLabel: 'Customers',
+      icon: UserCheck,
+      section: 'CUSTOMER & SALES'
     },
     {
       id: 'ORDERS',
@@ -91,16 +98,23 @@ export const SidebarNav: React.FC<SidebarNavProps> = ({
       badge: savedOrders.length > 0 ? String(savedOrders.length) : undefined
     },
     {
+      id: 'FRONT_DESK',
+      label: 'New Order Intake',
+      shortLabel: 'New Order',
+      icon: Store
+    },
+    {
       id: 'CUTTING_DEPT',
-      label: 'Cutting Department',
+      label: 'Cutting Management',
       shortLabel: 'Cutting',
       icon: Scissors,
+      section: 'PRODUCTION',
       badge: cuttingCount > 0 ? String(cuttingCount) : undefined,
       badgeColor: 'bg-[#147D75]'
     },
     {
       id: 'STITCHING_DEPT',
-      label: 'Stitching Department',
+      label: 'Stitching Management',
       shortLabel: 'Stitching',
       icon: Users,
       badge: stitchingCount > 0 ? String(stitchingCount) : undefined,
@@ -108,7 +122,7 @@ export const SidebarNav: React.FC<SidebarNavProps> = ({
     },
     {
       id: 'QC_DEPT',
-      label: 'QC & Trial',
+      label: 'Quality Control',
       shortLabel: 'QC',
       icon: ShieldCheck,
       badge: qcCount > 0 ? String(qcCount) : undefined,
@@ -116,29 +130,52 @@ export const SidebarNav: React.FC<SidebarNavProps> = ({
     },
     {
       id: 'DISPATCH_DEPT',
-      label: 'Dispatch & Delivery',
+      label: 'Dispatch Management',
       shortLabel: 'Dispatch',
       icon: Package,
       badge: dispatchCount > 0 ? String(dispatchCount) : undefined,
       badgeColor: 'bg-purple-600'
     },
     {
-      id: 'CUSTOMERS',
-      label: 'Customer Management',
-      shortLabel: 'Customers',
-      icon: UserCheck
+      id: 'INVENTORY',
+      label: 'Material Inventory',
+      shortLabel: 'Inventory',
+      icon: Boxes,
+      section: 'INVENTORY'
     },
     {
       id: 'TAILORS',
-      label: 'Tailor Management',
-      shortLabel: 'Tailors',
-      icon: Briefcase
+      label: 'Employee Management',
+      shortLabel: 'Employees',
+      icon: Briefcase,
+      section: 'BUSINESS MANAGEMENT'
+    },
+    {
+      id: 'BRANCHES',
+      label: 'Branch Management',
+      shortLabel: 'Branches',
+      icon: Building2
+    },
+    {
+      id: 'ACCOUNTS',
+      label: 'Accounts & Payments',
+      shortLabel: 'Accounts',
+      icon: IndianRupee,
+      section: 'FINANCE'
     },
     {
       id: 'REPORTS',
-      label: 'Reports & Audit',
+      label: 'Business Reports',
       shortLabel: 'Reports',
-      icon: BarChart3
+      icon: BarChart3,
+      section: 'ANALYTICS'
+    },
+    {
+      id: 'ACTIVITY_LOGS',
+      label: 'Activity Logs',
+      shortLabel: 'Logs',
+      icon: Activity,
+      section: 'SYSTEM'
     },
     {
       id: 'SETTINGS',
@@ -168,7 +205,7 @@ export const SidebarNav: React.FC<SidebarNavProps> = ({
 
       {/* Sidebar Container */}
       <aside
-        className={`fixed top-0 bottom-0 left-0 z-40 bg-[#092546] text-white border-r border-white/10 flex flex-col transition-all duration-300 no-print ${
+        className={`fixed top-0 bottom-0 left-0 z-40 bg-[#111827] text-slate-200 border-r border-slate-800 flex flex-col transition-all duration-300 no-print ${
           // Mobile drawer classes
           isMobileOpen 
             ? 'translate-x-0 w-72 shadow-2xl' 
@@ -179,17 +216,17 @@ export const SidebarNav: React.FC<SidebarNavProps> = ({
         }`}
       >
         {/* Brand Header */}
-        <div className="h-16 px-4 flex items-center justify-between border-b border-white/10 bg-[#061B33]">
+        <div className="h-16 px-4 flex items-center justify-between border-b border-slate-800 bg-[#0B1120]">
           <div className="flex items-center gap-3 overflow-hidden">
-            <div className="w-10 h-10 rounded-xl bg-white text-[#092546] flex items-center justify-center font-black shadow flex-shrink-0">
-              <Scissors className="w-5 h-5 stroke-[2.5]" />
+            <div className="w-9 h-9 rounded-lg bg-[#7F1D1D] text-white flex items-center justify-center font-bold shadow flex-shrink-0">
+              <Scissors className="w-4 h-4 stroke-[2.5]" />
             </div>
             {(!isCollapsed || isMobileOpen) && (
               <div className="flex flex-col min-w-0">
-                <span className="text-[17px] font-black text-white tracking-tight leading-tight truncate">
+                <span className="text-[15px] font-bold text-white tracking-tight leading-tight truncate">
                   GIRIRAJ GARMENTS
                 </span>
-                <span className="text-[11px] text-[#99F2E8] font-bold tracking-wider uppercase truncate">
+                <span className="text-[10px] text-amber-400 font-semibold tracking-widest uppercase truncate">
                   Enterprise ERP
                 </span>
               </div>
@@ -200,7 +237,7 @@ export const SidebarNav: React.FC<SidebarNavProps> = ({
           <button
             type="button"
             onClick={toggleCollapse}
-            className="hidden lg:flex w-7 h-7 rounded-lg bg-white/10 hover:bg-white/20 text-white items-center justify-center transition-all cursor-pointer"
+            className="hidden lg:flex w-7 h-7 rounded-md bg-slate-800 hover:bg-slate-700 text-slate-300 items-center justify-center transition-all cursor-pointer"
             title={isCollapsed ? 'Expand Sidebar' : 'Collapse Sidebar'}
           >
             {isCollapsed ? <ChevronRight className="w-4 h-4" /> : <ChevronLeft className="w-4 h-4" />}
@@ -210,14 +247,14 @@ export const SidebarNav: React.FC<SidebarNavProps> = ({
           <button
             type="button"
             onClick={onCloseMobile}
-            className="lg:hidden w-8 h-8 rounded-lg bg-white/10 text-white flex items-center justify-center cursor-pointer"
+            className="lg:hidden w-8 h-8 rounded-lg bg-slate-800 text-white flex items-center justify-center cursor-pointer"
           >
             <X className="w-5 h-5" />
           </button>
         </div>
 
         {/* Quick Action: New Order Booking */}
-        <div className="p-3 border-b border-white/10">
+        <div className="p-3 border-b border-slate-800">
           <button
             type="button"
             onClick={() => {
@@ -225,7 +262,7 @@ export const SidebarNav: React.FC<SidebarNavProps> = ({
               setActiveModule('FRONT_DESK');
               onCloseMobile();
             }}
-            className={`w-full py-2.5 rounded-xl bg-[#147D75] hover:bg-[#0E605A] text-white font-black text-sm flex items-center justify-center gap-2 shadow transition-all cursor-pointer ${
+            className={`w-full py-2.5 rounded-lg bg-[#7F1D1D] hover:bg-[#991B1B] text-white font-semibold text-sm flex items-center justify-center gap-2 shadow-sm transition-all cursor-pointer ${
               isCollapsed && !isMobileOpen ? 'px-0' : 'px-3'
             }`}
             title="Book New Customer Order"
@@ -242,17 +279,22 @@ export const SidebarNav: React.FC<SidebarNavProps> = ({
             const isActive = activeModule === item.id;
 
             return (
-              <button
-                key={item.id}
-                type="button"
-                onClick={() => handleNavClick(item.id)}
-                className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-[14px] font-bold transition-all group relative cursor-pointer ${
-                  isActive
-                    ? 'bg-white text-[#092546] shadow-md font-black'
-                    : 'text-slate-300 hover:text-white hover:bg-white/10'
-                } ${isCollapsed && !isMobileOpen ? 'justify-center px-0' : ''}`}
-                title={isCollapsed ? item.label : undefined}
-              >
+              <React.Fragment key={item.id}>
+                {item.section && (!isCollapsed || isMobileOpen) && (
+                  <div className="px-3 pt-3 pb-1 text-[10px] font-black uppercase tracking-[0.18em] text-slate-400">
+                    {item.section}
+                  </div>
+                )}
+                <button
+                  type="button"
+                  onClick={() => handleNavClick(item.id)}
+                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-[14px] font-bold transition-all group relative cursor-pointer ${
+                    isActive
+                      ? 'bg-white text-[#092546] shadow-md font-black'
+                      : 'text-slate-300 hover:text-white hover:bg-white/10'
+                  } ${isCollapsed && !isMobileOpen ? 'justify-center px-0' : ''}`}
+                  title={isCollapsed ? item.label : undefined}
+                >
                 <Icon 
                   className={`w-5 h-5 flex-shrink-0 transition-colors ${
                     isActive ? 'text-[#147D75]' : 'text-slate-400 group-hover:text-white'
@@ -282,6 +324,7 @@ export const SidebarNav: React.FC<SidebarNavProps> = ({
                   </div>
                 )}
               </button>
+              </React.Fragment>
             );
           })}
         </nav>
