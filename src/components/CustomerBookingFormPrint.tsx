@@ -134,12 +134,12 @@ html, body {
   position: relative;
 }
 
-/* Fold 3: ~67mm (preserved exactly) */
+/* Fold 3: fills remaining height to bottom border */
 .fold-3 {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  min-height: 0;
 }
 
 /* ── FOLD 1: HEADER & SHOP BRANDING ──────────────────────── */
@@ -439,18 +439,20 @@ table { width: 100%; border-collapse: collapse; flex-shrink: 0; }
   width: 100%;
 }
 
-/* ── FOLD 3: BOTTOM SECTION (PRESERVED) ──────────────────── */
+/* ── FOLD 3: BOTTOM SECTION (EXPANDED TO FILL FULL FOLD) ── */
 .bottom-section {
   border: 2px solid #000;
-  margin-top: 1mm;
-  padding: 2mm 3mm;
-  flex-shrink: 0;
+  margin-top: 1.5mm;
+  padding: 2.5mm 3.5mm;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
   background: #fff;
 }
 .bottom-strip {
   display: flex;
   gap: 6mm;
-  padding-bottom: 2mm;
+  padding-bottom: 2.5mm;
 }
 .bottom-field {
   flex: 1;
@@ -474,22 +476,13 @@ table { width: 100%; border-collapse: collapse; flex-shrink: 0; }
 }
 .bottom-notes-area {
   margin-top: 2mm;
+  flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 1mm;
-}
-.bottom-notes-title {
-  font-size: 10pt;
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  color: #000;
 }
 .bottom-notes-lines {
-  display: flex;
-  flex-direction: column;
-  gap: 2.5mm;
-  padding-top: 1mm;
+  flex: 1;
+  width: 100%;
 }
 .notes-line {
   border-bottom: 1.2px solid #000;
@@ -727,7 +720,7 @@ table { width: 100%; border-collapse: collapse; flex-shrink: 0; }
       
       <!-- Expanded notes / instructions handwritten area (clean blank area) -->
       <div class="bottom-notes-area">
-        <div class="bottom-notes-lines" style="min-height:22mm;"></div>
+        <div class="bottom-notes-lines"></div>
       </div>
     </div>
   </div><!-- end fold-3 -->
