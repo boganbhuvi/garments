@@ -112,10 +112,10 @@ html, body {
   flex-direction: column;
 }
 
-/* Fold 1 made half inch larger (~118mm) to fit customer details, phones/items, address, and NO. OF */
+/* Fold 1: 111mm (+0.5 inch larger than original) */
 .fold-1 {
-  height: 118mm;
-  max-height: 118mm;
+  height: 111mm;
+  max-height: 111mm;
   border-bottom: 2px dashed #666;
   padding-bottom: 1.5mm;
   margin-bottom: 1.5mm;
@@ -123,10 +123,10 @@ html, body {
   position: relative;
 }
 
-/* Fold 2: 102mm (tailoring details) */
+/* Fold 2: 109mm (balanced middle section) */
 .fold-2 {
-  height: 102mm;
-  max-height: 102mm;
+  height: 109mm;
+  max-height: 109mm;
   border-bottom: 2px dashed #666;
   padding-bottom: 1.5mm;
   margin-bottom: 1.5mm;
@@ -205,13 +205,13 @@ table { width: 100%; border-collapse: collapse; flex-shrink: 0; }
 }
 
 .addr-val {
-  font-size: 9pt;
+  font-size: 9.5pt;
   font-weight: 600;
   display: block;
-  min-height: 5mm;
+  min-height: 11mm; /* Generous writing space for full address */
   word-break: break-word;
   white-space: normal;
-  line-height: 1.2;
+  line-height: 1.3;
   color: #000;
 }
 
