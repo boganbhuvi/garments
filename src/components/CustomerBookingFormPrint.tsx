@@ -725,13 +725,9 @@ table { width: 100%; border-collapse: collapse; flex-shrink: 0; }
         </div>
       </div>
       
-      <!-- Expanded notes / instructions handwritten lines -->
+      <!-- Expanded notes / instructions handwritten area (clean blank area) -->
       <div class="bottom-notes-area">
-        <div class="bottom-notes-lines">
-          <div class="notes-line"></div>
-          <div class="notes-line"></div>
-          <div class="notes-line"></div>
-        </div>
+        <div class="bottom-notes-lines" style="min-height:22mm;"></div>
       </div>
     </div>
   </div><!-- end fold-3 -->
