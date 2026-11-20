@@ -112,10 +112,10 @@ html, body {
   flex-direction: column;
 }
 
-/* Fold 1 made ~1/2 inch (12.7mm) larger: 98mm + 13mm = 111mm */
+/* Fold 1 made half inch larger (~118mm) to fit customer details, phones/items, address, and NO. OF */
 .fold-1 {
-  height: 111mm;
-  max-height: 111mm;
+  height: 118mm;
+  max-height: 118mm;
   border-bottom: 2px dashed #666;
   padding-bottom: 1.5mm;
   margin-bottom: 1.5mm;
@@ -123,10 +123,10 @@ html, body {
   position: relative;
 }
 
-/* Fold 2: 109mm (balanced middle section) */
+/* Fold 2: 102mm (tailoring details) */
 .fold-2 {
-  height: 109mm;
-  max-height: 109mm;
+  height: 102mm;
+  max-height: 102mm;
   border-bottom: 2px dashed #666;
   padding-bottom: 1.5mm;
   margin-bottom: 1.5mm;
@@ -208,10 +208,10 @@ table { width: 100%; border-collapse: collapse; flex-shrink: 0; }
   font-size: 9pt;
   font-weight: 600;
   display: block;
-  min-height: 4.5mm;
+  min-height: 5mm;
   word-break: break-word;
   white-space: normal;
-  line-height: 1.15;
+  line-height: 1.2;
   color: #000;
 }
 
@@ -562,15 +562,13 @@ table { width: 100%; border-collapse: collapse; flex-shrink: 0; }
       </tr>
     </table>
 
-    <!-- ROW 2: NAME / R.NO / ADDRESS (ADDRESS IN PLACE OF PREVIOUS PHONE COLUMN) -->
+    <!-- ROW 2: NAME / R.NO -->
     <table class="info-table">
       <tr>
         <td class="lbl" style="width:16mm;">NAME&nbsp;:</td>
-        <td style="width:68mm;"><span class="val-block highlight-red">${name}</span></td>
+        <td style="width:105mm;"><span class="val-block highlight-red">${name}</span></td>
         <td class="lbl" style="width:16mm;">R.NO&nbsp;:</td>
-        <td style="width:30mm;"><span class="val-block highlight-red">${rNo}</span></td>
-        <td class="lbl" style="width:20mm;">ADDRESS&nbsp;:</td>
-        <td><span class="addr-val">${address}</span></td>
+        <td><span class="val-block highlight-red">${rNo}</span></td>
       </tr>
     </table>
 
@@ -612,6 +610,14 @@ table { width: 100%; border-collapse: collapse; flex-shrink: 0; }
         </div>
       </div>
     </div>
+
+    <!-- ROW 6: ADDRESS (MOVED BELOW PHONE & ITEMS) -->
+    <table class="info-table" style="margin-top:1.2mm;">
+      <tr>
+        <td class="lbl" style="width:20mm; vertical-align:top; padding-top:1.2mm;">ADDRESS&nbsp;:</td>
+        <td><span class="addr-val">${address}</span></td>
+      </tr>
+    </table>
 
     <!-- ROW 6: NO. OF QUANTITIES
          Row 1: TOPS, BOTTOM, DHUPATTA, NIGHTY
