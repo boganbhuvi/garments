@@ -438,11 +438,10 @@ table { width: 100%; border-collapse: collapse; flex-shrink: 0; }
   font-weight: 900;
   color: #000;
 }
-/* User Request: Change colour in 3rd fold also to clean black */
 .bottom-field .populated-val {
   font-size: 11pt;
   font-weight: 700;
-  color: #000 !important;
+  color: #000;
   border-bottom: 1.5px solid #000;
   padding: 0.5mm 2mm;
   flex: 1;
