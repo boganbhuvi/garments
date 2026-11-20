@@ -208,10 +208,10 @@ table { width: 100%; border-collapse: collapse; flex-shrink: 0; }
   font-size: 9.5pt;
   font-weight: 600;
   display: block;
-  min-height: 7mm; /* Generous writing space for full address while fitting within 101mm fold */
+  min-height: 14mm; /* Large spacious box for writing full address */
   word-break: break-word;
   white-space: normal;
-  line-height: 1.3;
+  line-height: 1.35;
   color: #000;
 }
 
