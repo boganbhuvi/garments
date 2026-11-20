@@ -112,10 +112,10 @@ html, body {
   flex-direction: column;
 }
 
-/* Fold 1: 111mm (+0.5 inch larger than original) */
+/* Fold 1: 101mm (reduced by 10mm / 1cm to make folds balanced after printout) */
 .fold-1 {
-  height: 111mm;
-  max-height: 111mm;
+  height: 101mm;
+  max-height: 101mm;
   border-bottom: 2px dashed #666;
   padding-bottom: 1.5mm;
   margin-bottom: 1.5mm;
@@ -208,7 +208,7 @@ table { width: 100%; border-collapse: collapse; flex-shrink: 0; }
   font-size: 9.5pt;
   font-weight: 600;
   display: block;
-  min-height: 11mm; /* Generous writing space for full address */
+  min-height: 7mm; /* Generous writing space for full address while fitting within 101mm fold */
   word-break: break-word;
   white-space: normal;
   line-height: 1.3;
@@ -451,7 +451,6 @@ table { width: 100%; border-collapse: collapse; flex-shrink: 0; }
   display: flex;
   gap: 6mm;
   padding-bottom: 2mm;
-  border-bottom: 1.5px dashed #444;
 }
 .bottom-field {
   flex: 1;
@@ -667,7 +666,6 @@ table { width: 100%; border-collapse: collapse; flex-shrink: 0; }
           <div class="section-box" style="flex:1;">
             <div class="section-box-title">
               <span>LINING :</span>
-              <span style="font-size:8pt; font-weight:normal; color:#444;">Full / Half / None</span>
             </div>
             <span class="write-box-sm"></span>
           </div>
@@ -676,7 +674,6 @@ table { width: 100%; border-collapse: collapse; flex-shrink: 0; }
           <div class="section-box" style="flex:1.2;">
             <div class="section-box-title">
               <span>SLEEVE (SL) :</span>
-              <span style="font-size:8pt; font-weight:normal; color:#444;">Length &amp; Round</span>
             </div>
             <span class="write-box-md"></span>
           </div>
@@ -685,7 +682,6 @@ table { width: 100%; border-collapse: collapse; flex-shrink: 0; }
           <div class="section-box" style="flex:1.2;">
             <div class="section-box-title">
               <span>BH :</span>
-              <span style="font-size:8pt; font-weight:normal; color:#444;">Blouse Height</span>
             </div>
             <span class="write-box-md"></span>
           </div>
@@ -694,7 +690,6 @@ table { width: 100%; border-collapse: collapse; flex-shrink: 0; }
           <div class="section-box" style="flex:1;">
             <div class="section-box-title">
               <span>SLIT :</span>
-              <span style="font-size:8pt; font-weight:normal; color:#444;">Side / Front</span>
             </div>
             <span class="write-box-sm"></span>
           </div>
@@ -703,7 +698,6 @@ table { width: 100%; border-collapse: collapse; flex-shrink: 0; }
           <div class="section-box" style="flex:1;">
             <div class="section-box-title">
               <span>FITTING :</span>
-              <span style="font-size:8pt; font-weight:normal; color:#444;">Tight / Regular / Loose</span>
             </div>
             <span class="write-box-sm"></span>
           </div>
@@ -744,7 +738,6 @@ table { width: 100%; border-collapse: collapse; flex-shrink: 0; }
       
       <!-- Expanded notes / instructions handwritten lines -->
       <div class="bottom-notes-area">
-        <div class="bottom-notes-title">SPECIAL WORKSHOP REMARKS / NOTES :</div>
         <div class="bottom-notes-lines">
           <div class="notes-line"></div>
           <div class="notes-line"></div>
