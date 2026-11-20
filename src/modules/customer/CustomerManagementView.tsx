@@ -11,7 +11,8 @@ import {
   Scissors, 
   ExternalLink,
   BookOpen,
-  Filter
+  Filter,
+  RotateCcw
 } from 'lucide-react';
 import { Order } from '../../types/order';
 
@@ -21,7 +22,8 @@ export const CustomerManagementView: React.FC = () => {
     selectCustomerFromHistory, 
     createNewOrder, 
     setActiveModule, 
-    setSelectedDetailOrder 
+    setSelectedDetailOrder,
+    restoreCustomerDatabase
   } = useOrder();
 
   const [searchQuery, setSearchQuery] = useState('');
@@ -94,17 +96,29 @@ export const CustomerManagementView: React.FC = () => {
           </div>
         </div>
 
-        <button
-          type="button"
-          onClick={() => {
-            createNewOrder();
-            setActiveModule('FRONT_DESK');
-          }}
-          className="px-5 py-3 rounded-xl bg-[#147D75] hover:bg-[#0E605A] text-white font-black text-sm flex items-center gap-2 shadow-md transition-all cursor-pointer self-start md:self-auto"
-        >
-          <PlusCircle className="w-4 h-4" />
-          <span>+ Register New Customer</span>
-        </button>
+        <div className="flex items-center gap-3 self-start md:self-auto flex-wrap">
+          <button
+            type="button"
+            onClick={restoreCustomerDatabase}
+            className="px-4 py-3 rounded-xl bg-slate-700/80 hover:bg-slate-600 text-white font-bold text-sm flex items-center gap-2 shadow-md transition-all cursor-pointer border border-slate-500/50"
+            title="Restore all 191 customers from the original register"
+          >
+            <RotateCcw className="w-4 h-4 text-emerald-400" />
+            <span>Restore All Customers (191)</span>
+          </button>
+
+          <button
+            type="button"
+            onClick={() => {
+              createNewOrder();
+              setActiveModule('FRONT_DESK');
+            }}
+            className="px-5 py-3 rounded-xl bg-[#147D75] hover:bg-[#0E605A] text-white font-black text-sm flex items-center gap-2 shadow-md transition-all cursor-pointer"
+          >
+            <PlusCircle className="w-4 h-4" />
+            <span>+ Register New Customer</span>
+          </button>
+        </div>
       </div>
 
       {/* Search Input - Single Column Vertical Layout */}

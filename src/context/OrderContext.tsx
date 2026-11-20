@@ -154,9 +154,10 @@ interface OrderContextType {
     orderId: string,
     overrideRecord: CapacityOverrideRecord
   ) => Promise<void>;
+  restoreCustomerDatabase: () => void;
 }
 
-const STORAGE_KEY = 'giriraj_garments_orders_v4';
+const STORAGE_KEY = 'giriraj_garments_orders_v5';
 const CURRENT_ORDER_KEY = 'giriraj_garments_current_order_v2';
 const TAILORS_STORAGE_KEY = 'giriraj_garments_tailors_v1';
 const WAGES_STORAGE_KEY = 'giriraj_garments_wages_v1';
@@ -242,21 +243,30 @@ export const OrderProvider: React.FC<{ children: React.ReactNode }> = ({ childre
       const stored = localStorage.getItem(STORAGE_KEY);
       if (stored) {
         const parsed: Order[] = JSON.parse(stored);
-        // If stored contains the old fake data or lacks additionalPhones schema, upgrade to latest database
+        // If stored contains the old fake data, upgrade to latest database
         const hasOldData = parsed.some(
           o => o.customer.customerId === 'CUST-101' || 
                o.customer.customerName === 'Lakshmi Ramakrishnan' ||
-               o.customer.customerName === 'Dr. Ananya Subramanian' ||
-               (o.customer.customerId === 'A005' && (!o.customer.additionalPhones || o.customer.additionalPhones.length === 0))
+               o.customer.customerName === 'Dr. Ananya Subramanian'
         );
         if (!hasOldData && parsed.length > 0) {
+          // If any customers from SAMPLE_ORDERS are missing (e.g. accidentally deleted), restore them
+          const existingIds = new Set(parsed.map(o => o.customer.customerId || o.id));
+          const missingOriginals = SAMPLE_ORDERS.filter(o => !existingIds.has(o.customer.customerId || o.id));
+          if (missingOriginals.length > 0) {
+            const merged = [...parsed, ...missingOriginals];
+            try {
+              localStorage.setItem(STORAGE_KEY, JSON.stringify(merged));
+            } catch {}
+            return merged;
+          }
           return parsed;
         }
       }
     } catch (e) {
       console.error('Error reading saved orders from localStorage', e);
     }
-    // Default to the 191 real register customers
+    // Default to all 191 real register customers
     try {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(SAMPLE_ORDERS));
     } catch {}
@@ -1969,6 +1979,20 @@ export const OrderProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     showToast(`✓ Capacity override authorized by ${overrideRecord.authorizedBy}`, 'info');
   };
 
+  const restoreCustomerDatabase = () => {
+    // Merge existing user-created orders with the complete 191 customer register
+    setSavedOrders(prev => {
+      const existingIds = new Set(prev.map(o => o.customer.customerId || o.id));
+      const missingOriginals = SAMPLE_ORDERS.filter(o => !existingIds.has(o.customer.customerId || o.id));
+      const restored = [...prev, ...missingOriginals];
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(restored));
+      } catch {}
+      return restored;
+    });
+    showToast('✓ All 191 customer records successfully restored!', 'success');
+  };
+
   const loadDemoData = () => {
     setSavedOrders(SAMPLE_ORDERS);
     localStorage.setItem(STORAGE_KEY, JSON.stringify(SAMPLE_ORDERS));
@@ -2056,7 +2080,8 @@ export const OrderProvider: React.FC<{ children: React.ReactNode }> = ({ childre
         // QC, Dispatch & Capacity Overrides
         updateQCStatus,
         recordDispatch,
-        recordCapacityOverride
+        recordCapacityOverride,
+        restoreCustomerDatabase
       }}
     >
       {children}
