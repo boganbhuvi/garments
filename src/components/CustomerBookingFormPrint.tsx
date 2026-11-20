@@ -549,8 +549,9 @@ table { width: 100%; border-collapse: collapse; flex-shrink: 0; }
       <span style="font-size:10pt; font-weight:900; letter-spacing:0.5px;">FORM 1 (THREE-FOLD WORKSHEET)</span>
     </div>
 
-    <!-- ROW 1: BILL NO / S.NO / DATE -->
+    <!-- UNIFIED CUSTOMER INFO TABLE (PERFECT GRID ALIGNMENT) -->
     <table class="info-table">
+      <!-- ROW 1: BILL NO / S.NO / DATE -->
       <tr>
         <td class="lbl" style="width:20mm;">BILL NO&nbsp;:</td>
         <td style="width:46mm;"><span class="val-block">${billNo}</span></td>
@@ -559,88 +560,76 @@ table { width: 100%; border-collapse: collapse; flex-shrink: 0; }
         <td class="lbl" style="width:13mm;">DATE&nbsp;:</td>
         <td><span class="val-block">${date}</span></td>
       </tr>
-    </table>
 
-    <!-- ROW 2: NAME / R.NO -->
-    <table class="info-table">
+      <!-- ROW 2: NAME / R.NO -->
       <tr>
         <td class="lbl" style="width:16mm;">NAME&nbsp;:</td>
-        <td style="width:105mm;"><span class="val-block highlight-red">${name}</span></td>
+        <td colspan="3"><span class="val-block highlight-red">${name}</span></td>
         <td class="lbl" style="width:16mm;">R.NO&nbsp;:</td>
         <td><span class="val-block highlight-red">${rNo}</span></td>
       </tr>
-    </table>
 
-    <!-- ROW 3: FATHER NAME -->
-    <table class="info-table">
+      <!-- ROW 3: FATHER NAME -->
       <tr>
         <td class="lbl" style="width:30mm;">FATHER NAME&nbsp;:</td>
-        <td><span class="val-block">${fatherName}</span></td>
+        <td colspan="5"><span class="val-block">${fatherName}</span></td>
       </tr>
-    </table>
 
-    <!-- ROW 4: HUSBAND NAME (DIRECTLY BELOW FATHER NAME) -->
-    <table class="info-table">
+      <!-- ROW 4: HUSBAND NAME -->
       <tr>
         <td class="lbl" style="width:30mm;">HUSBAND NAME&nbsp;:</td>
-        <td><span class="val-block">${husbandName}</span></td>
+        <td colspan="5"><span class="val-block">${husbandName}</span></td>
       </tr>
-    </table>
 
-    <!-- ROW 5: P.NO (3 REG) ON LEFT SIDE, LARGE SQUARE ITEMS BOX ON RIGHT SIDE -->
-    <div class="items-phone-row">
-      <!-- Phone Number Box on Left Side with Tag "P.NO (3 REG):" and Font Size +2, Bold Off -->
-      <div class="phones-box">
-        <div class="phones-hdr">P.NO (3 REG) :</div>
-        <div class="phones-list">
-          ${
-            recent3Phones.length > 0
-              ? recent3Phones.map((ph, idx) => `<span class="phone-chip">#${idx + 1}: ${ph}</span>`).join('')
-              : '<span style="font-size:11pt; color:#666; font-style:italic;">No phone numbers on file</span>'
-          }
-        </div>
-      </div>
+      <!-- ROW 5: P.NO (3 REG) ON LEFT, ITEMS ON RIGHT -->
+      <tr>
+        <td colspan="4" style="padding:1.5mm 2mm; vertical-align:top; background:#fafafa;">
+          <div class="phones-hdr">P.NO (3 REG) :</div>
+          <div class="phones-list">
+            ${
+              recent3Phones.length > 0
+                ? recent3Phones.map((ph, idx) => `<span class="phone-chip">#${idx + 1}: ${ph}</span>`).join('')
+                : '<span style="font-size:11pt; color:#666; font-style:italic;">No phone numbers on file</span>'
+            }
+          </div>
+        </td>
+        <td colspan="2" style="padding:1.5mm 2mm; vertical-align:top; background:#fff;">
+          <div class="large-items-header">ITEMS :</div>
+          <div class="large-items-write">
+            <span class="items-square-blank"></span>
+          </div>
+        </td>
+      </tr>
 
-      <!-- Large Square ITEMS Box on Right Side -->
-      <div class="large-items-box">
-        <div class="large-items-header">ITEMS :</div>
-        <div class="large-items-write">
-          <span class="items-square-blank"></span>
-        </div>
-      </div>
-    </div>
-
-    <!-- ROW 6: ADDRESS (MOVED BELOW PHONE & ITEMS) -->
-    <table class="info-table" style="margin-top:1.2mm;">
+      <!-- ROW 6: ADDRESS -->
       <tr>
         <td class="lbl" style="width:20mm; vertical-align:top; padding-top:1.2mm;">ADDRESS&nbsp;:</td>
-        <td><span class="addr-val">${address}</span></td>
+        <td colspan="5"><span class="addr-val">${address}</span></td>
+      </tr>
+
+      <!-- ROW 7 & 8: NO. OF QUANTITIES (PERFECTLY INTEGRATED IN TABLE GRID) -->
+      <tr>
+        <td class="lbl" rowspan="2" style="width:20mm; vertical-align:middle; text-align:center;">NO. OF&nbsp;:</td>
+        <td colspan="5" style="padding: 1mm 1.5mm;">
+          <div class="qty-row">
+            <div class="qty-item"><span class="garment-name-black">TOPS</span><span class="qty-box"></span></div>
+            <div class="qty-item"><span class="garment-name-black">BOTTOM</span><span class="qty-box"></span></div>
+            <div class="qty-item"><span class="garment-name-black">DHUPATTA</span><span class="qty-box"></span></div>
+            <div class="qty-item"><span class="garment-name-black">NIGHTY</span><span class="qty-box"></span></div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="5" style="padding: 1mm 1.5mm;">
+          <div class="qty-row">
+            <div class="qty-item"><span class="garment-name-black">BLOWS</span><span class="qty-box"></span></div>
+            <div class="qty-item"><span class="garment-name-black">SAREE</span><span class="qty-box"></span></div>
+            <div class="qty-item"><span class="garment-name-black">FALLS</span><span class="qty-box"></span></div>
+            <div class="qty-item"><span class="garment-name-black">OTHERS</span><span class="qty-box"></span></div>
+          </div>
+        </td>
       </tr>
     </table>
-
-    <!-- ROW 6: NO. OF QUANTITIES
-         Row 1: TOPS, BOTTOM, DHUPATTA, NIGHTY
-         Row 2: BLOWS, SAREE, FALLS, OTHERS
-    -->
-    <div class="qty-section">
-      <div class="qty-hdr">NO. OF :</div>
-      <div class="qty-grid-2rows">
-        <!-- Row 1 -->
-        <div class="qty-row">
-          <div class="qty-item"><span class="garment-name-black">TOPS</span><span class="qty-box"></span></div>
-          <div class="qty-item"><span class="garment-name-black">BOTTOM</span><span class="qty-box"></span></div>
-          <div class="qty-item"><span class="garment-name-black">DHUPATTA</span><span class="qty-box"></span></div>
-          <div class="qty-item"><span class="garment-name-black">NIGHTY</span><span class="qty-box"></span></div>
-        </div>
-        <!-- Row 2 -->
-        <div class="qty-row">
-          <div class="qty-item"><span class="garment-name-black">BLOWS</span><span class="qty-box"></span></div>
-          <div class="qty-item"><span class="garment-name-black">SAREE</span><span class="qty-box"></span></div>
-          <div class="qty-item"><span class="garment-name-black">FALLS</span><span class="qty-box"></span></div>
-          <div class="qty-item"><span class="garment-name-black">OTHERS</span><span class="qty-box"></span></div>
-        </div>
-      </div>
-    </div>
 
   </div><!-- end fold-1 -->
 
