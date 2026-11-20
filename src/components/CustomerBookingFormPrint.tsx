@@ -194,6 +194,10 @@ table { width: 100%; border-collapse: collapse; flex-shrink: 0; }
 }
 .lbl { font-weight: 800; font-size: 9pt; white-space: nowrap; color: #000; }
 .val-block { font-size: 9.5pt; font-weight: 700; color: #000; }
+.highlight-red {
+  color: #dc2626 !important; /* Bold vivid red */
+  font-weight: 800;
+}
 
 /* ── PROMINENT ITEMS BOX (BLANK FOR HANDWRITING) ─────────── */
 .items-cell {
@@ -520,25 +524,25 @@ table { width: 100%; border-collapse: collapse; flex-shrink: 0; }
       <span style="font-size:10pt; font-weight:900; letter-spacing:0.5px;">FORM 1 (THREE-FOLD WORKSHEET)</span>
     </div>
 
-    <!-- ROW 1: BILL NO / S.NO / DATE (ALL BLACK) -->
+    <!-- ROW 1: BILL NO / S.NO / DATE -->
     <table class="info-table">
       <tr>
         <td class="lbl" style="width:20mm;">BILL NO&nbsp;:</td>
         <td style="width:46mm;"><span class="val-block">${billNo}</span></td>
         <td class="lbl" style="width:13mm;">S.NO&nbsp;:</td>
-        <td style="width:34mm;"><span class="val-block">${sNo}</span></td>
+        <td style="width:34mm;"><span class="val-block highlight-red">${sNo}</span></td>
         <td class="lbl" style="width:13mm;">DATE&nbsp;:</td>
         <td><span class="val-block">${date}</span></td>
       </tr>
     </table>
 
-    <!-- ROW 2: NAME / R.NO / ITEMS (PHONE NUMBER REMOVED NEXT TO R.NO; ITEMS COLUMN LEFT BLANK FOR HANDWRITING) -->
+    <!-- ROW 2: NAME / R.NO / ITEMS (NAME & R.NO IN BOLD RED; ITEMS BLANK FOR HANDWRITING) -->
     <table class="info-table">
       <tr>
         <td class="lbl" style="width:16mm;">NAME&nbsp;:</td>
-        <td style="width:80mm;"><span class="val-block">${name}</span></td>
+        <td style="width:80mm;"><span class="val-block highlight-red">${name}</span></td>
         <td class="lbl" style="width:16mm;">R.NO&nbsp;:</td>
-        <td style="width:40mm;"><span class="val-block">${rNo}</span></td>
+        <td style="width:40mm;"><span class="val-block highlight-red">${rNo}</span></td>
         <td class="lbl" style="width:18mm; text-align:center;">ITEMS&nbsp;:</td>
         <td class="items-cell"><span class="items-blank-line"></span></td>
       </tr>
@@ -732,11 +736,11 @@ table { width: 100%; border-collapse: collapse; flex-shrink: 0; }
       <div class="bottom-strip">
         <div class="bottom-field">
           <span class="lbl">NAME :</span>
-          <span class="populated-val">${name}</span>
+          <span class="populated-val highlight-red">${name}</span>
         </div>
         <div class="bottom-field" style="max-width:45mm;">
           <span class="lbl">R.NO :</span>
-          <span class="populated-val">${rNo}</span>
+          <span class="populated-val highlight-red">${rNo}</span>
         </div>
         <div class="bottom-field" style="max-width:55mm;">
           <span class="lbl">DUE DATE :</span>
