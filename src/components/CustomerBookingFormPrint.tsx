@@ -282,15 +282,15 @@ table { width: 100%; border-collapse: collapse; flex-shrink: 0; }
   align-items: center;
   flex-wrap: wrap;
 }
-/* Increased font size for phone number */
+/* Phone chip: font-size +2 (13pt), bold off (font-weight: normal / 400) */
 .phone-chip {
-  font-size: 11pt; /* Increased font size */
-  font-weight: 800;
+  font-size: 13pt; /* +2 size from 11pt */
+  font-weight: 500; /* Bold off (regular clean font) */
   color: #000;
-  background: #f1f5f9;
+  background: #f8fafc;
   padding: 0.8mm 2.2mm;
   border-radius: 4px;
-  border: 1.2px solid #94a3b8;
+  border: 1.2px solid #cbd5e1;
   letter-spacing: 0.5px;
 }
 
@@ -415,7 +415,7 @@ table { width: 100%; border-collapse: collapse; flex-shrink: 0; }
   flex: 1;
 }
 
-/* Expanded Other Instructions for 2nd half of Fold 2 */
+/* Expanded Other Instructions for 2nd half of Fold 2: Clean open handwriting canvas (lines removed) */
 .other-instructions-full {
   border: 1.5px solid #000;
   padding: 1.5mm 2.5mm;
@@ -434,17 +434,9 @@ table { width: 100%; border-collapse: collapse; flex-shrink: 0; }
   padding-bottom: 1mm;
   margin-bottom: 1.5mm;
 }
-.other-instructions-lines {
-  display: flex;
-  flex-direction: column;
-  gap: 6.5mm;
+.other-instructions-blank {
   flex: 1;
-  padding-top: 1mm;
-}
-.other-line {
-  border-bottom: 1.2px solid #888;
   width: 100%;
-  height: 6mm;
 }
 
 /* ── FOLD 3: BOTTOM SECTION (PRESERVED) ──────────────────── */
@@ -598,25 +590,25 @@ table { width: 100%; border-collapse: collapse; flex-shrink: 0; }
       </tr>
     </table>
 
-    <!-- ROW 5: LARGE SQUARE ITEMS BOX & P.NO (3 REG) IN PLACE OF SELF/SHOP -->
+    <!-- ROW 5: P.NO (3 REG) ON LEFT SIDE, LARGE SQUARE ITEMS BOX ON RIGHT SIDE -->
     <div class="items-phone-row">
-      <!-- Large Square ITEMS Box -->
-      <div class="large-items-box">
-        <div class="large-items-header">ITEMS :</div>
-        <div class="large-items-write">
-          <span class="items-square-blank"></span>
-        </div>
-      </div>
-
-      <!-- Phone Number Box with Tag "P.NO (3 REG):" and Increased Font Size -->
+      <!-- Phone Number Box on Left Side with Tag "P.NO (3 REG):" and Font Size +2, Bold Off -->
       <div class="phones-box">
         <div class="phones-hdr">P.NO (3 REG) :</div>
         <div class="phones-list">
           ${
             recent3Phones.length > 0
               ? recent3Phones.map((ph, idx) => `<span class="phone-chip">#${idx + 1}: ${ph}</span>`).join('')
-              : '<span style="font-size:10pt; color:#666; font-style:italic;">No phone numbers on file</span>'
+              : '<span style="font-size:11pt; color:#666; font-style:italic;">No phone numbers on file</span>'
           }
+        </div>
+      </div>
+
+      <!-- Large Square ITEMS Box on Right Side -->
+      <div class="large-items-box">
+        <div class="large-items-header">ITEMS :</div>
+        <div class="large-items-write">
+          <span class="items-square-blank"></span>
         </div>
       </div>
     </div>
@@ -712,20 +704,11 @@ table { width: 100%; border-collapse: collapse; flex-shrink: 0; }
 
         </div><!-- end left half -->
 
-        <!-- RIGHT HALF: OTHER INSTRUCTIONS (EXPANDED TO OCCUPY 2ND HALF) -->
+        <!-- RIGHT HALF: OTHER INSTRUCTIONS (EXPANDED TO OCCUPY 2ND HALF - CLEAN BLANK CANVAS) -->
         <div class="col-stack-right">
           <div class="other-instructions-full">
             <div class="other-instructions-title">OTHER INSTRUCTIONS :</div>
-            <div class="other-instructions-lines">
-              <div class="other-line"></div>
-              <div class="other-line"></div>
-              <div class="other-line"></div>
-              <div class="other-line"></div>
-              <div class="other-line"></div>
-              <div class="other-line"></div>
-              <div class="other-line"></div>
-              <div class="other-line"></div>
-            </div>
+            <div class="other-instructions-blank"></div>
           </div>
         </div><!-- end right half -->
 
