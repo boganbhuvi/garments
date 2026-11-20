@@ -20,7 +20,7 @@ import {
   Trash2
 } from 'lucide-react';
 import { searchIndianAddress, AddressSuggestion } from '../services/addressService';
-import { printCustomerBookingForm } from '../components/CustomerBookingFormPrint';
+import { printCustomerBookingForm, printBlankBookingForm } from '../components/CustomerBookingFormPrint';
 
 interface Page1CustomerProps {
   onOpenSearch: () => void;
@@ -221,10 +221,21 @@ export const Page1Customer: React.FC<Page1CustomerProps> = ({ onOpenSearch }) =>
             type="button"
             onClick={() => printCustomerBookingForm(order)}
             className="min-h-[46px] px-4 rounded-xl bg-amber-50 hover:bg-amber-100 text-amber-900 text-[15px] font-black flex items-center gap-2 border-2 border-amber-400 transition-all shadow-sm cursor-pointer"
-            title="Print the original Giriraj City Garments booking form"
+            title="Print customer booking form with current order details"
           >
             <Printer className="w-4 h-4 text-amber-700" />
             <span>Print Customer Form</span>
+          </button>
+
+          {/* Print Blank Customer Form button */}
+          <button
+            type="button"
+            onClick={() => printBlankBookingForm()}
+            className="min-h-[46px] px-4 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-800 text-[15px] font-bold flex items-center gap-2 border-2 border-slate-300 transition-all shadow-sm cursor-pointer"
+            title="Print blank customer tailoring worksheet for manual handwriting"
+          >
+            <Printer className="w-4 h-4 text-slate-600" />
+            <span>Print Blank Form</span>
           </button>
 
           <button

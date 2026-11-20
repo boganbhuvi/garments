@@ -27,36 +27,36 @@
 
 import { Order } from '../types/order';
 
-function buildBookingFormHTML(order: Order): string {
-  const c = order.customer;
+function buildBookingFormHTML(order?: Order | null): string {
+  const c = order?.customer;
 
-  const billNo      = c.billNumber  || order.id || '';
-  const sNo         = order.serialNumber || '';
-  const date        = c.date        || '';
-  const name        = c.customerName || '';
-  const address     = c.fullAddress || [
-    c.doorNo, c.street, c.areaLocation, c.city,
-    c.state, c.pinCode ? `PIN ${c.pinCode}` : ''
+  const billNo      = c?.billNumber  || order?.id || '';
+  const sNo         = order?.serialNumber || '';
+  const date        = c?.date        || '';
+  const name        = c?.customerName || '';
+  const address     = c?.fullAddress || [
+    c?.doorNo, c?.street, c?.areaLocation, c?.city,
+    c?.state, c?.pinCode ? `PIN ${c.pinCode}` : ''
   ].filter(Boolean).join(', ');
 
-  const fatherName  = c.relationshipType === 'D/O' ? (c.fatherName  || '') : (c.fatherName || '');
-  const husbandName = c.relationshipType === 'W/O' ? (c.husbandName || '') : (c.husbandName || '');
+  const fatherName  = c ? (c.relationshipType === 'D/O' ? (c.fatherName  || '') : (c.fatherName || '')) : '';
+  const husbandName = c ? (c.relationshipType === 'W/O' ? (c.husbandName || '') : (c.husbandName || '')) : '';
 
-  const rNo         = c.customerId || '';
-  const dueDate     = order.billing?.dueDate || '';
+  const rNo         = c?.customerId || '';
+  const dueDate     = order?.billing?.dueDate || '';
 
   // Extract up to 3 recent / registered customer mobile numbers
   const allPhones: string[] = [];
-  if (c.primaryPhone && c.primaryPhone.trim()) {
+  if (c?.primaryPhone && c.primaryPhone.trim()) {
     allPhones.push(c.primaryPhone.trim());
   }
-  if (c.secondaryPhone && c.secondaryPhone.trim()) {
+  if (c?.secondaryPhone && c.secondaryPhone.trim()) {
     const secParts = c.secondaryPhone.split(',').map(p => p.trim()).filter(Boolean);
     for (const p of secParts) {
       if (!allPhones.includes(p)) allPhones.push(p);
     }
   }
-  if (Array.isArray(c.additionalPhones)) {
+  if (Array.isArray(c?.additionalPhones)) {
     for (const p of c.additionalPhones) {
       const cleanP = (p || '').trim();
       if (cleanP && !allPhones.includes(cleanP)) allPhones.push(cleanP);
@@ -582,7 +582,7 @@ table { width: 100%; border-collapse: collapse; flex-shrink: 0; }
             ${
               recent3Phones.length > 0
                 ? recent3Phones.map((ph, idx) => `<span class="phone-chip">#${idx + 1}: ${ph}</span>`).join('')
-                : '<span style="font-size:11pt; color:#666; font-style:italic;">No phone numbers on file</span>'
+                : '<div style="height:11mm;"></div>'
             }
           </div>
         </td>
@@ -736,7 +736,7 @@ table { width: 100%; border-collapse: collapse; flex-shrink: 0; }
 </html>`;
 }
 
-export function printCustomerBookingForm(order: Order): void {
+export function printCustomerBookingForm(order?: Order | null): void {
   const html = buildBookingFormHTML(order);
   const printWindow = window.open('', '_blank', 'width=940,height=1180,scrollbars=yes');
   if (!printWindow) {
@@ -746,4 +746,8 @@ export function printCustomerBookingForm(order: Order): void {
   printWindow.document.open();
   printWindow.document.write(html);
   printWindow.document.close();
+}
+
+export function printBlankBookingForm(): void {
+  printCustomerBookingForm(null);
 }
