@@ -741,28 +741,30 @@ export function printCustomerBookingForm(order?: Order | null): void {
   const iframe = document.createElement('iframe');
   iframe.id = 'giriraj-booking-print-frame';
   iframe.style.position = 'fixed';
-  iframe.style.right = '0';
-  iframe.style.bottom = '0';
-  iframe.style.width = '0';
-  iframe.style.height = '0';
+  iframe.style.left = '-10000px';
+  iframe.style.top = '0';
+  iframe.style.width = '210mm';
+  iframe.style.height = '297mm';
   iframe.style.border = '0';
-  iframe.style.visibility = 'hidden';
 
   iframe.onload = () => {
-    try {
-      iframe.contentWindow?.focus();
-      iframe.contentWindow?.print();
-    } catch {
-      // Fallback to popup if iframe print is restricted
-      const printWindow = window.open('', '_blank', 'width=940,height=1180,scrollbars=yes');
-      if (printWindow) {
-        printWindow.document.open();
-        printWindow.document.write(html);
-        printWindow.document.close();
-        printWindow.focus();
-        printWindow.print();
+    const win = iframe.contentWindow;
+    if (!win) return;
+    win.requestAnimationFrame(() => {
+      try {
+        win.focus();
+        win.print();
+      } catch {
+        const printWindow = window.open('', '_blank', 'width=940,height=1180,scrollbars=yes');
+        if (printWindow) {
+          printWindow.document.open();
+          printWindow.document.write(html);
+          printWindow.document.close();
+          printWindow.focus();
+          printWindow.print();
+        }
       }
-    }
+    });
   };
 
   document.body.appendChild(iframe);
