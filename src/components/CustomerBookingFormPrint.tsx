@@ -581,7 +581,7 @@ table { width: 100%; border-collapse: collapse; flex-shrink: 0; }
           <div class="phones-list">
             ${
               recent3Phones.length > 0
-                ? `<span style="font-size:10pt; font-weight:700; color:#000;">${recent3Phones.join(', ')}</span>`
+                ? `<span style="font-size:12pt; font-weight:700; color:#000;">${recent3Phones.join(', ')}</span>`
                 : '<div style="height:5mm;"></div>'
             }
           </div>

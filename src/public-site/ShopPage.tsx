@@ -66,6 +66,15 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     sizes: ['Standard'],
     fabricNote: 'Chiffon, Georgette, Net, Silk',
   },
+  {
+    id: 'CAT-LONGDRESS-01',
+    name: 'Custom Tailored Long Dress',
+    category: 'Long Dress',
+    description: 'Bespoke full-length dress tailored with our guided 13-point measurement experience.',
+    customizable: true,
+    sizes: ['Custom Fit'],
+    fabricNote: 'Silk, Georgette, Crepe, Cotton, or Designer Fabrics',
+  },
 ];
 
 interface ShopPageProps {
