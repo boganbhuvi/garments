@@ -727,25 +727,46 @@ table { width: 100%; border-collapse: collapse; flex-shrink: 0; }
 
 </div><!-- end .page -->
 
-<script>
-  window.addEventListener('load', function () {
-    setTimeout(function () { window.print(); }, 350);
-  });
-</script>
 </body>
 </html>`;
 }
 
 export function printCustomerBookingForm(order?: Order | null): void {
   const html = buildBookingFormHTML(order);
-  const printWindow = window.open('', '_blank', 'width=940,height=1180,scrollbars=yes');
-  if (!printWindow) {
-    alert('Pop-up was blocked. Please allow pop-ups for this site and try again.');
-    return;
+  const existingFrame = document.getElementById('giriraj-booking-print-frame') as HTMLIFrameElement | null;
+  if (existingFrame) {
+    existingFrame.remove();
   }
-  printWindow.document.open();
-  printWindow.document.write(html);
-  printWindow.document.close();
+
+  const iframe = document.createElement('iframe');
+  iframe.id = 'giriraj-booking-print-frame';
+  iframe.style.position = 'fixed';
+  iframe.style.right = '0';
+  iframe.style.bottom = '0';
+  iframe.style.width = '0';
+  iframe.style.height = '0';
+  iframe.style.border = '0';
+  iframe.style.visibility = 'hidden';
+
+  iframe.onload = () => {
+    try {
+      iframe.contentWindow?.focus();
+      iframe.contentWindow?.print();
+    } catch {
+      // Fallback to popup if iframe print is restricted
+      const printWindow = window.open('', '_blank', 'width=940,height=1180,scrollbars=yes');
+      if (printWindow) {
+        printWindow.document.open();
+        printWindow.document.write(html);
+        printWindow.document.close();
+        printWindow.focus();
+        printWindow.print();
+      }
+    }
+  };
+
+  document.body.appendChild(iframe);
+  iframe.srcdoc = html;
 }
 
 export function printBlankBookingForm(): void {

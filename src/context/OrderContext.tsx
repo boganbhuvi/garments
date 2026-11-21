@@ -2028,9 +2028,13 @@ export const OrderProvider: React.FC<{ children: React.ReactNode }> = ({ childre
       try {
         localStorage.setItem('giriraj_garments_customers_v1', JSON.stringify(remote));
       } catch {}
-    } else if (customers.length === 0 && savedOrders.length > 0) {
-      // Offline fallback: derive unique customers from savedOrders without creating duplicates
+    } else if (savedOrders.length > 0) {
+      // Offline fallback: merge unique customers from savedOrders without overwriting existing records
       const map = new Map<string, CustomerRecord>();
+      customers.forEach(c => {
+        const key = c.customerId || c.primaryPhone;
+        if (key) map.set(key, c);
+      });
       savedOrders.forEach(ord => {
         const c = ord.customer;
         const key = c.customerId || c.primaryPhone;
@@ -2054,7 +2058,10 @@ export const OrderProvider: React.FC<{ children: React.ReactNode }> = ({ childre
           });
         }
       });
-      setCustomers(Array.from(map.values()));
+      const merged = Array.from(map.values());
+      if (merged.length !== customers.length) {
+        setCustomers(merged);
+      }
     }
   };
 

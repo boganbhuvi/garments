@@ -24,6 +24,7 @@ import {
 } from 'lucide-react';
 
 import { GarmentWorksheets } from './print/GarmentWorksheets';
+import { DepartmentTransitionBar } from './DepartmentTransitionBar';
 
 interface OrderDetailModalProps {
   order: Order | null;
@@ -168,6 +169,7 @@ export const OrderDetailModal: React.FC<OrderDetailModalProps> = ({
 
         {/* Modal Scrollable Content */}
         <div className="p-6 sm:p-8 overflow-y-auto space-y-6 text-[#191C1E]">
+          <DepartmentTransitionBar order={order} />
           
           {/* TAB 1: EXECUTIVE OVERVIEW */}
           {activeTab === 'OVERVIEW' && (

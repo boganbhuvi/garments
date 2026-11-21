@@ -1,26 +1,50 @@
 import React, { useState } from 'react';
 import { CatalogItem } from './ShopPage';
-import { CheckCircle2, Trash2, ShoppingBag, Building2, Phone, Mail, MapPin } from 'lucide-react';
+import { api } from '../services/api';
+import { CheckCircle2, Trash2, ShoppingBag, Building2, Phone, Mail, MapPin, AlertCircle } from 'lucide-react';
 
 export const BulkEnquiryPage: React.FC = () => {
-  const [submitted, setSubmitted] = useState(false);
+  const [enquiryId, setEnquiryId] = useState<string | null>(null);
   const [org, setOrg] = useState('');
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [qty, setQty] = useState('');
   const [details, setDetails] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  if (submitted) {
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!name.trim() || !phone.trim()) return;
+    setLoading(true);
+    setError(null);
+    const res = await api.submitEnquiry({
+      type: 'BULK',
+      name: name.trim(),
+      organization: org.trim(),
+      phone: phone.trim(),
+      estimatedQuantity: qty.trim(),
+      message: details.trim(),
+    });
+    setLoading(false);
+    if (!res.ok || !res.enquiryId) {
+      setError(res.error || 'Could not submit enquiry. Please try again.');
+      return;
+    }
+    setEnquiryId(res.enquiryId);
+  };
+
+  if (enquiryId) {
     return (
       <div className="max-w-xl mx-auto px-4 py-16 text-center space-y-4">
         <CheckCircle2 className="w-12 h-12 text-emerald-700 mx-auto" />
         <h1 className="font-serif text-3xl font-bold text-[#1C1917]">Enquiry Received</h1>
         <p className="text-sm text-[#57534E]">
-          Thank you, {name}. Our studio team will review your bulk requirement for {org || 'your organization'} and contact you on {phone}.
+          Reference <strong>{enquiryId}</strong> — Thank you, {name}. Our studio team will review your bulk requirement for {org || 'your organization'} and contact you on {phone}.
         </p>
         <button
           type="button"
-          onClick={() => setSubmitted(false)}
+          onClick={() => { setEnquiryId(null); setName(''); setOrg(''); setPhone(''); setQty(''); setDetails(''); }}
           className="px-6 py-2.5 rounded-full bg-[#7F1D1D] text-white text-sm font-semibold cursor-pointer"
         >
           Submit Another Enquiry
@@ -45,12 +69,15 @@ export const BulkEnquiryPage: React.FC = () => {
       </div>
 
       <form
-        onSubmit={(e) => {
-          e.preventDefault();
-          if (name.trim() && phone.trim()) setSubmitted(true);
-        }}
+        onSubmit={handleSubmit}
         className="bg-white rounded-3xl border border-[#E7E5E4] p-6 sm:p-8 space-y-4 shadow-sm"
       >
+        {error && (
+          <div className="p-3 rounded-xl bg-red-50 border border-red-200 text-red-800 text-xs font-medium flex items-center gap-2">
+            <AlertCircle className="w-4 h-4 flex-shrink-0" />
+            <span>{error}</span>
+          </div>
+        )}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
             <label className="block text-xs font-bold uppercase text-[#57534E] mb-1">Contact Name *</label>
@@ -73,8 +100,8 @@ export const BulkEnquiryPage: React.FC = () => {
             <textarea rows={4} value={details} onChange={(e) => setDetails(e.target.value)} className="w-full px-4 py-2.5 rounded-xl border border-[#D6D3D1] text-sm" />
           </div>
         </div>
-        <button type="submit" className="px-7 py-3 rounded-full bg-[#7F1D1D] hover:bg-[#991B1B] text-white text-sm font-semibold cursor-pointer">
-          Submit Bulk Enquiry
+        <button type="submit" disabled={loading} className="px-7 py-3 rounded-full bg-[#7F1D1D] hover:bg-[#991B1B] text-white text-sm font-semibold cursor-pointer disabled:opacity-50">
+          {loading ? 'Submitting...' : 'Submit Bulk Enquiry'}
         </button>
       </form>
     </div>
@@ -101,7 +128,32 @@ export const AboutPage: React.FC = () => (
 );
 
 export const ContactPage: React.FC = () => {
-  const [sent, setSent] = useState(false);
+  const [enquiryId, setEnquiryId] = useState<string | null>(null);
+  const [name, setName] = useState('');
+  const [phone, setPhone] = useState('');
+  const [message, setMessage] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  const handleContactSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!name.trim() || !phone.trim()) return;
+    setLoading(true);
+    setError(null);
+    const res = await api.submitEnquiry({
+      type: 'CONTACT',
+      name: name.trim(),
+      phone: phone.trim(),
+      message: message.trim(),
+    });
+    setLoading(false);
+    if (!res.ok || !res.enquiryId) {
+      setError(res.error || 'Could not send message. Please try again.');
+      return;
+    }
+    setEnquiryId(res.enquiryId);
+  };
+
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-8">
       <div>
@@ -135,19 +187,24 @@ export const ContactPage: React.FC = () => {
         </div>
 
         <div className="bg-white rounded-3xl border border-[#E7E5E4] p-6">
-          {sent ? (
+          {enquiryId ? (
             <div className="text-center py-8 space-y-2">
               <CheckCircle2 className="w-10 h-10 text-emerald-700 mx-auto" />
-              <p className="font-bold text-[#1C1917]">Message Sent</p>
+              <p className="font-bold text-[#1C1917]">Message Sent ({enquiryId})</p>
               <p className="text-xs text-[#57534E]">We will get back to you shortly.</p>
             </div>
           ) : (
-            <form onSubmit={(e) => { e.preventDefault(); setSent(true); }} className="space-y-3">
-              <input required type="text" placeholder="Your Name" className="w-full px-4 py-2.5 rounded-xl border border-[#D6D3D1] text-sm" />
-              <input required type="tel" placeholder="Mobile Number" className="w-full px-4 py-2.5 rounded-xl border border-[#D6D3D1] text-sm" />
-              <textarea required rows={3} placeholder="How can we help?" className="w-full px-4 py-2.5 rounded-xl border border-[#D6D3D1] text-sm" />
-              <button type="submit" className="w-full py-2.5 rounded-full bg-[#7F1D1D] text-white text-sm font-semibold cursor-pointer">
-                Send Message
+            <form onSubmit={handleContactSubmit} className="space-y-3">
+              {error && (
+                <div className="p-2.5 rounded-lg bg-red-50 border border-red-200 text-red-700 text-xs font-medium">
+                  {error}
+                </div>
+              )}
+              <input required type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder="Your Name" className="w-full px-4 py-2.5 rounded-xl border border-[#D6D3D1] text-sm" />
+              <input required type="tel" value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="Mobile Number" className="w-full px-4 py-2.5 rounded-xl border border-[#D6D3D1] text-sm" />
+              <textarea required rows={3} value={message} onChange={(e) => setMessage(e.target.value)} placeholder="How can we help?" className="w-full px-4 py-2.5 rounded-xl border border-[#D6D3D1] text-sm" />
+              <button type="submit" disabled={loading} className="w-full py-2.5 rounded-full bg-[#7F1D1D] text-white text-sm font-semibold cursor-pointer disabled:opacity-50">
+                {loading ? 'Sending...' : 'Send Message'}
               </button>
             </form>
           )}

@@ -1,11 +1,16 @@
 import express, { Request, Response } from 'express';
 import cors from 'cors';
+import cookieParser from 'cookie-parser';
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { OrderModel } from './models/Order';
 import { CustomerModel } from './models/Customer';
+import { UserModel } from './models/User';
+import { BranchModel } from './models/Branch';
+import { hashPassword, requireAuth, requireStaff, requirePermission } from './middleware/auth';
+import { createErpRouter } from './routes/erpRoutes';
 import { SAMPLE_ORDERS } from '../src/data/sampleData';
 
 dotenv.config();
@@ -15,16 +20,41 @@ const __dirname = path.dirname(__filename);
 
 import { uri, connectToMongoDB, disconnectFromMongoDB } from './db';
 
-const app = express();
+export const app = express();
 const PORT = process.env.PORT || 5000;
 
+const ALLOWED_ORIGINS = (
+  process.env.ALLOWED_ORIGINS ||
+  'http://localhost:5173,http://localhost:5000,https://garments-u131.onrender.com'
+)
+  .split(',')
+  .map((o) => o.trim())
+  .filter(Boolean);
+
 // Middlewares
-app.use(cors({ origin: '*' }));
+app.use(
+  cors({
+    origin: (origin, callback) => {
+      if (!origin || ALLOWED_ORIGINS.includes(origin)) {
+        return callback(null, true);
+      }
+      return callback(new Error(`Origin ${origin} not allowed by CORS policy`));
+    },
+    credentials: true,
+  })
+);
+app.use(cookieParser());
 app.use(express.json({ limit: '25mb' })); // Support base64 image uploads
 
 let isDbConnected = false;
 let dbHost = '';
 let dbName = '';
+
+export function escapeRegex(value: string): string {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+app.use('/api', createErpRouter(() => isDbConnected));
 
 // MongoDB Connection
 async function initMongo() {
@@ -97,6 +127,35 @@ async function initMongo() {
         console.log(`✓ Synced ${toInsert.length} unique customer profiles into Customer collection.`);
       }
     }
+
+    // Seed default Main Studio Branch if empty
+    const branchCount = await BranchModel.countDocuments();
+    if (branchCount === 0) {
+      await BranchModel.create({
+        branchId: 'BR-001',
+        name: 'Giriraj City Garments — Main Studio',
+        address: 'Primary Workshop & Front Desk',
+        managerName: 'Store Admin',
+        status: 'ACTIVE',
+      });
+    }
+
+    // Seed default Super Admin if no users exist
+    const userCount = await UserModel.countDocuments();
+    if (userCount === 0) {
+      const defaultPass = process.env.ADMIN_PASSWORD || 'Giriraj@Admin2025';
+      const passwordHash = await hashPassword(defaultPass);
+      await UserModel.create({
+        userId: 'USR-ADMIN-01',
+        username: 'admin',
+        fullName: 'Giriraj Super Admin',
+        passwordHash,
+        role: 'SUPER_ADMIN',
+        branchIds: ['BR-001'],
+        isActive: true,
+      });
+      console.log('✓ Default Super Admin seeded (username: admin)');
+    }
   } catch (error: any) {
     isDbConnected = false;
     console.warn(`! MongoDB Connection Warning: ${error.message}`);
@@ -104,7 +163,9 @@ async function initMongo() {
   }
 }
 
-initMongo();
+if (process.env.NODE_ENV !== 'test') {
+  initMongo();
+}
 
 // ==========================================
 // REST API ENDPOINTS
@@ -126,7 +187,7 @@ app.get('/api/health', (req: Request, res: Response) => {
 });
 
 // GET all orders
-app.get('/api/orders', async (req: Request, res: Response) => {
+app.get('/api/orders', requireAuth, requireStaff, requirePermission('read'), async (req: Request, res: Response) => {
   if (!isDbConnected) {
     return res.status(503).json({ error: 'Database disconnected. Using client fallback.' });
   }
@@ -140,7 +201,7 @@ app.get('/api/orders', async (req: Request, res: Response) => {
     }
 
     if (q && typeof q === 'string' && q.trim()) {
-      const regex = new RegExp(q.trim(), 'i');
+      const regex = new RegExp(escapeRegex(q.trim()), 'i');
       filter.$or = [
         { id: regex },
         { serialNumber: regex },
@@ -148,6 +209,16 @@ app.get('/api/orders', async (req: Request, res: Response) => {
         { 'customer.primaryPhone': regex },
         { 'customer.customerId': regex },
       ];
+    }
+
+    if (req.query.page) {
+      const page = Math.max(1, parseInt(String(req.query.page), 10) || 1);
+      const limit = Math.min(100, Math.max(1, parseInt(String(req.query.limit || '25'), 10) || 25));
+      const [data, total] = await Promise.all([
+        OrderModel.find(filter).sort({ updatedAt: -1 }).skip((page - 1) * limit).limit(limit).lean(),
+        OrderModel.countDocuments(filter),
+      ]);
+      return res.json({ data, page, limit, total, totalPages: Math.ceil(total / limit) });
     }
 
     const orders = await OrderModel.find(filter).sort({ updatedAt: -1 }).lean();
@@ -159,7 +230,7 @@ app.get('/api/orders', async (req: Request, res: Response) => {
 });
 
 // GET single order by ID
-app.get('/api/orders/:id', async (req: Request, res: Response) => {
+app.get('/api/orders/:id', requireAuth, requireStaff, requirePermission('read'), async (req: Request, res: Response) => {
   if (!isDbConnected) {
     return res.status(503).json({ error: 'Database disconnected' });
   }
@@ -176,7 +247,7 @@ app.get('/api/orders/:id', async (req: Request, res: Response) => {
 });
 
 // POST create or upsert order (for Drafts and Confirmations)
-app.post('/api/orders', async (req: Request, res: Response) => {
+app.post('/api/orders', requireAuth, requireStaff, requirePermission('create'), async (req: Request, res: Response) => {
   if (!isDbConnected) {
     return res.status(503).json({ error: 'Database disconnected' });
   }
@@ -201,7 +272,7 @@ app.post('/api/orders', async (req: Request, res: Response) => {
 });
 
 // PUT update order
-app.put('/api/orders/:id', async (req: Request, res: Response) => {
+app.put('/api/orders/:id', requireAuth, requireStaff, requirePermission('update'), async (req: Request, res: Response) => {
   if (!isDbConnected) {
     return res.status(503).json({ error: 'Database disconnected' });
   }
@@ -222,7 +293,7 @@ app.put('/api/orders/:id', async (req: Request, res: Response) => {
 });
 
 // DELETE order
-app.delete('/api/orders/:id', async (req: Request, res: Response) => {
+app.delete('/api/orders/:id', requireAuth, requireStaff, requirePermission('deleteArchive'), async (req: Request, res: Response) => {
   if (!isDbConnected) {
     return res.status(503).json({ error: 'Database disconnected' });
   }
@@ -239,7 +310,7 @@ app.delete('/api/orders/:id', async (req: Request, res: Response) => {
 });
 
 // Customer search endpoint
-app.get('/api/customers/search', async (req: Request, res: Response) => {
+app.get('/api/customers/search', requireAuth, requireStaff, requirePermission('read'), async (req: Request, res: Response) => {
   if (!isDbConnected) {
     return res.status(503).json({ error: 'Database disconnected' });
   }
@@ -251,7 +322,7 @@ app.get('/api/customers/search', async (req: Request, res: Response) => {
       return res.json(recent);
     }
 
-    const regex = new RegExp(query.trim(), 'i');
+    const regex = new RegExp(escapeRegex(query.trim()), 'i');
     const matches = await OrderModel.find({
       $or: [
         { 'customer.customerName': regex },
@@ -276,7 +347,7 @@ app.get('/api/customers/search', async (req: Request, res: Response) => {
 // ==========================================
 
 // GET all registered customers (with optional search ?q= and ?includeArchived=true)
-app.get('/api/customers', async (req: Request, res: Response) => {
+app.get('/api/customers', requireAuth, requireStaff, requirePermission('read'), async (req: Request, res: Response) => {
   if (!isDbConnected) {
     return res.status(503).json({ error: 'Database disconnected' });
   }
@@ -286,7 +357,7 @@ app.get('/api/customers', async (req: Request, res: Response) => {
     const filter: any = includeArchived ? {} : { isArchived: { $ne: true } };
 
     if (q) {
-      const regex = new RegExp(q, 'i');
+      const regex = new RegExp(escapeRegex(q), 'i');
       filter.$or = [
         { customerName: regex },
         { primaryPhone: regex },
@@ -297,6 +368,16 @@ app.get('/api/customers', async (req: Request, res: Response) => {
       ];
     }
 
+    if (req.query.page) {
+      const page = Math.max(1, parseInt(String(req.query.page), 10) || 1);
+      const limit = Math.min(100, Math.max(1, parseInt(String(req.query.limit || '25'), 10) || 25));
+      const [data, total] = await Promise.all([
+        CustomerModel.find(filter).sort({ updatedAt: -1 }).skip((page - 1) * limit).limit(limit).lean(),
+        CustomerModel.countDocuments(filter),
+      ]);
+      return res.json({ data, page, limit, total, totalPages: Math.ceil(total / limit) });
+    }
+
     const customers = await CustomerModel.find(filter).sort({ updatedAt: -1 }).lean();
     res.json(customers);
   } catch (error: any) {
@@ -305,7 +386,7 @@ app.get('/api/customers', async (req: Request, res: Response) => {
 });
 
 // GET single customer profile + all associated orders
-app.get('/api/customers/:customerId', async (req: Request, res: Response) => {
+app.get('/api/customers/:customerId', requireAuth, requireStaff, requirePermission('read'), async (req: Request, res: Response) => {
   if (!isDbConnected) {
     return res.status(503).json({ error: 'Database disconnected' });
   }
@@ -324,7 +405,7 @@ app.get('/api/customers/:customerId', async (req: Request, res: Response) => {
 });
 
 // POST register a new customer (with duplicate phone/ID validation)
-app.post('/api/customers', async (req: Request, res: Response) => {
+app.post('/api/customers', requireAuth, requireStaff, requirePermission('create'), async (req: Request, res: Response) => {
   if (!isDbConnected) {
     return res.status(503).json({ error: 'Database disconnected' });
   }
@@ -382,7 +463,7 @@ app.post('/api/customers', async (req: Request, res: Response) => {
 });
 
 // PUT update an existing customer (strictly UPDATE, never CREATE, customerId immutable)
-app.put('/api/customers/:customerId', async (req: Request, res: Response) => {
+app.put('/api/customers/:customerId', requireAuth, requireStaff, requirePermission('update'), async (req: Request, res: Response) => {
   if (!isDbConnected) {
     return res.status(503).json({ error: 'Database disconnected' });
   }
@@ -439,7 +520,7 @@ app.put('/api/customers/:customerId', async (req: Request, res: Response) => {
 });
 
 // DELETE or safely archive a customer
-app.delete('/api/customers/:customerId', async (req: Request, res: Response) => {
+app.delete('/api/customers/:customerId', requireAuth, requireStaff, requirePermission('deleteArchive'), async (req: Request, res: Response) => {
   if (!isDbConnected) {
     return res.status(503).json({ error: 'Database disconnected' });
   }
@@ -482,7 +563,7 @@ app.delete('/api/customers/:customerId', async (req: Request, res: Response) => 
 });
 
 // Batch Sync endpoint (uploads LocalStorage orders to MongoDB)
-app.post('/api/sync', async (req: Request, res: Response) => {
+app.post('/api/sync', requireAuth, requireStaff, requirePermission('create'), async (req: Request, res: Response) => {
   if (!isDbConnected) {
     return res.status(503).json({ error: 'Database disconnected' });
   }
@@ -517,7 +598,7 @@ app.post('/api/sync', async (req: Request, res: Response) => {
 import { TailorModel } from './models/Tailor';
 
 // GET all tailors
-app.get('/api/tailors', async (req: Request, res: Response) => {
+app.get('/api/tailors', requireAuth, requireStaff, requirePermission('read'), async (req: Request, res: Response) => {
   if (!isDbConnected) {
     return res.status(503).json({ error: 'Database disconnected' });
   }
@@ -530,7 +611,7 @@ app.get('/api/tailors', async (req: Request, res: Response) => {
 });
 
 // POST create or upsert tailor
-app.post('/api/tailors', async (req: Request, res: Response) => {
+app.post('/api/tailors', requireAuth, requireStaff, requirePermission('production'), async (req: Request, res: Response) => {
   if (!isDbConnected) {
     return res.status(503).json({ error: 'Database disconnected' });
   }
@@ -591,10 +672,12 @@ app.use((req: Request, res: Response, next) => {
 });
 
 // Start Server
-app.listen(PORT, () => {
-  console.log(`====================================================`);
-  console.log(`GIRIRAJ GARMENTS ERP BACKEND SERVER`);
-  console.log(`Listening on http://localhost:${PORT}`);
-  console.log(`API Health: http://localhost:${PORT}/api/health`);
-  console.log(`====================================================`);
-});
+if (process.env.NODE_ENV !== 'test') {
+  app.listen(PORT, () => {
+    console.log(`====================================================`);
+    console.log(`GIRIRAJ GARMENTS ERP BACKEND SERVER`);
+    console.log(`Listening on http://localhost:${PORT}`);
+    console.log(`API Health: http://localhost:${PORT}/api/health`);
+    console.log(`====================================================`);
+  });
+}

@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { CustomerRecord } from '../types/order';
 import { useOrder } from '../context/OrderContext';
-import { User, LogOut, Save, BookOpen, AlertCircle } from 'lucide-react';
+import { api } from '../services/api';
+import { User, LogOut, Save, BookOpen, AlertCircle, Lock } from 'lucide-react';
 
 interface CustomerAccountPageProps {
   loggedInCustomer: CustomerRecord | null;
@@ -16,12 +17,14 @@ export const CustomerAccountPage: React.FC<CustomerAccountPageProps> = ({
   onLogout,
   onTrackOrder,
 }) => {
-  const { customers, savedOrders, registerCustomer, updateCustomerRecord } = useOrder();
+  const { savedOrders, updateCustomerRecord } = useOrder();
 
   const [mode, setMode] = useState<'LOGIN' | 'REGISTER'>('LOGIN');
   const [phoneInput, setPhoneInput] = useState('');
+  const [passwordInput, setPasswordInput] = useState('');
   const [nameInput, setNameInput] = useState('');
   const [addressInput, setAddressInput] = useState('');
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
   const [editName, setEditName] = useState(loggedInCustomer?.customerName || '');
@@ -29,37 +32,41 @@ export const CustomerAccountPage: React.FC<CustomerAccountPageProps> = ({
   const [editAddress, setEditAddress] = useState(loggedInCustomer?.fullAddress || '');
   const [savedMsg, setSavedMsg] = useState<string | null>(null);
 
-  const handleLogin = () => {
+  const handleLogin = async (e: React.FormEvent) => {
+    e.preventDefault();
     setError(null);
-    const clean = phoneInput.replace(/\D/g, '');
-    if (clean.length < 6) {
-      setError('Enter your registered mobile number.');
+    if (!phoneInput.trim() || !passwordInput) {
+      setError('Mobile number and password are required.');
       return;
     }
-    const found = customers.find((c) =>
-      c.primaryPhone.replace(/\D/g, '').endsWith(clean.slice(-10))
-    );
-    if (!found) {
-      setError('No account found with this mobile number. Please register.');
+    setLoading(true);
+    const res = await api.loginCustomerAccount(phoneInput.trim(), passwordInput);
+    setLoading(false);
+    if (!res.ok || !res.customer) {
+      setError(res.error || 'Invalid mobile number or password.');
       return;
     }
-    setEditName(found.customerName);
-    setEditPhone(found.primaryPhone);
-    setEditAddress(found.fullAddress || '');
-    onLogin(found);
+    setEditName(res.customer.customerName);
+    setEditPhone(res.customer.primaryPhone);
+    setEditAddress(res.customer.fullAddress || '');
+    onLogin(res.customer);
   };
 
-  const handleRegister = async () => {
+  const handleRegister = async (e: React.FormEvent) => {
+    e.preventDefault();
     setError(null);
-    if (!nameInput.trim() || !phoneInput.trim()) {
-      setError('Name and Mobile Number are required.');
+    if (!nameInput.trim() || !phoneInput.trim() || passwordInput.length < 6) {
+      setError('Name, mobile number, and password (min 6 characters) are required.');
       return;
     }
-    const res = await registerCustomer({
+    setLoading(true);
+    const res = await api.registerCustomerAccount({
       customerName: nameInput.trim(),
       primaryPhone: phoneInput.trim(),
+      password: passwordInput,
       fullAddress: addressInput.trim(),
     });
+    setLoading(false);
     if (!res.ok || !res.customer) {
       setError(res.error || 'Registration failed.');
       return;
@@ -87,10 +94,18 @@ export const CustomerAccountPage: React.FC<CustomerAccountPageProps> = ({
     setSavedMsg('Profile updated! Existing Customer ID preserved.');
   };
 
+  const handleSignOut = async () => {
+    await api.logoutStaff();
+    onLogout();
+  };
+
   if (!loggedInCustomer) {
     return (
       <div className="max-w-md mx-auto px-4 py-14">
-        <div className="bg-white rounded-3xl border border-[#E7E5E4] p-7 shadow-sm space-y-5">
+        <form
+          onSubmit={mode === 'LOGIN' ? handleLogin : handleRegister}
+          className="bg-white rounded-3xl border border-[#E7E5E4] p-7 shadow-sm space-y-5"
+        >
           <div className="flex items-center gap-2 border-b border-[#E7E5E4] pb-3">
             <button
               type="button"
@@ -123,6 +138,7 @@ export const CustomerAccountPage: React.FC<CustomerAccountPageProps> = ({
             <div>
               <label className="block text-xs font-bold uppercase text-[#57534E] mb-1">Full Name *</label>
               <input
+                required
                 type="text"
                 value={nameInput}
                 onChange={(e) => setNameInput(e.target.value)}
@@ -134,12 +150,31 @@ export const CustomerAccountPage: React.FC<CustomerAccountPageProps> = ({
           <div>
             <label className="block text-xs font-bold uppercase text-[#57534E] mb-1">Mobile Number *</label>
             <input
+              required
               type="tel"
               value={phoneInput}
               onChange={(e) => setPhoneInput(e.target.value)}
               placeholder="10-digit mobile"
               className="w-full px-4 py-2.5 rounded-xl border border-[#D6D3D1] text-sm"
             />
+          </div>
+
+          <div>
+            <label className="block text-xs font-bold uppercase text-[#57534E] mb-1">
+              Password * {mode === 'REGISTER' && '(min 6 chars)'}
+            </label>
+            <div className="relative">
+              <Lock className="w-4 h-4 text-[#78716C] absolute left-3.5 top-1/2 -translate-y-1/2" />
+              <input
+                required
+                type="password"
+                minLength={6}
+                value={passwordInput}
+                onChange={(e) => setPasswordInput(e.target.value)}
+                placeholder="Enter password"
+                className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-[#D6D3D1] text-sm"
+              />
+            </div>
           </div>
 
           {mode === 'REGISTER' && (
@@ -155,13 +190,13 @@ export const CustomerAccountPage: React.FC<CustomerAccountPageProps> = ({
           )}
 
           <button
-            type="button"
-            onClick={mode === 'LOGIN' ? handleLogin : handleRegister}
-            className="w-full py-3 rounded-full bg-[#7F1D1D] hover:bg-[#991B1B] text-white text-sm font-semibold cursor-pointer"
+            type="submit"
+            disabled={loading}
+            className="w-full py-3 rounded-full bg-[#7F1D1D] hover:bg-[#991B1B] text-white text-sm font-semibold cursor-pointer disabled:opacity-50"
           >
-            {mode === 'LOGIN' ? 'Sign In with Mobile' : 'Create Customer Account'}
+            {loading ? 'Please wait...' : mode === 'LOGIN' ? 'Sign In' : 'Create Customer Account'}
           </button>
-        </div>
+        </form>
       </div>
     );
   }
@@ -184,7 +219,7 @@ export const CustomerAccountPage: React.FC<CustomerAccountPageProps> = ({
         </div>
         <button
           type="button"
-          onClick={onLogout}
+          onClick={handleSignOut}
           className="px-4 py-2 rounded-full border border-[#D6D3D1] text-xs font-semibold flex items-center gap-1.5 cursor-pointer self-start sm:self-auto"
         >
           <LogOut className="w-3.5 h-3.5" />

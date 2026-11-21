@@ -256,383 +256,137 @@ export const Page1Customer: React.FC<Page1CustomerProps> = ({ onOpenSearch }) =>
       {/* Main Container - 2 Columns on Wide Desktop, but strictly SINGLE-COLUMN VERTICAL INPUTS inside each column */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
         
-        {/* Left Column: Customer Details (7 Cols on desktop) */}
+        {/* Left Column: Select Registered Customer (Read-Only) (7 Cols on desktop) */}
         <div className="lg:col-span-7 bg-white rounded-2xl border border-slate-300 shadow-sm p-6 sm:p-7 flex flex-col gap-6">
-          
-          <div className="flex items-center justify-between border-b border-slate-200 pb-3">
+          <div className="flex items-center justify-between border-b border-slate-200 pb-3 flex-wrap gap-2">
             <div className="flex items-center gap-2.5">
               <User className="w-6 h-6 text-[#233B5D]" />
               <h2 className="text-[22px] font-black text-[#233B5D]">
-                Customer Registration Details
+                Select Registered Customer
               </h2>
             </div>
-            <span className="text-xs text-slate-500 font-semibold">
-              <span className="text-red-500 font-black">*</span> Mandatory
-            </span>
+            <button
+              type="button"
+              onClick={() => setActiveModule('CUSTOMERS')}
+              className="text-xs font-black px-3 py-1.5 rounded-lg bg-[#233B5D] hover:bg-[#1A2C46] text-white cursor-pointer"
+            >
+              + Register / Edit in Customer Details
+            </button>
           </div>
 
-          {/* STRICT SINGLE-COLUMN VERTICAL INPUT LAYOUT: Every field occupies its own vertical row */}
-          <div className="flex flex-col gap-5 w-full">
-            
-            {/* Field 1: Customer Name */}
-            <div className="flex flex-col gap-1.5 w-full">
-              <label className="text-[17px] font-black text-[#233B5D] flex items-center">
-                Customer Full Name <span className="text-red-500 font-black ml-1">*</span>
-              </label>
-              <input
-                type="text"
-                required
-                value={order.customer.customerName}
-                onChange={(e) => updateCustomer({ customerName: e.target.value })}
-                placeholder="Customer Full Name (e.g. S. Kavitha)"
-                className="w-full min-h-[52px] px-4 bg-white border-2 border-slate-300 focus:border-[#147D75] rounded-xl text-[18px] text-[#191C1E] font-medium focus:outline-none transition-colors"
-              />
-            </div>
-
-            {/* Field 2: Relationship Type */}
-            <div className="flex flex-col gap-1.5 w-full">
-              <label className="text-[17px] font-black text-[#233B5D]">
-                Relationship Type:
-              </label>
-              <div className="flex items-center gap-3 w-full min-h-[52px]">
-                <button
-                  type="button"
-                  onClick={() => updateCustomer({ relationshipType: 'D/O' })}
-                  className={`flex-1 min-h-[50px] rounded-xl font-black text-[16px] flex items-center justify-center gap-2 border-2 transition-all cursor-pointer ${
-                    order.customer.relationshipType === 'D/O'
-                      ? 'bg-[#233B5D] text-white border-[#233B5D] shadow-sm'
-                      : 'bg-slate-50 text-slate-700 border-slate-300 hover:bg-slate-100'
-                  }`}
-                >
-                  {order.customer.relationshipType === 'D/O' && <Check className="w-4 h-4" />}
-                  <span>Daughter Of (D/O)</span>
-                </button>
-                <button
-                  type="button"
-                  onClick={() => updateCustomer({ relationshipType: 'W/O' })}
-                  className={`flex-1 min-h-[50px] rounded-xl font-black text-[16px] flex items-center justify-center gap-2 border-2 transition-all cursor-pointer ${
-                    order.customer.relationshipType === 'W/O'
-                      ? 'bg-[#233B5D] text-white border-[#233B5D] shadow-sm'
-                      : 'bg-slate-50 text-slate-700 border-slate-300 hover:bg-slate-100'
-                  }`}
-                >
-                  {order.customer.relationshipType === 'W/O' && <Check className="w-4 h-4" />}
-                  <span>Wife Of (W/O)</span>
-                </button>
-              </div>
-            </div>
-
-            {/* Field 3: Father's or Husband's Name */}
-            <div className="flex flex-col gap-1.5 w-full">
-              <label className="text-[17px] font-black text-[#233B5D]">
-                {order.customer.relationshipType === 'D/O' ? "Father's Full Name:" : "Husband's Full Name:"}
-              </label>
-              <input
-                type="text"
-                value={order.customer.relationshipType === 'D/O' ? order.customer.fatherName : order.customer.husbandName}
-                onChange={(e) => {
-                  if (order.customer.relationshipType === 'D/O') {
-                    updateCustomer({ fatherName: e.target.value });
-                  } else {
-                    updateCustomer({ husbandName: e.target.value });
-                  }
-                }}
-                placeholder={order.customer.relationshipType === 'D/O' ? "Father's Name (e.g. K. Sundaram)" : "Husband's Name (e.g. M. Rajesh)"}
-                className="w-full min-h-[52px] px-4 bg-white border-2 border-slate-300 focus:border-[#147D75] rounded-xl text-[18px] text-[#191C1E] font-medium focus:outline-none transition-colors"
-              />
-            </div>
-
-            {/* Field 4: Primary Phone Number */}
-            <div className="flex flex-col gap-1.5 w-full">
-              <label className="text-[17px] font-black text-[#233B5D] flex items-center">
-                Primary Phone Number <span className="text-red-500 font-black ml-1">*</span>
-              </label>
-              <div className="relative w-full">
-                <span className="absolute left-4 top-1/2 -translate-y-1/2 text-[17px] font-bold text-slate-500">
-                  +91
-                </span>
-                <input
-                  type="tel"
-                  maxLength={10}
-                  required
-                  value={order.customer.primaryPhone}
-                  onChange={(e) => updateCustomer({ primaryPhone: e.target.value.replace(/\D/g, '') })}
-                  placeholder="9840123456 (10 Digits)"
-                  className="w-full min-h-[52px] pl-14 pr-4 bg-white border-2 border-slate-300 focus:border-[#147D75] rounded-xl text-[18px] text-[#191C1E] font-bold focus:outline-none transition-colors"
-                />
-              </div>
-            </div>
-
-            {/* Field 5: Secondary Phone Number (Default 2nd Number) */}
-            <div className="flex flex-col gap-1.5 w-full">
-              <div className="flex items-center justify-between">
-                <label className="text-[17px] font-black text-[#233B5D]">
-                  Secondary Phone Number (WhatsApp / Alternative):
-                </label>
-                <span className="text-xs text-slate-500 font-semibold">
-                  Default 2 Numbers • Up to 5 Max
-                </span>
-              </div>
-              <div className="relative w-full">
-                <span className="absolute left-4 top-1/2 -translate-y-1/2 text-[17px] font-bold text-slate-500">
-                  +91
-                </span>
-                <input
-                  type="tel"
-                  maxLength={10}
-                  value={order.customer.secondaryPhone || ''}
-                  onChange={(e) => updateCustomer({ secondaryPhone: e.target.value.replace(/\D/g, '') })}
-                  placeholder="Alternative Phone (Optional)"
-                  className="w-full min-h-[52px] pl-14 pr-4 bg-white border-2 border-slate-300 focus:border-[#147D75] rounded-xl text-[18px] text-[#191C1E] font-bold focus:outline-none transition-colors"
-                />
-              </div>
-            </div>
-
-            {/* Additional Phone Numbers (Up to 3 more, making 5 total) */}
-            {(order.customer.additionalPhones || []).map((phone, idx) => (
-              <div key={idx} className="flex flex-col gap-1.5 w-full animate-in fade-in duration-150">
-                <label className="text-[16px] font-black text-[#233B5D] flex items-center justify-between">
-                  <span>Additional Mobile Number {idx + 3} :</span>
-                  <button
-                    type="button"
-                    onClick={() => {
-                      const updated = [...(order.customer.additionalPhones || [])];
-                      updated.splice(idx, 1);
-                      updateCustomer({ additionalPhones: updated });
-                    }}
-                    className="text-xs text-red-600 hover:text-red-700 font-bold flex items-center gap-1 hover:underline cursor-pointer"
-                  >
-                    <Trash2 className="w-3.5 h-3.5" />
-                    <span>Remove Number</span>
-                  </button>
-                </label>
-                <div className="relative w-full flex items-center gap-2">
-                  <div className="relative flex-1">
-                    <span className="absolute left-4 top-1/2 -translate-y-1/2 text-[17px] font-bold text-slate-500">
-                      +91
-                    </span>
-                    <input
-                      type="tel"
-                      maxLength={10}
-                      value={phone}
-                      onChange={(e) => {
-                        const updated = [...(order.customer.additionalPhones || [])];
-                        updated[idx] = e.target.value.replace(/\D/g, '');
-                        updateCustomer({ additionalPhones: updated });
-                      }}
-                      placeholder={`Mobile Number ${idx + 3} (10 Digits)`}
-                      className="w-full min-h-[52px] pl-14 pr-4 bg-white border-2 border-slate-300 focus:border-[#147D75] rounded-xl text-[18px] text-[#191C1E] font-bold focus:outline-none transition-colors"
-                    />
-                  </div>
-                </div>
-              </div>
-            ))}
-
-            {/* Add Another Number Button (Enabled if total numbers < 5) */}
-            {((order.customer.additionalPhones?.length || 0) < 3) && (
-              <div className="flex justify-start pt-1">
-                <button
-                  type="button"
-                  onClick={() => {
-                    const current = order.customer.additionalPhones || [];
-                    if (current.length < 3) {
-                      updateCustomer({ additionalPhones: [...current, ''] });
-                    }
-                  }}
-                  className="min-h-[44px] px-4 rounded-xl border-2 border-dashed border-[#147D75] bg-[#E6F4F2] hover:bg-[#D0ECE8] text-[#147D75] text-[15px] font-black flex items-center gap-2 transition-all cursor-pointer shadow-sm"
-                >
-                  <PlusCircle className="w-4 h-4 text-[#147D75]" />
-                  <span>+ Add Another Mobile Number ({2 + (order.customer.additionalPhones?.length || 0)} / 5)</span>
-                </button>
-              </div>
+          <div className="relative">
+            <Search className="w-5 h-5 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
+            <input
+              type="text"
+              value={customerSelectQuery}
+              onChange={(e) => setCustomerSelectQuery(e.target.value)}
+              placeholder="Search registered customer by Name, Mobile, or Customer ID..."
+              className="w-full pl-11 pr-10 py-3 rounded-xl border-2 border-slate-300 focus:border-[#147D75] focus:outline-none text-[16px] font-semibold text-[#191C1E]"
+            />
+            {customerSelectQuery && (
+              <button
+                type="button"
+                onClick={() => setCustomerSelectQuery('')}
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-xs font-bold text-slate-400 hover:text-slate-700 px-1.5 py-0.5 cursor-pointer"
+                title="Clear search"
+              >
+                ✕
+              </button>
             )}
+          </div>
 
-            {/* Section Divider: Indian Address & Location */}
-            <div className="pt-3 border-t border-slate-200">
-              <div className="flex items-center gap-2 mb-2">
-                <MapPin className="w-5 h-5 text-[#147D75]" />
-                <h3 className="text-[18px] font-black text-[#233B5D]">
-                  Indian Address & Delivery Location
-                </h3>
-              </div>
-              <p className="text-xs text-slate-500 font-semibold mb-3">
-                Type area name for instant Indian suggestions (e.g. Melvisharam, Mylapore, Sathuvachari, Katpadi). Selecting a suggestion auto-fills city, district, state & PIN.
-              </p>
-            </div>
+          {customerSelectQuery.trim().length > 0 && (() => {
+            const q = customerSelectQuery.toLowerCase().trim();
+            const qDigits = q.replace(/\D/g, '');
+            const matches = customers.filter((c) => {
+              const name = (c.customerName || '').toLowerCase();
+              const id = (c.customerId || '').toLowerCase();
+              const phones = [
+                c.primaryPhone || '',
+                c.secondaryPhone || '',
+                ...(Array.isArray(c.additionalPhones) ? c.additionalPhones : []),
+              ];
+              const phoneTextMatch = phones.some((p) => p.toLowerCase().includes(q));
+              const phoneDigitMatch =
+                qDigits.length >= 3 &&
+                phones.some((p) => p.replace(/\D/g, '').includes(qDigits));
+              return name.includes(q) || id.includes(q) || phoneTextMatch || phoneDigitMatch;
+            });
 
-            {/* Field 6: Address Autocomplete Search / Quick Location Picker */}
-            <div className="flex flex-col gap-1.5 w-full relative" ref={autocompleteRef}>
-              <label className="text-[16px] font-black text-[#233B5D] flex items-center justify-between">
-                <span>Address Autocomplete & Locality Finder:</span>
-                {isSearchingAddress && <span className="text-xs text-[#147D75] font-bold animate-pulse">Searching Indian locations...</span>}
-              </label>
-              <div className="relative w-full">
-                <Search className="w-5 h-5 text-slate-400 absolute left-4 top-1/2 -translate-y-1/2" />
-                <input
-                  type="text"
-                  value={addressSearchQuery}
-                  onChange={e => {
-                    setAddressSearchQuery(e.target.value);
-                    setShowSuggestionsDropdown(true);
-                  }}
-                  onFocus={() => addressSuggestions.length > 0 && setShowSuggestionsDropdown(true)}
-                  placeholder="Type Locality, City or PIN (e.g. Melvisharam, Mylapore, 632509)..."
-                  className="w-full min-h-[52px] pl-12 pr-4 bg-teal-50/40 border-2 border-teal-300 focus:border-[#147D75] rounded-xl text-[17px] text-[#191C1E] font-semibold focus:outline-none"
-                />
-              </div>
-
-              {/* Suggestions Floating Dropdown */}
-              {showSuggestionsDropdown && addressSuggestions.length > 0 && (
-                <div className="absolute top-full left-0 right-0 z-50 mt-1 bg-white border-2 border-[#147D75] rounded-xl shadow-2xl overflow-hidden divide-y divide-slate-100 max-h-64 overflow-y-auto">
-                  <div className="p-2 bg-teal-50 text-xs font-black uppercase text-[#0F766E] tracking-wider">
-                    Location Suggestions — Click to Auto-Fill
-                  </div>
-                  {addressSuggestions.map((sug, i) => (
+            return (
+              <div className="max-h-56 overflow-y-auto border border-slate-200 rounded-xl divide-y divide-slate-100 bg-slate-50">
+                {matches.length > 0 ? (
+                  matches.slice(0, 12).map((c) => (
                     <button
-                      key={i}
+                      key={c.customerId}
                       type="button"
-                      onClick={() => handleSelectSuggestion(sug)}
-                      className="w-full p-3 text-left hover:bg-teal-50 flex items-start gap-2.5 transition-colors cursor-pointer"
+                      onClick={() => {
+                        selectRegisteredCustomerForOrder(c);
+                        setCustomerSelectQuery('');
+                      }}
+                      className="w-full text-left px-4 py-3 hover:bg-[#D3E4FE]/50 flex items-center justify-between gap-3 cursor-pointer transition-colors"
                     >
-                      <MapPin className="w-4 h-4 text-[#147D75] flex-shrink-0 mt-0.5" />
-                      <div className="flex flex-col">
-                        <strong className="text-sm font-black text-[#233B5D]">
-                          {sug.areaLocation}, {sug.city}
-                        </strong>
-                        <span className="text-xs text-slate-600 font-medium">
-                          {sug.district} District, {sug.state} — PIN: {sug.pinCode}
+                      <div>
+                        <span className="text-xs font-black px-2 py-0.5 rounded bg-red-50 text-red-700 border border-red-200 mr-2">
+                          {c.customerId}
                         </span>
+                        <span className="font-black text-[#191C1E]">{c.customerName}</span>
+                        <p className="text-xs text-slate-500 mt-0.5">{c.fullAddress || 'No address'}</p>
                       </div>
+                      <span className="text-sm font-bold text-[#147D75] whitespace-nowrap">{c.primaryPhone}</span>
                     </button>
-                  ))}
+                  ))
+                ) : (
+                  <div className="px-4 py-4 text-center text-sm text-slate-500">
+                    No registered customer found for <span className="font-bold text-slate-700">"{customerSelectQuery.trim()}"</span>.
+                  </div>
+                )}
+              </div>
+            );
+          })()}
+
+          {order.customer.customerName ? (
+            <div className="bg-slate-50 rounded-2xl border border-slate-200 p-5 space-y-4">
+              <div className="flex items-center justify-between border-b border-slate-200 pb-3">
+                <div>
+                  <span className="text-xs font-black uppercase text-slate-400">Linked Customer ID</span>
+                  <div className="flex items-center gap-2 mt-0.5">
+                    <span className="text-sm font-black px-2.5 py-0.5 rounded-md bg-red-50 text-red-700 border border-red-200">
+                      {order.customer.customerId || 'N/A'}
+                    </span>
+                    <span className="text-xl font-black text-[#191C1E]">{order.customer.customerName}</span>
+                  </div>
                 </div>
-              )}
+                <span className="text-xs font-bold px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800">
+                  Read-Only Profile
+                </span>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+                <div>
+                  <span className="text-xs font-bold text-slate-400 uppercase">Primary Mobile</span>
+                  <p className="font-black text-[#191C1E] text-base">{order.customer.primaryPhone || '—'}</p>
+                </div>
+                <div>
+                  <span className="text-xs font-bold text-slate-400 uppercase">Secondary Mobile</span>
+                  <p className="font-semibold text-slate-700">{order.customer.secondaryPhone || '—'}</p>
+                </div>
+                <div>
+                  <span className="text-xs font-bold text-slate-400 uppercase">Father / Husband Name</span>
+                  <p className="font-semibold text-slate-700">{[order.customer.fatherName, order.customer.husbandName].filter(Boolean).join(' / ') || '—'}</p>
+                </div>
+                <div>
+                  <span className="text-xs font-bold text-slate-400 uppercase">Address</span>
+                  <p className="font-semibold text-slate-700">{order.customer.fullAddress || '—'}</p>
+                </div>
+              </div>
             </div>
-
-            {/* Field 7: Door / Flat Number */}
-            <div className="flex flex-col gap-1.5 w-full">
-              <label className="text-[16px] font-bold text-[#233B5D]">
-                Door / Flat / Building Number:
-              </label>
-              <input
-                type="text"
-                value={order.customer.doorNo || ''}
-                onChange={(e) => syncFullAddress({ doorNo: e.target.value })}
-                placeholder="Door / Flat No (e.g. No. 42 / Flat 3B)"
-                className="w-full min-h-[50px] px-4 bg-white border-2 border-slate-300 focus:border-[#147D75] rounded-xl text-[17px] text-[#191C1E] font-medium focus:outline-none"
-              />
+          ) : (
+            <div className="bg-amber-50/60 border-2 border-dashed border-amber-300 rounded-2xl p-8 text-center">
+              <User className="w-10 h-10 text-amber-500 mx-auto mb-2" />
+              <p className="text-base font-black text-[#233B5D]">No Customer Selected</p>
+              <p className="text-sm text-slate-600 mt-1">Search above to select a registered customer, or register one in Customer Details.</p>
             </div>
-
-            {/* Field 8: Street Name */}
-            <div className="flex flex-col gap-1.5 w-full">
-              <label className="text-[16px] font-bold text-[#233B5D]">
-                Street / Road / Lane Name:
-              </label>
-              <input
-                type="text"
-                value={order.customer.street || ''}
-                onChange={(e) => syncFullAddress({ street: e.target.value })}
-                placeholder="Street Name (e.g. Bazaar Street, Anna Salai)"
-                className="w-full min-h-[50px] px-4 bg-white border-2 border-slate-300 focus:border-[#147D75] rounded-xl text-[17px] text-[#191C1E] font-medium focus:outline-none"
-              />
-            </div>
-
-            {/* Field 9: Area / Locality */}
-            <div className="flex flex-col gap-1.5 w-full">
-              <label className="text-[16px] font-bold text-[#233B5D]">
-                Area / Colony / Landmark:
-              </label>
-              <input
-                type="text"
-                value={order.customer.areaLocation || ''}
-                onChange={(e) => syncFullAddress({ areaLocation: e.target.value })}
-                placeholder="Area / Locality (e.g. Near Pillayar Kovil, Melvisharam)"
-                className="w-full min-h-[50px] px-4 bg-white border-2 border-slate-300 focus:border-[#147D75] rounded-xl text-[17px] text-[#191C1E] font-medium focus:outline-none"
-              />
-            </div>
-
-            {/* Field 10: City / Town */}
-            <div className="flex flex-col gap-1.5 w-full">
-              <label className="text-[16px] font-bold text-[#233B5D]">
-                City / Town:
-              </label>
-              <input
-                type="text"
-                value={order.customer.city || ''}
-                onChange={(e) => syncFullAddress({ city: e.target.value })}
-                placeholder="City (e.g. Vellore, Ranipet, Chennai)"
-                className="w-full min-h-[50px] px-4 bg-white border-2 border-slate-300 focus:border-[#147D75] rounded-xl text-[17px] text-[#191C1E] font-medium focus:outline-none"
-              />
-            </div>
-
-            {/* Field 11: District */}
-            <div className="flex flex-col gap-1.5 w-full">
-              <label className="text-[16px] font-bold text-[#233B5D]">
-                District:
-              </label>
-              <input
-                type="text"
-                value={order.customer.district || ''}
-                onChange={(e) => syncFullAddress({ district: e.target.value })}
-                placeholder="District (e.g. Ranipet / Vellore)"
-                className="w-full min-h-[50px] px-4 bg-white border-2 border-slate-300 focus:border-[#147D75] rounded-xl text-[17px] text-[#191C1E] font-medium focus:outline-none"
-              />
-            </div>
-
-            {/* Field 12: State */}
-            <div className="flex flex-col gap-1.5 w-full">
-              <label className="text-[16px] font-bold text-[#233B5D]">
-                State:
-              </label>
-              <input
-                type="text"
-                value={order.customer.state || 'Tamil Nadu'}
-                onChange={(e) => syncFullAddress({ state: e.target.value })}
-                placeholder="State (e.g. Tamil Nadu)"
-                className="w-full min-h-[50px] px-4 bg-white border-2 border-slate-300 focus:border-[#147D75] rounded-xl text-[17px] text-[#191C1E] font-medium focus:outline-none"
-              />
-            </div>
-
-            {/* Field 13: PIN Code */}
-            <div className="flex flex-col gap-1.5 w-full">
-              <label className="text-[16px] font-bold text-[#233B5D]">
-                Postal PIN Code (6 Digits):
-              </label>
-              <input
-                type="text"
-                maxLength={6}
-                value={order.customer.pinCode || ''}
-                onChange={(e) => syncFullAddress({ pinCode: e.target.value.replace(/\D/g, '') })}
-                placeholder="PIN Code (e.g. 632509)"
-                className="w-full min-h-[50px] px-4 bg-white border-2 border-slate-300 focus:border-[#147D75] rounded-xl text-[17px] text-[#191C1E] font-bold focus:outline-none"
-              />
-            </div>
-
-            {/* Field 14: Complete Full Address (Auto-assembled & manually editable) */}
-            <div className="flex flex-col gap-1.5 w-full">
-              <label className="text-[17px] font-black text-[#233B5D] flex items-center">
-                Full Assembled Delivery Address <span className="text-red-500 font-black ml-1">*</span>
-              </label>
-              <textarea
-                rows={3}
-                required
-                value={order.customer.fullAddress}
-                onChange={(e) => updateCustomer({ fullAddress: e.target.value })}
-                placeholder="Full delivery address will auto-assemble as you enter details above..."
-                className="w-full p-4 bg-slate-50 border-2 border-slate-300 focus:border-[#147D75] rounded-xl text-[17px] text-[#191C1E] font-medium focus:outline-none resize-none"
-              />
-            </div>
-
-          </div>
-
-          {/* Quick Notice */}
-          <div className="bg-[#F0FDFA] border border-[#99F6E4] rounded-xl p-4 flex items-start gap-3 text-[#0F766E]">
-            <Info className="w-5 h-5 flex-shrink-0 mt-0.5" />
-            <p className="text-[14px] leading-relaxed">
-              <strong>Front Desk Note:</strong> Customer profile is permanently registered under ID <strong className="font-bold text-[#092546]">{order.customer.customerId}</strong> for subsequent visits, measurement history lookups, and WhatsApp notifications.
-            </p>
-          </div>
-
+          )}
         </div>
 
         {/* Right Column: Garment Intake Manifest (5 Cols on desktop) */}

@@ -281,10 +281,69 @@ export interface BillingDetails {
   referralNotes: string;
 }
 
+export type OrderLifecycleStatus =
+  | 'DRAFT'
+  | 'CONFIRMED'
+  | 'IN_PROGRESS'
+  | 'COMPLETED'
+  | 'CANCELLED';
+
+export type ProductionLifecycleStatus =
+  | 'AWAITING_CUTTING'
+  | 'CUTTING'
+  | 'AWAITING_STITCHING'
+  | 'STITCHING'
+  | 'AWAITING_QC'
+  | 'REWORK'
+  | 'QC_APPROVED';
+
+export type FulfillmentLifecycleStatus =
+  | 'NOT_READY'
+  | 'READY_FOR_PICKUP'
+  | 'READY_FOR_DISPATCH'
+  | 'DISPATCHED'
+  | 'DELIVERED';
+
+export type PaymentLifecycleStatus =
+  | 'UNPAID'
+  | 'PARTIAL'
+  | 'PAID'
+  | 'REFUND_PENDING'
+  | 'REFUNDED';
+
+export interface WorkflowTransitionEntry {
+  fromStatus: string;
+  toStatus: string;
+  stage: 'ORDER' | 'PRODUCTION' | 'FULFILLMENT';
+  changedBy: string;
+  role: string;
+  timestamp: string;
+  note?: string;
+}
+
+export interface GarmentProductionJob {
+  jobId: string;
+  garmentLabel: string;
+  quantity: number;
+  productionStatus: ProductionLifecycleStatus;
+  assignedCutter?: string;
+  assignedTailor?: string;
+  reworkCount: number;
+  reworkTarget?: 'CUTTING' | 'STITCHING';
+  defectNote?: string;
+  updatedAt: string;
+}
+
 export interface Order {
   id: string; // Unique order reference e.g. GG-2025-0842
   serialNumber: string; // SR-094
   status: OrderStatus;
+  orderStatus?: OrderLifecycleStatus;
+  productionStatus?: ProductionLifecycleStatus;
+  fulfillmentStatus?: FulfillmentLifecycleStatus;
+  branchId?: string;
+  garmentJobs?: GarmentProductionJob[];
+  workflowHistory?: WorkflowTransitionEntry[];
   createdAt: string;
   updatedAt: string;
   currentStep: number;

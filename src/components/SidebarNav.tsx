@@ -22,14 +22,18 @@ import {
   Boxes,
   IndianRupee,
   Building2,
-  Activity
+  Activity,
+  LogOut
 } from 'lucide-react';
+import { isModuleAllowedForRole } from '../utils/rbac';
 
 interface SidebarNavProps {
   isMobileOpen: boolean;
   onCloseMobile: () => void;
   onOpenDemo?: () => void;
   onOpenOrdersModal?: () => void;
+  staffRole?: string;
+  onLogout?: () => void;
 }
 
 interface NavItem {
@@ -46,7 +50,9 @@ export const SidebarNav: React.FC<SidebarNavProps> = ({
   isMobileOpen,
   onCloseMobile,
   onOpenDemo,
-  onOpenOrdersModal
+  onOpenOrdersModal,
+  staffRole,
+  onLogout
 }) => {
   const { 
     activeModule, 
@@ -274,7 +280,7 @@ export const SidebarNav: React.FC<SidebarNavProps> = ({
 
         {/* Main Navigation List */}
         <nav className="flex-1 overflow-y-auto px-2 py-3 space-y-1">
-          {NAV_ITEMS.map((item) => {
+          {NAV_ITEMS.filter((item) => !staffRole || isModuleAllowedForRole(staffRole, item.id)).map((item) => {
             const Icon = item.icon;
             const isActive = activeModule === item.id;
 
@@ -331,21 +337,21 @@ export const SidebarNav: React.FC<SidebarNavProps> = ({
 
         {/* Bottom Section: Database & Demo Station */}
         <div className="p-3 border-t border-white/10 bg-[#061B33] space-y-2">
-          {/* Demo Tour Button */}
-          {onOpenDemo && (
+          {/* Staff Sign Out Button */}
+          {onLogout && (
             <button
               type="button"
               onClick={() => {
-                onOpenDemo();
+                onLogout();
                 onCloseMobile();
               }}
-              className={`w-full py-2 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-xs flex items-center justify-center gap-1.5 shadow transition-all cursor-pointer ${
+              className={`w-full py-2 rounded-lg bg-slate-800 hover:bg-[#7F1D1D] text-slate-200 hover:text-white font-semibold text-xs flex items-center justify-center gap-1.5 transition-all cursor-pointer ${
                 isCollapsed && !isMobileOpen ? 'px-0' : 'px-3'
               }`}
-              title="Open Interactive Demo Station"
+              title="Sign Out of ERP"
             >
-              <Sparkles className="w-3.5 h-3.5 fill-slate-950 flex-shrink-0" />
-              {(!isCollapsed || isMobileOpen) && <span>Demo Tour Station</span>}
+              <LogOut className="w-3.5 h-3.5 flex-shrink-0" />
+              {(!isCollapsed || isMobileOpen) && <span>Sign Out</span>}
             </button>
           )}
 
