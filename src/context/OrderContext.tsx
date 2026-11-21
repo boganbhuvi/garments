@@ -176,9 +176,28 @@ const PAYMENTS_STORAGE_KEY = 'giriraj_garments_payments_v1';
 
 export const OrderContext = createContext<OrderContextType | undefined>(undefined);
 
-function generateNextBillNumber(count: number): string {
-  const num = 840 + count + 1;
-  return `GG-2025-${num.toString().padStart(4, '0')}`;
+function generateNextBillNumber(existingOrders: Order[] = []): string {
+  const now = new Date();
+  const dd = String(now.getDate()).padStart(2, '0');
+  const mm = String(now.getMonth() + 1).padStart(2, '0');
+  const yy = String(now.getFullYear()).slice(-2);
+  const datePrefix = `${dd}${mm}${yy}`;
+  const regex = new RegExp(`^${datePrefix}(\\d{3})$`);
+
+  let maxSeq = -1;
+  for (const ord of existingOrders) {
+    const candidates = [ord.id, ord.customer?.billNumber];
+    for (const c of candidates) {
+      if (!c) continue;
+      const m = String(c).trim().match(regex);
+      if (m) {
+        const seq = parseInt(m[1], 10);
+        if (seq > maxSeq) maxSeq = seq;
+      }
+    }
+  }
+
+  return `${datePrefix}${String(maxSeq + 1).padStart(3, '0')}`;
 }
 
 function generateNextCustId(count: number): string {
@@ -186,22 +205,22 @@ function generateNextCustId(count: number): string {
   return `CUST-${num}`;
 }
 
-function createBlankOrder(orderCount: number, defaultUnit: 'in' | 'cm' = 'in'): Order {
+function createBlankOrder(existingOrders: Order[] = [], defaultUnit: 'in' | 'cm' = 'in'): Order {
   const today = new Date().toISOString().split('T')[0];
   const dueDate = new Date();
   dueDate.setDate(dueDate.getDate() + 7);
   const formattedDueDate = dueDate.toISOString().split('T')[0];
-  const billNo = generateNextBillNumber(orderCount);
+  const billNo = generateNextBillNumber(existingOrders);
 
   return {
     id: billNo,
-    serialNumber: `SR-${(orderCount + 95).toString().padStart(3, '0')}`,
+    serialNumber: '',
     status: 'NEW',
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString(),
     currentStep: 1,
     customer: {
-      customerId: generateNextCustId(orderCount),
+      customerId: generateNextCustId(existingOrders.length),
       billNumber: billNo,
       date: today,
       customerName: '',
@@ -334,7 +353,7 @@ export const OrderProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     } catch (e) {
       console.error('Error reading current order from localStorage', e);
     }
-    return createBlankOrder(SAMPLE_ORDERS.length, defaultWorkshopUnit);
+    return createBlankOrder(SAMPLE_ORDERS, defaultWorkshopUnit);
   });
 
   const [currentStep, setCurrentStep] = useState<number>(order.currentStep || 1);
@@ -651,7 +670,7 @@ export const OrderProvider: React.FC<{ children: React.ReactNode }> = ({ childre
   };
 
   const createNewOrder = () => {
-    const newOrd = createBlankOrder(savedOrders.length, defaultWorkshopUnit);
+    const newOrd = createBlankOrder(savedOrders, defaultWorkshopUnit);
     setOrder(newOrd);
     setCurrentStep(1);
     try {
@@ -663,7 +682,7 @@ export const OrderProvider: React.FC<{ children: React.ReactNode }> = ({ childre
   };
 
   const clearOrder = () => {
-    const newOrd = createBlankOrder(savedOrders.length, defaultWorkshopUnit);
+    const newOrd = createBlankOrder(savedOrders, defaultWorkshopUnit);
     setOrder(newOrd);
     setCurrentStep(1);
     try {

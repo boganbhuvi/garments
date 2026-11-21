@@ -581,8 +581,8 @@ table { width: 100%; border-collapse: collapse; flex-shrink: 0; }
           <div class="phones-list">
             ${
               recent3Phones.length > 0
-                ? recent3Phones.map((ph, idx) => `<span class="phone-chip">#${idx + 1}: ${ph}</span>`).join('')
-                : '<div style="height:11mm;"></div>'
+                ? `<span style="font-size:10pt; font-weight:700; color:#000;">${recent3Phones.join(', ')}</span>`
+                : '<div style="height:5mm;"></div>'
             }
           </div>
         </td>

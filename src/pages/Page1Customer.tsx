@@ -21,6 +21,7 @@ import {
 } from 'lucide-react';
 import { searchIndianAddress, AddressSuggestion } from '../services/addressService';
 import { printCustomerBookingForm, printBlankBookingForm } from '../components/CustomerBookingFormPrint';
+import { CustomDueDateCalendar } from '../components/CustomDueDateCalendar';
 
 interface Page1CustomerProps {
   onOpenSearch: () => void;
@@ -30,6 +31,7 @@ export const Page1Customer: React.FC<Page1CustomerProps> = ({ onOpenSearch }) =>
   const { 
     order, 
     updateCustomer, 
+    updateBillingMeta,
     updateGarmentQuantity, 
     addCustomGarmentCategory, 
     clearOrder,
@@ -184,15 +186,11 @@ export const Page1Customer: React.FC<Page1CustomerProps> = ({ onOpenSearch }) =>
 
           <div className="flex flex-col">
             <span className="text-[12px] text-slate-500 uppercase font-black tracking-wider">
-              Token / Serial
+              Order Date
             </span>
-            <div className="flex items-center gap-1.5 text-[18px] font-black text-[#191C1E]">
-              <span>{order.serialNumber}</span>
-              <span className="text-slate-400">•</span>
-              <span className="text-[15px] font-semibold text-slate-500">
-                {order.customer.date}
-              </span>
-            </div>
+            <span className="text-[18px] font-black text-[#191C1E]">
+              {order.customer.date}
+            </span>
           </div>
 
           <div className="h-8 w-px bg-slate-300 hidden md:block" />
@@ -379,6 +377,11 @@ export const Page1Customer: React.FC<Page1CustomerProps> = ({ onOpenSearch }) =>
                   <p className="font-semibold text-slate-700">{order.customer.fullAddress || '—'}</p>
                 </div>
               </div>
+
+              <CustomDueDateCalendar
+                value={order.billing.dueDate}
+                onChange={(dueDate) => updateBillingMeta({ dueDate })}
+              />
             </div>
           ) : (
             <div className="bg-amber-50/60 border-2 border-dashed border-amber-300 rounded-2xl p-8 text-center">
